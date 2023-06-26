@@ -233,6 +233,10 @@ function getMaxMoveName(moveType, pokemonSpecies, isStatus, pokemonAbility) {
         if (pokemonSpecies === 'Melmetal-Gmax')
             return 'G-Max Meltdown';
     }
+    if (moveType === 'Rock') {
+        if (pokemonAbility === 'Foundry')
+            return 'Max Flare';
+    }
     if (moveType === 'Electric') {
         if (pokemonSpecies === 'Pikachu-Gmax')
             return 'G-Max Volt Crash';

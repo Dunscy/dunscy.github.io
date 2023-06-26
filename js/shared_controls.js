@@ -298,6 +298,22 @@ function autosetWeather(ability, i) {
 		lastAutoWeather[i] = "Strong Winds";
 		$("#strong-winds").prop("checked", true);
 		break;
+	case "Noctem":
+		lastAutoWeather[i] = "New Moon";
+		$("#new-moon").prop("checked", true);
+		break;
+	case "Pollutant":
+		lastAutoWeather[i] = "Acid Rain";
+		$("#acid-rain").prop("checked", true);
+		break;
+	case "Stormbringer":
+		lastAutoWeather[i] = "Thunderstorm";
+		$("#thunderstorm").prop("checked", true);
+		break;
+	case "Chernobyll":
+		lastAutoWeather[i] = "Fallout";
+		$("#fallout").prop("checked", true);
+		break;
 	default:
 		lastAutoWeather[i] = "";
 		var newWeather = lastAutoWeather[1 - i] !== "" ? lastAutoWeather[1 - i] : "";

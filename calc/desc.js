@@ -352,7 +352,7 @@ function getEndOfTurn(gen, attacker, defender, move, field) {
     var damage = 0;
     var texts = [];
     if (field.hasWeather('Sun', 'Harsh Sunshine')) {
-        if (defender.hasAbility('Dry Skin', 'Solar Power')) {
+        if (defender.hasAbility('Dry Skin', 'Solar Power', 'Heliophobia')) {
             damage -= Math.floor(defender.maxHP() / 8);
             texts.push(defender.ability + ' damage');
         }
@@ -384,8 +384,40 @@ function getEndOfTurn(gen, attacker, defender, move, field) {
             !defender.hasAbility('Magic Guard', 'Overcoat', 'Snow Cloak') &&
             !defender.hasItem('Safety Goggles') &&
             field.hasWeather('Hail')) {
-            damage -= Math.floor(defender.maxHP() / 16);
+            damage -= attacker.hasAbility('Sleet') ? Math.floor(defender.maxHP() / 5) : Math.floor(defender.maxHP() / 16);
             texts.push('hail damage');
+        }
+    }
+    else if (field.hasWeather('Acid Rain')) {
+        if (defender.hasAbility('Poison Heal')) {
+            damage += Math.floor(defender.maxHP() / 16);
+            texts.push('Poison heal recovery');
+        }
+        else if (!defender.hasType('Poison') &&
+            !defender.hasAbility('Magic Guard', 'Liquid Ooze', 'Corrosion') &&
+            !defender.hasItem('Safety Goggles') &&
+            field.hasWeather('Acid Rain')) {
+            damage -= Math.floor(defender.maxHP() / 16);
+            texts.push('acid damage');
+        }
+    }
+    else if (field.hasWeather('Thunderstorm')) {
+        if (!defender.hasAbility('Magic Guard', 'Volt Absorb', 'Motor Drive', 'Lightning Rod')) {
+            var electricType = gen.types.get('electric');
+            var effectiveness = electricType.effectiveness[defender.types[0]] *
+                (defender.types[1] ? electricType.effectiveness[defender.types[1]] : 1);
+            damage -= Math.floor((effectiveness * defender.maxHP()) / 8);
+            texts.push('Thunderstorm damage');
+        }
+    }
+    else if (field.hasWeather('New Moon')) {
+        if (defender.hasAbility('Absolution')) {
+            damage -= Math.floor(defender.maxHP() / 8);
+            texts.push(defender.ability + ' damage');
+        }
+        else if (defender.hasAbility('Heliophobia')) {
+            damage += Math.floor(defender.maxHP() / 8);
+            texts.push('Heliophobia recovery');
         }
     }
     var loseItem = move.named('Knock Off') && !defender.hasAbility('Sticky Hold');
@@ -464,8 +496,11 @@ function getEndOfTurn(gen, attacker, defender, move, field) {
     else if ((defender.hasStatus('slp') || defender.hasAbility('Comatose')) &&
         attacker.hasAbility('isBadDreams') &&
         !defender.hasAbility('Magic Guard')) {
-        damage -= Math.floor(defender.maxHP() / 8);
+        damage -= field.hasWeather('New Moon') ? Math.floor(defender.maxHP() / 4) : Math.floor(defender.maxHP() / 8);
         texts.push('Bad Dreams');
+    }
+    else if ((defender.hasAbility('Phototroph') && !field.hasWeather('Rain', 'Heavy Rain', 'Acid Rain'))) {
+        damage += field.hasWeather('Sun', 'Harsh Sunshine') ? Math.floor(defender.maxHP() / 8) : Math.floor(defender.maxHP() / 16);
     }
     if (!defender.hasAbility('Magic Guard') && TRAPPING.includes(move.name)) {
         if (attacker.hasItem('Binding Band')) {
@@ -818,11 +853,11 @@ function serializeText(arr) {
         return arr[0] + ' and ' + arr[1];
     }
     else {
-        var text = '';
+        var text_1 = '';
         for (var i = 0; i < arr.length - 1; i++) {
-            text += arr[i] + ', ';
+            text_1 += arr[i] + ', ';
         }
-        return text + 'and ' + arr[arr.length - 1];
+        return text_1 + 'and ' + arr[arr.length - 1];
     }
 }
 function appendIfSet(str, toAppend) {
