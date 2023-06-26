@@ -310,7 +310,7 @@ function autosetWeather(ability, i) {
 		lastAutoWeather[i] = "Thunderstorm";
 		$("#thunderstorm").prop("checked", true);
 		break;
-	case "Chernobyll":
+	case "Chernobyl":
 		lastAutoWeather[i] = "Fallout";
 		$("#fallout").prop("checked", true);
 		break;

@@ -396,6 +396,22 @@ var SV = SS.concat([
     'Venomous',
     'Wind Force',
     'Winter Joy',
+    'Acceleration',
+    'Atomizate',
+    'Blood Lust',
+    'Chernobyl',
+    'Deep Freeze',
+    'Disenchant',
+    'Elementalist',
+    'Geiger Sense',
+    'Infuriate',
+    'Lazy',
+    'Lead Skin',
+    'Petrify',
+    'Quick Charge',
+    'Rebuild',
+    'Sharp Coral',
+    'Stormbringer',
 ]);
 exports.ABILITIES = [[], RBY, GSC, ADV, DPP, BW, XY, SM, SS, SV];
 var Abilities = (function () {

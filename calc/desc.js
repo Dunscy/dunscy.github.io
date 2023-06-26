@@ -390,7 +390,7 @@ function getEndOfTurn(gen, attacker, defender, move, field) {
     }
     else if (field.hasWeather('Acid Rain')) {
         if (defender.hasAbility('Poison Heal')) {
-            damage += Math.floor(defender.maxHP() / 16);
+            damage += Math.floor(defender.maxHP() / 8);
             texts.push('Poison heal recovery');
         }
         else if (!defender.hasType('Poison') &&
@@ -408,6 +408,15 @@ function getEndOfTurn(gen, attacker, defender, move, field) {
                 (defender.types[1] ? electricType.effectiveness[defender.types[1]] : 1);
             damage -= Math.floor((effectiveness * defender.maxHP()) / 8);
             texts.push('Thunderstorm damage');
+        }
+    }
+    else if (field.hasWeather('Fallout')) {
+        if (!defender.hasAbility('Magic Guard', 'Lead Skin')) {
+            var electricType = gen.types.get('nuclear');
+            var effectiveness = electricType.effectiveness[defender.types[0]] *
+                (defender.types[1] ? electricType.effectiveness[defender.types[1]] : 1);
+            damage -= Math.floor((effectiveness * defender.maxHP()) / 8);
+            texts.push('Fallout damage');
         }
     }
     else if (field.hasWeather('New Moon')) {
@@ -475,7 +484,7 @@ function getEndOfTurn(gen, attacker, defender, move, field) {
         }
     }
     else if (defender.hasStatus('tox')) {
-        if (defender.hasAbility('Poison Heal')) {
+        if (defender.hasAbility('Poison Heal') && !field.hasWeather('Acid Rain')) {
             damage += Math.floor(defender.maxHP() / 8);
             texts.push('Poison Heal');
         }
@@ -501,6 +510,7 @@ function getEndOfTurn(gen, attacker, defender, move, field) {
     }
     else if ((defender.hasAbility('Phototroph') && !field.hasWeather('Rain', 'Heavy Rain', 'Acid Rain'))) {
         damage += field.hasWeather('Sun', 'Harsh Sunshine') ? Math.floor(defender.maxHP() / 8) : Math.floor(defender.maxHP() / 16);
+        texts.push('Phototroph healing');
     }
     if (!defender.hasAbility('Magic Guard') && TRAPPING.includes(move.name)) {
         if (attacker.hasItem('Binding Band')) {
