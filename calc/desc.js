@@ -449,7 +449,7 @@ function getEndOfTurn(gen, attacker, defender, move, field) {
         texts.push('Sticky Barb damage');
     }
     if (field.defenderSide.isSeeded) {
-        if (!defender.hasAbility('Magic Guard')) {
+        if (!defender.hasAbility('Magic Guard', 'Ivy Wall')) {
             damage -= Math.floor(defender.maxHP() / (gen.num >= 2 ? 8 : 16));
             texts.push('Leech Seed damage');
         }
@@ -533,7 +533,7 @@ function getEndOfTurn(gen, attacker, defender, move, field) {
         damage -= Math.floor(defender.maxHP() / 8);
         texts.push('Sea of Fire damage');
     }
-    if (!defender.hasAbility('Magic Guard') && !defender.hasType('Grass') &&
+    if (!defender.hasAbility('Magic Guard', 'Ivy Wall') && !defender.hasType('Grass') &&
         (field.defenderSide.vinelash || move.named('G-Max Vine Lash'))) {
         damage -= Math.floor(defender.maxHP() / 6);
         texts.push('Vine Lash damage');
@@ -750,6 +750,9 @@ function buildDescription(description, attacker, defender) {
     if (description.isSwordOfRuin) {
         output += 'Sword of Ruin ';
     }
+    if (description.isOminous) {
+        output += 'Ominous Presence';
+    }
     output += description.attackerName + ' ';
     if (description.isHelpingHand) {
         output += 'Helping Hand ';
@@ -823,6 +826,9 @@ function buildDescription(description, attacker, defender) {
     }
     else if (description.isLightScreen) {
         output += ' through Light Screen';
+    }
+    if (description.isFabled) {
+        output += ' through Fabled Protector';
     }
     if (description.isFlowerGiftDefender) {
         output += ' with an ally\'s Flower Gift';

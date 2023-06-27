@@ -60,6 +60,7 @@ export declare namespace State {
         isSR?: boolean;
         isReflect?: boolean;
         isLightScreen?: boolean;
+        isFabled?: boolean;
         isProtected?: boolean;
         isSeeded?: boolean;
         isForesight?: boolean;
@@ -70,6 +71,7 @@ export declare namespace State {
         isAuroraVeil?: boolean;
         isBattery?: boolean;
         isPowerSpot?: boolean;
+        isOminous?: boolean;
         isSwitching?: 'out' | 'in';
     }
 }

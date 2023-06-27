@@ -45,6 +45,8 @@ export interface RawDesc {
     terrain?: Terrain;
     weather?: Weather;
     isDefenderDynamaxed?: boolean;
+    isFabled?: boolean;
+    isOminous?: boolean;
 }
 export declare function display(gen: Generation, attacker: Pokemon, defender: Pokemon, move: Move, field: Field, damage: Damage, rawDesc: RawDesc, notation?: string, err?: boolean): string;
 export declare function displayMove(gen: Generation, attacker: Pokemon, defender: Pokemon, move: Move, damage: Damage, notation?: string): string;

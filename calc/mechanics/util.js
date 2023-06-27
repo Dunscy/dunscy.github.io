@@ -155,7 +155,8 @@ function getFinalSpeed(gen, pokemon, field, side) {
         ((pokemon.hasAbility('Protosynthesis') &&
             (weather.includes('Sun') || pokemon.hasItem('Booster Energy'))) ||
             (pokemon.hasAbility('Quark Drive') &&
-                (terrain === 'Electric' || pokemon.hasItem('Booster Energy'))))) {
+                (terrain === 'Electric' || pokemon.hasItem('Booster Energy'))) ||
+            (pokemon.hasAbility('Flowing Tranquility') && field.hasWeather('Rain', 'Heavy Rain')))) {
         speedMods.push(6144);
     }
     if (pokemon.hasItem('Choice Scarf')) {

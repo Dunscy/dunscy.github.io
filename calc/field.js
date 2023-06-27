@@ -89,6 +89,7 @@ var Side = (function () {
         this.isSR = !!side.isSR;
         this.isReflect = !!side.isReflect;
         this.isLightScreen = !!side.isLightScreen;
+        this.isFabled = !!side.isFabled;
         this.isProtected = !!side.isProtected;
         this.isSeeded = !!side.isSeeded;
         this.isForesight = !!side.isForesight;
@@ -99,6 +100,7 @@ var Side = (function () {
         this.isAuroraVeil = !!side.isAuroraVeil;
         this.isBattery = !!side.isBattery;
         this.isPowerSpot = !!side.isPowerSpot;
+        this.isOminous = !!side.isOminous;
         this.isSwitching = side.isSwitching;
     }
     Side.prototype.clone = function () {
