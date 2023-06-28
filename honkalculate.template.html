@@ -679,7 +679,7 @@
                         <input class="visually-hidden" type="radio" name="weather" value="Strong Winds" id="strong-winds" />
                         <label class="btn btn-xxxwide btn-right" for="strong-winds">Strong Winds</label>
                     </div>
-                    <div class="gen-specific g2 hide" style="width: 17.8em; margin: 0 auto 5px;" title="Select the current weather condition.">
+                    <div class="gen-specific g2 hide" style="margin: 0 auto 5px;" title="Select the current weather condition.">
                         <input class="visually-hidden" type="radio" name="gscWeather" value="" id="gscClear" checked="checked" />
                         <label class="btn btn-small btn-left" for="gscClear">None</label>
                         <input class="visually-hidden" type="radio" name="gscWeather" value="Sun" id="gscSun" />
@@ -689,13 +689,16 @@
                         <input class="visually-hidden" type="radio" name="gscWeather" value="Sand" id="gscSand" />
                         <label class="btn btn-small btn-right" for="gscSand">Sand</label>
                     </div>
-                    <div class="gen-specific g5 g6 g7 g8 g9" style="width: 22.2em; margin: 5px auto; display: inline-block;">
+                    <div class="gen-specific g5 g6 g7 g8 g9">
                         <span hidden id="magicRoomInstruction">Is Magic Room in effect?</span>
                         <span hidden id="wonderRoomInstruction">Is Wonder Room in effect?</span>
+                        <span hidden id="panicRoomInstruction">Is Panic Room in effect?</span>
                         <input aria-describedby="magicRoomInstruction" class="visually-hidden" type="checkbox" id="magicroom" />
                         <label class="btn btn-xxxwide btn-left" for="magicroom">Magic Room</label>
                         <input aria-describedby="wonderRoomInstruction" class="visually-hidden" type="checkbox" id="wonderroom" />
-                        <label class="btn btn-xxxwide btn-right" for="wonderroom">Wonder Room</label>
+                        <label class="btn btn-xxxwide btn-mid" for="wonderroom">Wonder Room</label>
+                        <input aria-describedby="panicRoomInstruction" class="visually-hidden" type="checkbox" id="panicroom" />
+                        <label class="btn btn-xxxwide btn-right" for="panicroom">Panic Room</label>
                     </div>
                     <div class="gen-specific g4 g5 g6 g7 g8 g9" style="width: 5.3em; margin: 5px auto;" title="Is gravity in effect?">
                         <input class="visually-hidden" type="checkbox" id="gravity" />

@@ -511,6 +511,7 @@ var SS = SM.concat([
     'Sweet Apple',
     'Tart Apple',
     'Throat Spray',
+    'Acidic Rock',
 ]);
 for (var i = 0; i < 100; i++) {
     SS.push("TR".concat(i < 10 ? "0".concat(i) : i));

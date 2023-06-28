@@ -80,6 +80,28 @@ function getRecovery(gen, attacker, defender, move, damage, notation) {
             }
         }
     }
+    if (move.flags.contact && attacker.hasAbility('Vampiric')) {
+        var percentHealed = 0.25;
+        var max = Math.round(defender.maxHP() * percentHealed);
+        for (var i = 0; i < minD.length; i++) {
+            var range = [minD[i], maxD[i]];
+            for (var j in recovery) {
+                var drained = Math.round(range[j] * percentHealed);
+                recovery[j] += Math.min(drained * move.hits, max);
+            }
+        }
+    }
+    if (attacker.hasAbility('Blood Lust')) {
+        var percentHealed = 1 / 6;
+        var max = Math.round(defender.maxHP() * percentHealed);
+        for (var i = 0; i < minD.length; i++) {
+            var range = [minD[i], maxD[i]];
+            for (var j in recovery) {
+                var drained = Math.round(range[j] * percentHealed);
+                recovery[j] += Math.min(drained * move.hits, max);
+            }
+        }
+    }
     if (recovery[1] === 0)
         return { recovery: recovery, text: text };
     var minHealthRecovered = toDisplay(notation, recovery[0], attacker.maxHP());
@@ -300,7 +322,7 @@ function combine(damage) {
 }
 var TRAPPING = [
     'Bind', 'Clamp', 'Fire Spin', 'Infestation', 'Magma Storm', 'Sand Tomb',
-    'Thunder Cage', 'Whirlpool', 'Wrap', 'G-Max Sandblast', 'G-Max Centiferno',
+    'Thunder Cage', 'Whirlpool', 'Wrap', 'G-Max Sandblast', 'G-Max Centiferno', 'Metal Whip', 'Oceans Wrath',
 ];
 function getHazards(gen, defender, defenderSide) {
     var damage = 0;
@@ -844,6 +866,9 @@ function buildDescription(description, attacker, defender) {
     }
     if (description.isWonderRoom) {
         output += ' in Wonder Room';
+    }
+    if (description.isPanicRoom) {
+        output += ' in Panic Room';
     }
     return output;
 }

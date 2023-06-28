@@ -248,6 +248,11 @@ $(".ability").bind("keyup change", function () {
 		$(this).closest(".poke-info").find(".alliesFainted").hide();
 
 	}
+	if (ability === "Magic Trick") {
+		$("#magicroom").prop("checked", true);
+	} else {
+		$("#magicroom").prop("checked", false);
+	}
 });
 
 $("#p1 .ability").bind("keyup change", function () {
@@ -933,6 +938,7 @@ function createField() {
 	var isVesselOfRuin = $("#vessel").prop("checked");
 	var isMagicRoom = $("#magicroom").prop("checked");
 	var isWonderRoom = $("#wonderroom").prop("checked");
+	var isPanicRoom = $("#panicroom").prop("checked");
 	var isGravity = $("#gravity").prop("checked");
 	var isSR = [$("#srL").prop("checked"), $("#srR").prop("checked")];
 	var weather;
@@ -979,7 +985,7 @@ function createField() {
 	};
 	return new calc.Field({
 		gameType: gameType, weather: weather, terrain: terrain,
-		isMagicRoom: isMagicRoom, isWonderRoom: isWonderRoom, isGravity: isGravity,
+		isMagicRoom: isMagicRoom, isWonderRoom: isWonderRoom, isPanicRoom: isPanicRoom, isGravity: isGravity,
 		isBeadsOfRuin: isBeadsOfRuin, isTabletsOfRuin: isTabletsOfRuin,
 		isSwordOfRuin: isSwordOfRuin, isVesselOfRuin: isVesselOfRuin,
 		attackerSide: createSide(0), defenderSide: createSide(1)

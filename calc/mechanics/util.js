@@ -186,9 +186,16 @@ function getMoveEffectiveness(gen, move, type, isGhostRevealed, isGravity, isRin
     else if (move.named('Freeze-Dry') && type === 'Water') {
         return 2;
     }
+    else if (move.named('Corrode') && type === 'Steel') {
+        return 2;
+    }
     else if (move.named('Flying Press')) {
         return (gen.types.get('fighting').effectiveness[type] *
             gen.types.get('flying').effectiveness[type]);
+    }
+    else if (move.named('Meltdown')) {
+        return (gen.types.get('fire').effectiveness[type] *
+            gen.types.get('water').effectiveness[type]);
     }
     else {
         return gen.types.get((0, util_1.toID)(move.type)).effectiveness[type];
