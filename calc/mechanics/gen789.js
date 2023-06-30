@@ -1053,7 +1053,7 @@ function calculateAtModsSMSSSV(gen, attacker, defender, move, field, desc) {
         atMods.push(8192);
         desc.attackerAbility = attacker.ability;
     }
-    else if (field.attackerSide.isOminous) {
+    if (field.attackerSide.isOminous) {
         atMods.push(5461);
         desc.isOminous = true;
     }
