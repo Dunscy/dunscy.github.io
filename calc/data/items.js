@@ -512,6 +512,12 @@ var SS = SM.concat([
     'Tart Apple',
     'Throat Spray',
     'Acidic Rock',
+    'Pixie Dust',
+    'Null Helm',
+    'Jungle Crown',
+    'Trick Rock',
+    'Dark Rock',
+    'Hafli Berry',
 ]);
 for (var i = 0; i < 100; i++) {
     SS.push("TR".concat(i < 10 ? "0".concat(i) : i));

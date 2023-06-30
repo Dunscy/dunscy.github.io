@@ -48,7 +48,7 @@ function calculateSMSSSV(gen, attacker, defender, move, field) {
         return result;
     }
     var defenderIgnoresAbility = defender.hasAbility('Full Metal Body', 'Neutralizing Gas', 'Prism Armor', 'Shadow Shield');
-    var attackerIgnoresAbility = attacker.hasAbility('Mold Breaker', 'Teravolt', 'Turboblaze');
+    var attackerIgnoresAbility = (attacker.hasAbility('Mold Breaker', 'Teravolt', 'Turboblaze') || attacker.hasItem('Null Helm'));
     var moveIgnoresAbility = move.named('G-Max Drum Solo', 'G-Max Fire Ball', 'G-Max Hydrosnipe', 'Light That Burns the Sky', 'Menacing Moonraze Maelstrom', 'Moongeist Beam', 'Photon Geyser', 'Searing Sunraze Smash', 'Sunsteel Strike');
     if (!defenderIgnoresAbility && !defender.hasAbility('Poison Heal') &&
         (attackerIgnoresAbility || moveIgnoresAbility)) {

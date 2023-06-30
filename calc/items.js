@@ -21,6 +21,7 @@ function getItemBoostType(item) {
             return 'Ground';
         case 'Fist Plate':
         case 'Black Belt':
+        case 'Jungle Crown':
             return 'Fighting';
         case 'Flame Plate':
         case 'Charcoal':
@@ -43,6 +44,7 @@ function getItemBoostType(item) {
         case 'Twisted Spoon':
             return 'Psychic';
         case 'Pixie Plate':
+        case 'Pixie Dust':
             return 'Fairy';
         case 'Sky Plate':
         case 'Sharp Beak':
@@ -111,6 +113,8 @@ function getBerryResistType(berry) {
         case 'Babiri Berry':
             return 'Steel';
         case 'Roseli Berry':
+            return 'Fairy';
+        case 'Hafli Berry':
             return 'Fairy';
         default:
             return undefined;
