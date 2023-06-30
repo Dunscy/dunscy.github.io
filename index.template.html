@@ -41,13 +41,13 @@
 <nav><div class="header"><div class="header-inner">
     <ul class="nav">
         <li><a class="button nav-first" href="//vikrambarr.com"><img src="http://vikrambarr.com/pokemonshowdownbetabw@2x.gif" alt="Plan of Attack!" width="100" height="50"/> Home</a></li>
-        <li><a class="button" href="https://tinyurl.com/PoA-Changes">PoA Changes</a></li>
+        <li><a class="button nav-last" href="https://tinyurl.com/PoA-Changes">PoA Changes</a></li>
         <!-- <li><a class="button" href="//replay.pokemonshowdown.com/">Replays</a></li>
         <li><a class="button" href="//pokemonshowdown.com/ladder/">Ladder</a></li> 
         <li><a class="button nav-last" href="//pokemonshowdown.com/forums/">Forum</a></li> -->
     </ul>
     <ul class="nav nav-play">
-        <li><a class="button greenbutton nav-first nav-last" href="//play.pokemonshowdown.com/">Play</a></li>
+        <li><a class="button greenbutton nav-first nav-last" href="//vikrambarr.com/">Play</a></li>
     </ul>
     <div style="clear:both"></div>
 </div></div></nav>
@@ -84,6 +84,8 @@
     <div aria-label="Move selection" class="move-result-group" role="region" title="Select a move to show detailed results.">
         <div  aria-labelledby="resultHeaderL" class="move-result-subgroup" role="radiogroup">
             <div class="result-move-header"><span id="resultHeaderL">Pok&eacute;mon 1's Moves (select one to show detailed results)</span>
+                <div title="Your Pokemon" id="pokemonSpriteL" class="sprite" href="" name="sprite">
+                </div>
             </div>
             <div>
                 <input class="result-move visually-hidden" type="radio" name="resultMove" id="resultMoveL1" checked="checked" aria-describedby="resultDamageL1" />
@@ -108,6 +110,8 @@
         </div>
         <div aria-labelledby="resultHeaderR" class="move-result-subgroup" role="radiogroup">
             <div class="result-move-header"><span id="resultHeaderR">Pok&eacute;mon 2's Moves (select one to show detailed results)</span>
+                <div title="Your Pokemon" id="pokemonSpriteR" class="sprite" href="" name="sprite">
+                </div>
             </div>
             <div>
                 <input class="result-move visually-hidden" type="radio" name="resultMove" id="resultMoveR1" aria-describedby="resultDamageR1" />
@@ -130,6 +134,9 @@
                 <span id="resultDamageR4">??? - ???%</span>
             </div>
         </div>
+    </div>
+    <div>
+        &nbsp;
     </div>
     <div aria-label="Calculation results" class="main-result-group" role="region">
         <div class="big-text" title="Click to copy.">

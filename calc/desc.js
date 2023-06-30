@@ -773,7 +773,7 @@ function buildDescription(description, attacker, defender) {
         output += 'Sword of Ruin ';
     }
     if (description.isOminous) {
-        output += 'Ominous Presence';
+        output += 'Ominous Presence ';
     }
     output += description.attackerName + ' ';
     if (description.isHelpingHand) {

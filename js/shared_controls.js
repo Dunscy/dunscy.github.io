@@ -482,9 +482,13 @@ $(".item").change(function () {
 });
 
 function smogonAnalysis(pokemonName) {
-	var generation = ["rb", "gs", "rs", "dp", "bw", "xy", "sm", "ss", "sv"][gen - 1];
-	return "https://smogon.com/dex/" + generation + "/pokemon/" + pokemonName.toLowerCase() + "/";
+    var generation = ["rb", "gs", "rs", "dp", "bw", "xy", "sm", "ss", "sv"][gen - 1];
+    return {
+        analysisURL: "https://smogon.com/dex/" + generation + "/pokemon/" + pokemonName.toLowerCase() + "/",
+    };
 }
+
+
 
 // auto-update set details on select
 $(".set-selector").change(function () {
@@ -499,7 +503,11 @@ $(".set-selector").change(function () {
 		}
 		pokeObj.find(".teraToggle").prop("checked", false);
 		pokeObj.find(".boostedStat").val("Auto-Select");
-		pokeObj.find(".analysis").attr("href", smogonAnalysis(pokemonName));
+
+		var urls = smogonAnalysis(pokemonName);
+        pokeObj.find(".analysis").attr("href", urls.analysisURL);
+		
+		
 		pokeObj.find(".type1").val(pokemon.types[0]);
 		pokeObj.find(".type2").val(pokemon.types[1]);
 		pokeObj.find(".hp .base").val(pokemon.bs.hp);
