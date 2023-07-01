@@ -217,6 +217,29 @@ function calculateSMSSSV(gen, attacker, defender, move, field) {
             typeEffectiveness = 1 / typeEffectiveness;
         }
     }
+    if (defender.hasAbility('Omnitype')) {
+        var fairyEffectiveness = (0, util_2.getMoveEffectiveness)(gen, move, 'Fairy', isGhostRevealed, field.isGravity, isRingTarget);
+        var bugEffectiveness = (0, util_2.getMoveEffectiveness)(gen, move, 'Bug', isGhostRevealed, field.isGravity, isRingTarget);
+        var darkEffectiveness = (0, util_2.getMoveEffectiveness)(gen, move, 'Dark', isGhostRevealed, field.isGravity, isRingTarget);
+        var dragonEffectiveness = (0, util_2.getMoveEffectiveness)(gen, move, 'Dragon', isGhostRevealed, field.isGravity, isRingTarget);
+        var electricEffectiveness = (0, util_2.getMoveEffectiveness)(gen, move, 'Electric', isGhostRevealed, field.isGravity, isRingTarget);
+        var fightingEffectiveness = (0, util_2.getMoveEffectiveness)(gen, move, 'Fighting', isGhostRevealed, field.isGravity, isRingTarget);
+        var fireEffectiveness = (0, util_2.getMoveEffectiveness)(gen, move, 'Fire', isGhostRevealed, field.isGravity, isRingTarget);
+        var flyingEffectiveness = (0, util_2.getMoveEffectiveness)(gen, move, 'Flying', isGhostRevealed, field.isGravity, isRingTarget);
+        var ghostEffectiveness = (0, util_2.getMoveEffectiveness)(gen, move, 'Ghost', isGhostRevealed, field.isGravity, isRingTarget);
+        var grassEffectiveness = (0, util_2.getMoveEffectiveness)(gen, move, 'Grass', isGhostRevealed, field.isGravity, isRingTarget);
+        var groundEffectiveness = (0, util_2.getMoveEffectiveness)(gen, move, 'Ground', isGhostRevealed, field.isGravity, isRingTarget);
+        var iceEffectiveness = (0, util_2.getMoveEffectiveness)(gen, move, 'Ice', isGhostRevealed, field.isGravity, isRingTarget);
+        var normalEffectiveness = (0, util_2.getMoveEffectiveness)(gen, move, 'Normal', isGhostRevealed, field.isGravity, isRingTarget);
+        var poisonEffectiveness = (0, util_2.getMoveEffectiveness)(gen, move, 'Poison', isGhostRevealed, field.isGravity, isRingTarget);
+        var psychicEffectiveness = (0, util_2.getMoveEffectiveness)(gen, move, 'Psychic', isGhostRevealed, field.isGravity, isRingTarget);
+        var rockEffectiveness = (0, util_2.getMoveEffectiveness)(gen, move, 'Rock', isGhostRevealed, field.isGravity, isRingTarget);
+        var steelEffectiveness = (0, util_2.getMoveEffectiveness)(gen, move, 'Steel', isGhostRevealed, field.isGravity, isRingTarget);
+        var waterEffectiveness = (0, util_2.getMoveEffectiveness)(gen, move, 'Water', isGhostRevealed, field.isGravity, isRingTarget);
+        typeEffectiveness = fairyEffectiveness * bugEffectiveness * darkEffectiveness * dragonEffectiveness * electricEffectiveness * fightingEffectiveness * fireEffectiveness *
+            flyingEffectiveness * ghostEffectiveness * grassEffectiveness * groundEffectiveness * iceEffectiveness * normalEffectiveness * poisonEffectiveness *
+            rockEffectiveness * steelEffectiveness * waterEffectiveness;
+    }
     if (move.named('Achilles Heel')) {
         if (type1Effectiveness !== 0) {
             type1Effectiveness = 2;
