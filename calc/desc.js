@@ -760,8 +760,12 @@ function buildDescription(description, attacker, defender) {
         output += 'burned ';
     }
     if (description.alliesFainted) {
-        output += Math.min(5, description.alliesFainted) +
+        output += Math.min(9, description.alliesFainted) +
             " ".concat(description.alliesFainted === 1 ? 'ally' : 'allies', " fainted ");
+    }
+    if (description.heads) {
+        output += Math.min(9, description.heads) +
+            " ".concat(description.heads === 1 ? 'head ' : 'heads ');
     }
     if (description.attackerTera) {
         output += "Tera ".concat(description.attackerTera, " ");

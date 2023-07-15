@@ -922,6 +922,12 @@ function calculateBPModsSMSSSV(gen, attacker, defender, move, field, desc, baseP
         desc.attackerAbility = attacker.ability;
         desc.alliesFainted = attacker.alliesFainted;
     }
+    if (attacker.hasAbility('Lernean') && attacker.heads && !move.named('Self-Destruct', 'Explosion', 'Natural Gift', 'Fling') && (move.hits === 1)) {
+        var powMod = [0, 0, 0, 0, 0, 4710, 5018, 5325, 5632, 5939];
+        bpMods.push(powMod[Math.min(9, attacker.heads)]);
+        desc.attackerAbility = attacker.ability;
+        desc.heads = attacker.heads;
+    }
     if (attacker.hasItem("".concat(move.type, " Gem"))) {
         bpMods.push(5325);
         desc.attackerItem = attacker.item;

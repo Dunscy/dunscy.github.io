@@ -248,6 +248,13 @@ $(".ability").bind("keyup change", function () {
 		$(this).closest(".poke-info").find(".alliesFainted").hide();
 
 	}
+	if (ability === "Lernean") {
+		$(this).closest(".poke-info").find(".heads").show();
+	} else {
+		$(this).closest(".poke-info").find(".heads").val('0');
+		$(this).closest(".poke-info").find(".heads").hide();
+
+	}
 	if (ability === "Magic Trick") {
 		$("#magicroom").prop("checked", true);
 	} else {
@@ -894,6 +901,7 @@ function createPokemon(pokeInfo) {
 			isDynamaxed: isDynamaxed,
 			isSaltCure: pokeInfo.find(".saltcure").is(":checked"),
 			alliesFainted: parseInt(pokeInfo.find(".alliesFainted").val()),
+			heads: parseInt(pokeInfo.find(".heads").val()),
 			boostedStat: pokeInfo.find(".boostedStat").val() || undefined,
 			teraType: teraType,
 			boosts: boosts,
