@@ -5347,7 +5347,7 @@ var SV_PATCH = {
         zp: 100,
         maxPower: 90
     },
-    'Obsidian Crach': {
+    'Obsidian Crash': {
         bp: 80,
         type: 'Fire',
         category: 'Physical',

@@ -440,7 +440,9 @@ var XY = (0, util_1.extend)(true, {}, GSC, {
         Dragon: 2,
         Dark: 2,
         Steel: 0.5,
-        Fairy: 1
+        Fairy: 1,
+        Nuclear: 2,
+        Crystal: 2
     },
     Nuclear: {
         '???': 1,
