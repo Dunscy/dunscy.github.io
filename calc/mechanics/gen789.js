@@ -418,8 +418,8 @@ function calculateSMSSSV(gen, attacker, defender, move, field) {
             baseDamage = (0, util_2.pokeRound)((0, util_2.OF32)(baseDamage * 6144) / 4096);
             desc.weather = field.weather;
         }
-        else if ((field.hasWeather('Sun') && move.hasType('Water')) && !move.named('Obsidian Crash') ||
-            (field.hasWeather('Rain') && move.hasType('Fire'))) {
+        else if ((field.hasWeather('Sun') && move.hasType('Water')) ||
+            (field.hasWeather('Rain') && move.hasType('Fire') && !move.named('Obsidian Crash'))) {
             baseDamage = (0, util_2.pokeRound)((0, util_2.OF32)(baseDamage * 2048) / 4096);
             desc.weather = field.weather;
         }

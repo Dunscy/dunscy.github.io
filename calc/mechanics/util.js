@@ -186,6 +186,9 @@ function getMoveEffectiveness(gen, move, type, isGhostRevealed, isGravity, isRin
     else if (move.named('Freeze-Dry') && type === 'Water') {
         return 2;
     }
+    else if (move.named('Obsidian Crash') && type === 'Water') {
+        return 1;
+    }
     else if (move.named('Corrode') && type === 'Steel') {
         return 2;
     }
