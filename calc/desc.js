@@ -334,7 +334,7 @@ function getHazards(gen, defender, defenderSide) {
         var rockType = gen.types.get('rock');
         var effectiveness = rockType.effectiveness[defender.types[0]] *
             (defender.types[1] ? rockType.effectiveness[defender.types[1]] : 1);
-        damage += Math.floor((effectiveness * defender.maxHP()) / 8);
+        damage += Math.floor((effectiveness * defender.maxHP()) / 8) * (defender.hasAbility('Calcium Collapse') ? 2 : 1);
         texts.push('Stealth Rock');
     }
     if (defenderSide.steelsurge && !defender.hasAbility('Magic Guard', 'Mountaineer')) {
@@ -348,7 +348,7 @@ function getHazards(gen, defender, defenderSide) {
         !defender.hasAbility('Magic Guard', 'Levitate') &&
         !defender.hasItem('Air Balloon')) {
         if (defenderSide.spikes === 1) {
-            damage += Math.floor(defender.maxHP() / 8);
+            damage += Math.floor(defender.maxHP() / 8) * (defender.hasAbility('Calcium Collapse') ? 2 : 1);
             if (gen.num === 2) {
                 texts.push('Spikes');
             }
@@ -357,11 +357,11 @@ function getHazards(gen, defender, defenderSide) {
             }
         }
         else if (defenderSide.spikes === 2) {
-            damage += Math.floor(defender.maxHP() / 6);
+            damage += Math.floor(defender.maxHP() / 6) * (defender.hasAbility('Calcium Collapse') ? 2 : 1);
             texts.push('2 layers of Spikes');
         }
         else if (defenderSide.spikes === 3) {
-            damage += Math.floor(defender.maxHP() / 4);
+            damage += Math.floor(defender.maxHP() / 4) * (defender.hasAbility('Calcium Collapse') ? 2 : 1);
             texts.push('3 layers of Spikes');
         }
     }
@@ -472,7 +472,7 @@ function getEndOfTurn(gen, attacker, defender, move, field) {
     }
     if (field.defenderSide.isSeeded) {
         if (!defender.hasAbility('Magic Guard', 'Ivy Wall')) {
-            damage -= Math.floor(defender.maxHP() / (gen.num >= 2 ? 8 : 16));
+            damage -= Math.floor(defender.maxHP() / (gen.num >= 2 ? 8 : 16)) * (defender.hasAbility('Calcium Collapse') ? 2 : 1);
             texts.push('Leech Seed damage');
         }
     }
@@ -501,7 +501,7 @@ function getEndOfTurn(gen, attacker, defender, move, field) {
             texts.push('Poison Heal');
         }
         else if (!defender.hasAbility('Magic Guard')) {
-            damage -= Math.floor(defender.maxHP() / (gen.num === 1 ? 16 : 8));
+            damage -= Math.floor(defender.maxHP() / (gen.num === 1 ? 16 : 8)) * (defender.hasAbility('Calcium Collapse') ? 2 : 1);
             texts.push('poison damage');
         }
     }
@@ -520,7 +520,7 @@ function getEndOfTurn(gen, attacker, defender, move, field) {
             texts.push('reduced burn damage');
         }
         else if (!defender.hasAbility('Magic Guard')) {
-            damage -= Math.floor(defender.maxHP() / (gen.num === 1 || gen.num > 6 ? 16 : 8));
+            damage -= Math.floor(defender.maxHP() / (gen.num === 1 || gen.num > 6 ? 16 : 8)) * (defender.hasAbility('Calcium Collapse') ? 2 : 1);
             texts.push('burn damage');
         }
     }

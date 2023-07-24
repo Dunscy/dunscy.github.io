@@ -403,24 +403,24 @@ var ADV = GSC;
 var DPP = GSC;
 var BW = GSC;
 var XY = (0, util_1.extend)(true, {}, GSC, {
-    '???': { Fairy: 1, Nuclear: 2, Crystal: 1 },
-    Normal: { Fairy: 1, Nuclear: 2, Crystal: 1 },
-    Grass: { Fairy: 1, Nuclear: 2, Crystal: 1 },
-    Fire: { Fairy: 1, Nuclear: 2, Crystal: 1 },
-    Water: { Fairy: 1, Nuclear: 2, Crystal: 1 },
-    Electric: { Fairy: 1, Nuclear: 2, Crystal: 1 },
-    Ice: { Fairy: 1, Nuclear: 2, Crystal: 1 },
-    Flying: { Fairy: 1, Nuclear: 2, Crystal: 1 },
-    Bug: { Fairy: 0.5, Nuclear: 2, Crystal: 1 },
-    Poison: { Fairy: 2, Nuclear: 2, Crystal: 1 },
-    Ground: { Fairy: 1, Nuclear: 2, Crystal: 1 },
-    Rock: { Fairy: 1, Nuclear: 2, Crystal: 1 },
-    Fighting: { Fairy: 0.5, Nuclear: 2, Crystal: 1 },
-    Psychic: { Fairy: 1, Nuclear: 2, Crystal: 1 },
-    Ghost: { Steel: 1, Fairy: 1, Nuclear: 2, Crystal: 1 },
-    Dragon: { Fairy: 0, Nuclear: 2, Crystal: 1 },
-    Dark: { Steel: 1, Fairy: 0.5, Nuclear: 2, Crystal: 1 },
-    Steel: { Fairy: 2, Nuclear: 0.5, Crystal: 1 },
+    '???': { Fairy: 1 },
+    Normal: { Fairy: 1 },
+    Grass: { Fairy: 1 },
+    Fire: { Fairy: 1 },
+    Water: { Fairy: 1 },
+    Electric: { Fairy: 1 },
+    Ice: { Fairy: 1 },
+    Flying: { Fairy: 1 },
+    Bug: { Fairy: 0.5 },
+    Poison: { Fairy: 2 },
+    Ground: { Fairy: 1 },
+    Rock: { Fairy: 1 },
+    Fighting: { Fairy: 0.5 },
+    Psychic: { Fairy: 1 },
+    Ghost: { Steel: 1 },
+    Dragon: { Fairy: 0 },
+    Dark: { Steel: 1, Fairy: 0.5 },
+    Steel: { Fairy: 2 },
     Fairy: {
         '???': 1,
         Normal: 1,
@@ -440,10 +440,30 @@ var XY = (0, util_1.extend)(true, {}, GSC, {
         Dragon: 2,
         Dark: 2,
         Steel: 0.5,
-        Fairy: 1,
-        Nuclear: 2,
-        Crystal: 2
-    },
+        Fairy: 1
+    }
+});
+var SM = XY;
+var SS = SM;
+var SV = (0, util_1.extend)(true, {}, SS, {
+    '???': { Nuclear: 2, Crystal: 1 },
+    Normal: { Nuclear: 2, Crystal: 1 },
+    Grass: { Nuclear: 2, Crystal: 1 },
+    Fire: { Nuclear: 2, Crystal: 1 },
+    Water: { Nuclear: 2, Crystal: 1 },
+    Electric: { Nuclear: 2, Crystal: 1 },
+    Ice: { Nuclear: 2, Crystal: 1 },
+    Flying: { Nuclear: 2, Crystal: 1 },
+    Bug: { Nuclear: 2, Crystal: 1 },
+    Poison: { Nuclear: 2, Crystal: 1 },
+    Ground: { Nuclear: 2, Crystal: 1 },
+    Rock: { Nuclear: 2, Crystal: 1 },
+    Fighting: { Nuclear: 2, Crystal: 1 },
+    Psychic: { Nuclear: 2, Crystal: 1 },
+    Ghost: { Nuclear: 2, Crystal: 1 },
+    Dragon: { Nuclear: 2, Crystal: 1 },
+    Dark: { Nuclear: 2, Crystal: 1 },
+    Steel: { Nuclear: 0.5, Crystal: 1 },
     Nuclear: {
         '???': 1,
         Normal: 2,
@@ -464,7 +484,8 @@ var XY = (0, util_1.extend)(true, {}, GSC, {
         Dark: 2,
         Steel: 0.5,
         Fairy: 2,
-        Crystal: 0.5
+        Crystal: 0.5,
+        Nuclear: 0.5
     },
     Crystal: {
         '???': 1,
@@ -486,12 +507,10 @@ var XY = (0, util_1.extend)(true, {}, GSC, {
         Dark: 1,
         Steel: 1,
         Fairy: 1,
-        Nuclear: 2
+        Nuclear: 2,
+        Crystal: 1
     }
 });
-var SM = XY;
-var SS = SM;
-var SV = SS;
 exports.TYPE_CHART = [{}, RBY, GSC, ADV, DPP, BW, XY, SM, SS, SV];
 var Types = (function () {
     function Types(gen) {
