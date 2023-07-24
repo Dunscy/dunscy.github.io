@@ -8999,6 +8999,13 @@ var SV_PATCH = {
     Dunsparce: { nfe: true },
     Girafarig: { nfe: true },
     Primeape: { nfe: true },
+    Corsola: { nfe: true },
+    Grumpig: { nfe: true },
+    Kecleon: { nfe: true },
+    Starmie: { nfe: true },
+    Swalot: { nfe: true },
+    Parasect: { nfe: true },
+    Spinda: { nfe: true },
     Tauros: { otherFormes: ['Tauros-Paldea-Aqua', 'Tauros-Paldea-Blaze', 'Tauros-Paldea-Combat'] },
     Wooper: { otherFormes: ['Wooper-Paldea'] },
     Zacian: { bs: { at: 120 } },
@@ -12400,7 +12407,8 @@ var SV_PATCH = {
         types: ['Water', 'Bug'],
         bs: { hp: 100, at: 70, df: 70, sa: 65, sd: 65, sp: 45 },
         weightkg: 14,
-        abilities: { 0: 'Hyper Cutter' }
+        abilities: { 0: 'Hyper Cutter' },
+        nfe: true
     },
     'Scizor-Delta': {
         types: ['Ice', 'Fighting'],
@@ -13299,7 +13307,8 @@ var SV_PATCH = {
         types: ['Flying', 'Fighting'],
         bs: { hp: 65, at: 125, df: 100, sa: 60, sd: 70, sp: 70 },
         weightkg: 70,
-        abilities: { 0: 'Defiant' }
+        abilities: { 0: 'Defiant' },
+        nfe: true
     },
     'Bisharp-Delta-Mega': {
         types: ['Flying', 'Fighting'],
