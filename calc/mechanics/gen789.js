@@ -257,7 +257,7 @@ function calculateSMSSSV(gen, attacker, defender, move, field) {
             type2Effectiveness = 2;
         }
         typeEffectiveness = type1Effectiveness * type2Effectiveness;
-        if (typeEffectiveness < 2) {
+        if (typeEffectiveness < 2 && defender.hasType('Fairy')) {
             typeEffectiveness = 2;
         }
     }
