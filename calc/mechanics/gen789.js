@@ -544,10 +544,6 @@ function calculateBasePowerSMSSSV(gen, attacker, defender, move, field, hasAteAb
             basePower = move.bp * (turnOrder !== 'last' ? 2 : 1);
             desc.moveBP = basePower;
             break;
-        case 'Bushido':
-            basePower = move.bp * (turnOrder !== 'last' ? 1.3 : 1);
-            desc.moveBP = basePower;
-            break;
         case 'Pursuit':
         case 'Mindtrap':
         case 'Monkey Arms':
@@ -871,6 +867,8 @@ function calculateBPModsSMSSSV(gen, attacker, defender, move, field, desc, baseP
             field.hasWeather('Acid Rain') && move.hasType('Poison')) ||
         (attacker.hasAbility('Analytic') &&
             (turnOrder !== 'first' || field.defenderSide.isSwitching === 'out')) ||
+        (attacker.hasAbility('Bushido') &&
+            (turnOrder !== 'last')) ||
         (attacker.hasAbility('Tough Claws') && move.flags.contact) ||
         (attacker.hasAbility('Punk Rock', 'Amplifier') && move.flags.sound) ||
         (attacker.hasAbility('Flowing Tranquility') && field.hasWeather('Rain', 'Heavy Rain') && move.hasType('Psychic'))) {
