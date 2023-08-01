@@ -518,6 +518,7 @@ var SS = SM.concat([
     'Trick Rock',
     'Dark Rock',
     'Hafli Berry',
+    'Discarded Cloth',
 ]);
 for (var i = 0; i < 100; i++) {
     SS.push("TR".concat(i < 10 ? "0".concat(i) : i));
