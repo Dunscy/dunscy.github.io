@@ -417,7 +417,7 @@ var XY = (0, util_1.extend)(true, {}, GSC, {
     Rock: { Fairy: 1 },
     Fighting: { Fairy: 0.5 },
     Psychic: { Fairy: 1 },
-    Ghost: { Steel: 1 },
+    Ghost: { Steel: 1, Fairy: 1 },
     Dragon: { Fairy: 0 },
     Dark: { Steel: 1, Fairy: 0.5 },
     Steel: { Fairy: 2 },

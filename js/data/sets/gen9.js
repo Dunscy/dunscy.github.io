@@ -48,75 +48,75 @@ var SETDEX_SV = {"Abomasnow":{"UU Showdown Usage":{"level":100,"ability":"Snow W
       ]
     }
   },
-  "Austratus": {
+"Austratus": {
     "The Fish": {
-      "level": 100,
-      "ability": "Water Bubble",
-      "item": "Choice Scarf",
-      "teraType": "Water",
-      "customMove": "Normal",
-      "evs": {
-        "sa": 252,
-        "sd": 4,
-        "sp": 252
-      },
-      "nature": "Timid",
-      "ivs": {
-        "at": 0
-      },
-      "moves": [
-        "Water Spout",
-        "Psyshock",
-        "Hydro Pump",
-        "Grass Knot"
-      ]
+        "level": 100,
+        "ability": "Water Bubble",
+        "item": "Choice Scarf",
+        "teraType": "Water",
+        "customMove": "Normal",
+        "evs": {
+            "sa": 252,
+            "sd": 4,
+            "sp": 252
+        },
+        "nature": "Timid",
+        "ivs": {
+            "at": 0
+        },
+        "moves": [
+            "Water Spout",
+            "Psyshock",
+            "Hydro Pump",
+            "Grass Knot"
+        ]
     },
-        "Small Pond": {
-          "level": 100,
-          "ability": "Water Bubble",
-          "item": "Discarded Cloth",
-          "teraType": "Water",
-          "customMove": "Normal",
-          "evs": {
+    "Small Pond": {
+        "level": 100,
+        "ability": "Water Bubble",
+        "item": "Discarded Cloth",
+        "teraType": "Water",
+        "customMove": "Normal",
+        "evs": {
             "hp": 252,
             "at": 4,
             "sp": 252
-          },
-          "nature": "Quiet",
-          "ivs": {
+        },
+        "nature": "Quiet",
+        "ivs": {
             "at": 0,
             "sp": 0
-          },
-          "moves": [
+        },
+        "moves": [
             "Grass Knot",
             "Trick Room",
             "Water Spout",
             "Psyshock"
-          ]
+        ]
         }
       },
-      "Magnemite-Rhinian-Swarm": {
-        "Specs Mag-Rhin": {
-          "level": 100,
-          "ability": "Swarming",
-          "item": "Choice Specs",
-          "teraType": "Water",
-          "customMove": "Normal",
-          "evs": {
+"Magnemite-Rhinian-Swarm": {
+    "Specs Mag-Rhin": {
+        "level": 100,
+        "ability": "Swarming",
+        "item": "Choice Specs",
+        "teraType": "Water",
+        "customMove": "Normal",
+        "evs": {
             "hp": 252,
             "sp": 252,
             "sd": 4
-          },
-          "nature": "Modest",
-          "ivs": {
+        },
+        "nature": "Modest",
+        "ivs": {
             "at": 0
-          },
-          "moves": [
+        },
+        "moves": [
             "Flash Cannon",
             "Volt Switch",
             "Thunderbolt",
             "Tera Blast"
-          ]
+        ]
         }
-      }
-  };
+    }
+};
