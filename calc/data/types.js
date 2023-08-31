@@ -463,7 +463,7 @@ var SV = (0, util_1.extend)(true, {}, SS, {
     Ghost: { Nuclear: 2, Crystal: 1 },
     Dragon: { Nuclear: 2, Crystal: 1 },
     Dark: { Nuclear: 2, Crystal: 1 },
-    Steel: { Nuclear: 0.5, Crystal: 1 },
+    Steel: { Nuclear: 2, Crystal: 1 },
     Fairy: { Nuclear: 2, Crystal: 1 },
     Nuclear: {
         '???': 1,
