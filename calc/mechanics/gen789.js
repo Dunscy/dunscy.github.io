@@ -214,8 +214,8 @@ function calculateSMSSSV(gen, attacker, defender, move, field) {
         typeEffectiveness = type1Effectiveness * type2Effectiveness;
         if (defender.teraType) {
             typeEffectiveness = (0, util_2.getMoveEffectiveness)(gen, move, defender.teraType, isGhostRevealed, field.isGravity, isRingTarget);
-            typeEffectiveness = 1 / typeEffectiveness;
         }
+        typeEffectiveness = 1 / typeEffectiveness;
     }
     if (defender.hasAbility('Omnitype')) {
         var fairyEffectiveness = (0, util_2.getMoveEffectiveness)(gen, move, 'Fairy', isGhostRevealed, field.isGravity, isRingTarget);
