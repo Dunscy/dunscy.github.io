@@ -81,6 +81,7 @@ var Move = (function () {
         this.struggleRecoil = !!data.struggleRecoil;
         this.isCrit = !!options.isCrit || !!data.willCrit ||
             gen.num === 1 && ['crabhammer', 'razorleaf', 'slash', 'karate chop'].includes(data.id);
+        this.isStellarFirstUse = !!options.isStellarFirstUse;
         this.drain = data.drain;
         this.flags = data.flags;
         this.priority = data.priority || 0;
@@ -120,6 +121,7 @@ var Move = (function () {
             useZ: this.useZ,
             useMax: this.useMax,
             isCrit: this.isCrit,
+            isStellarFirstUse: this.isStellarFirstUse,
             hits: this.hits,
             timesUsed: this.timesUsed,
             timesUsedWithMetronome: this.timesUsedWithMetronome,
@@ -232,10 +234,6 @@ function getMaxMoveName(moveType, pokemonSpecies, isStatus, pokemonAbility) {
             return 'G-Max Steelsurge';
         if (pokemonSpecies === 'Melmetal-Gmax')
             return 'G-Max Meltdown';
-    }
-    if (moveType === 'Rock') {
-        if (pokemonAbility === 'Foundry')
-            return 'Max Flare';
     }
     if (moveType === 'Electric') {
         if (pokemonSpecies === 'Pikachu-Gmax')

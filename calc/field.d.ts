@@ -6,7 +6,6 @@ export declare class Field implements State.Field {
     terrain?: Terrain;
     isMagicRoom: boolean;
     isWonderRoom: boolean;
-    isPanicRoom: boolean;
     isGravity: boolean;
     isAuraBreak?: boolean;
     isFairyAura?: boolean;
@@ -33,7 +32,6 @@ export declare class Side implements State.Side {
     isSR: boolean;
     isReflect: boolean;
     isLightScreen: boolean;
-    isFabled?: boolean;
     isProtected: boolean;
     isSeeded: boolean;
     isForesight: boolean;
@@ -44,7 +42,6 @@ export declare class Side implements State.Side {
     isAuroraVeil: boolean;
     isBattery: boolean;
     isPowerSpot: boolean;
-    isOminous?: boolean;
     isSwitching?: 'out' | 'in';
     constructor(side?: State.Side);
     clone(): Side;

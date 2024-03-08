@@ -21,7 +21,6 @@ function getItemBoostType(item) {
             return 'Ground';
         case 'Fist Plate':
         case 'Black Belt':
-        case 'Jungle Crown':
             return 'Fighting';
         case 'Flame Plate':
         case 'Charcoal':
@@ -43,8 +42,8 @@ function getItemBoostType(item) {
         case 'Odd Incense':
         case 'Twisted Spoon':
             return 'Psychic';
+        case 'Fairy Feather':
         case 'Pixie Plate':
-        case 'Pixie Dust':
             return 'Fairy';
         case 'Sky Plate':
         case 'Sharp Beak':
@@ -113,8 +112,6 @@ function getBerryResistType(berry) {
         case 'Babiri Berry':
             return 'Steel';
         case 'Roseli Berry':
-            return 'Fairy';
-        case 'Hafli Berry':
             return 'Fairy';
         default:
             return undefined;
@@ -373,7 +370,7 @@ var FLING_10 = new Set([
 function getFlingPower(item) {
     if (!item)
         return 0;
-    if (['Iron Ball', 'TR43', 'TR71'].includes(item))
+    if (['Big Nugget', 'Iron Ball', 'TR43', 'TR71'].includes(item))
         return 130;
     if (FLING_120.has(item))
         return 85;

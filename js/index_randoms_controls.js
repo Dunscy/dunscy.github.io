@@ -95,10 +95,6 @@ function performCalculations() {
 	bestResult.change();
 	$("#resultHeaderL").text(p1.name + "'s Moves (select one to show detailed results)");
 	$("#resultHeaderR").text(p2.name + "'s Moves (select one to show detailed results)");
-
-	$("#pokemonSpriteL").html('<img src="' + "http://vikrambarr.com/sprites/gen5/" + p1.name.replace(/\s/g, "").toLowerCase() + ".png" + '" alt="Image" style="width: 96px; height: 96px;">');
-	$("#pokemonSpriteR").html('<img src="' + "http://vikrambarr.com/sprites/gen5/" + p2.name.replace(/\s/g, "").toLowerCase() + ".png" + '" alt="Image" style="width: 96px; height: 96px;">');
-
 }
 
 $(".result-move").change(function () {
@@ -209,6 +205,6 @@ $("#mainResult").click(function () {
 		document.getElementById('tooltipText').style.visibility = 'visible';
 		setTimeout(function () {
 			document.getElementById('tooltipText').style.visibility = 'hidden';
-		}, 2000);
+		}, 1500);
 	});
 });

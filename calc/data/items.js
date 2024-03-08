@@ -146,7 +146,6 @@ var GSC_ONLY = [
     'Pink Bow',
     'Polkadot Bow',
     'PSN Cure Berry',
-    'Enigma Berry',
 ];
 var ADV = GSC.filter(function (i) { return !GSC_ONLY.includes(i); }).concat([
     'Aguav Berry',
@@ -318,6 +317,7 @@ var DPP = ADV.concat([
 var BW = DPP.concat([
     'Absorb Bulb',
     'Air Balloon',
+    'Big Nugget',
     'Binding Band',
     'Bug Gem',
     'Burn Drive',
@@ -511,14 +511,6 @@ var SS = SM.concat([
     'Sweet Apple',
     'Tart Apple',
     'Throat Spray',
-    'Acidic Rock',
-    'Pixie Dust',
-    'Null Helm',
-    'Jungle Crown',
-    'Trick Rock',
-    'Dark Rock',
-    'Hafli Berry',
-    'Discarded Cloth',
 ]);
 for (var i = 0; i < 100; i++) {
     SS.push("TR".concat(i < 10 ? "0".concat(i) : i));
@@ -531,14 +523,22 @@ var SV = SS.concat([
     'Ability Shield',
     'Booster Energy',
     'Clear Amulet',
+    'Cornerstone Mask',
     'Covert Cloak',
+    'Fairy Feather',
+    'Hearthflame Mask',
     'Loaded Dice',
     'Malicious Armor',
+    'Masterpiece Teacup',
+    'Metal Alloy',
     'Mirror Herb',
     'Punching Glove',
     'Lustrous Globe',
     'Griseous Core',
     'Strange Ball',
+    'Syrupy Apple',
+    'Unremarkable Teacup',
+    'Wellspring Mask',
 ]);
 var BERRIES = {
     'Aguav Berry': { t: 'Dragon', p: 80 },

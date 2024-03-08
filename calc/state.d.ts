@@ -9,8 +9,7 @@ export declare namespace State {
         dynamaxLevel?: number;
         isSaltCure?: boolean;
         alliesFainted?: number;
-        heads?: number;
-        boostedStat?: I.StatIDExceptHP;
+        boostedStat?: I.StatIDExceptHP | 'auto';
         item?: I.ItemName;
         gender?: I.GenderName;
         nature?: I.NatureName;
@@ -29,6 +28,7 @@ export declare namespace State {
         useZ?: boolean;
         useMax?: boolean;
         isCrit?: boolean;
+        isStellarFirstUse?: boolean;
         hits?: number;
         timesUsed?: number;
         timesUsedWithMetronome?: number;
@@ -40,7 +40,6 @@ export declare namespace State {
         terrain?: I.Terrain;
         isMagicRoom?: boolean;
         isWonderRoom?: boolean;
-        isPanicRoom?: boolean;
         isGravity?: boolean;
         isAuraBreak?: boolean;
         isFairyAura?: boolean;
@@ -62,7 +61,6 @@ export declare namespace State {
         isSR?: boolean;
         isReflect?: boolean;
         isLightScreen?: boolean;
-        isFabled?: boolean;
         isProtected?: boolean;
         isSeeded?: boolean;
         isForesight?: boolean;
@@ -73,7 +71,6 @@ export declare namespace State {
         isAuroraVeil?: boolean;
         isBattery?: boolean;
         isPowerSpot?: boolean;
-        isOminous?: boolean;
         isSwitching?: 'out' | 'in';
     }
 }

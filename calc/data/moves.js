@@ -4143,6 +4143,7 @@ finally {
 }
 var SV_PATCH = {
     'Aerial Ace': { isSlicing: true },
+    Aeroblast: { isWind: true },
     'Air Cutter': { isSlicing: true, isWind: true },
     'Air Slash': { isSlicing: true },
     'Behemoth Blade': { isSlicing: true },
@@ -4152,18 +4153,21 @@ var SV_PATCH = {
     'Fairy Wind': { isWind: true },
     'Fury Cutter': { isSlicing: true },
     'Glacial Lance': { bp: 120, zp: 190 },
-    'Grassy Glide': { bp: 60, zp: 120, maxPower: 110 },
+    'Grassy Glide': { bp: 55, zp: 100, maxPower: 110 },
     Gust: { isWind: true },
     'Heat Wave': { isWind: true },
     Hurricane: { isWind: true },
     'Icy Wind': { isWind: true },
     'Leaf Blade': { isSlicing: true },
+    'Luster Purge': { bp: 95, zp: 175, maxPower: 130 },
+    'Mist Ball': { bp: 95, zp: 175, maxPower: 130 },
     'Night Slash': { isSlicing: true },
     'Petal Blizzard': { isWind: true },
     'Psycho Cut': { isSlicing: true },
     'Razor Leaf': { isSlicing: true },
     'Razor Shell': { isSlicing: true },
     'Sacred Sword': { isSlicing: true },
+    'Secret Sword': { isSlicing: true },
     Sandstorm: { isWind: true },
     Slash: { isSlicing: true },
     'Solar Blade': { isSlicing: true },
@@ -4179,6 +4183,16 @@ var SV_PATCH = {
         zp: 140,
         maxPower: 120,
         isSlicing: true
+    },
+    'Alluring Voice': {
+        bp: 80,
+        type: 'Fairy',
+        category: 'Special',
+        zp: 160,
+        maxPower: 130,
+        secondaries: true,
+        isSound: true,
+        makesContact: true
     },
     'Aqua Step': {
         bp: 80,
@@ -4250,6 +4264,14 @@ var SV_PATCH = {
         isWind: true,
         target: 'allAdjacentFoes'
     },
+    'Blood Moon': {
+        bp: 140,
+        type: 'Normal',
+        category: 'Special',
+        zp: 200,
+        maxPower: 140
+    },
+    'Burning Bulwark': { bp: 0, type: 'Fire', priority: 4 },
     'Ceaseless Edge': {
         bp: 65,
         type: 'Dark',
@@ -4327,6 +4349,7 @@ var SV_PATCH = {
         makesContact: true,
         secondaries: true
     },
+    'Dragon Cheer': { bp: 0, type: 'Dragon' },
     'Electro Drift': {
         bp: 100,
         type: 'Electric',
@@ -4335,6 +4358,13 @@ var SV_PATCH = {
         maxPower: 130,
         makesContact: true
     },
+    'Electro Shot': {
+        bp: 130,
+        type: 'Electric',
+        category: 'Special',
+        zp: 195,
+        maxPower: 140
+    },
     'Esper Wing': {
         bp: 80,
         type: 'Psychic',
@@ -4342,6 +4372,13 @@ var SV_PATCH = {
         zp: 160,
         maxPower: 130,
         secondaries: true
+    },
+    'Fickle Beam': {
+        bp: 80,
+        type: 'Dragon',
+        category: 'Special',
+        zp: 160,
+        maxPower: 130
     },
     'Fillet Away': {
         bp: 0,
@@ -4369,6 +4406,14 @@ var SV_PATCH = {
         category: 'Physical',
         zp: 190,
         maxPower: 140,
+        makesContact: true
+    },
+    'Hard Press': {
+        bp: 0,
+        type: 'Steel',
+        category: 'Physical',
+        zp: 100,
+        maxPower: 100,
         makesContact: true
     },
     'Headlong Rush': {
@@ -4411,6 +4456,13 @@ var SV_PATCH = {
         zp: 120,
         maxPower: 110,
         secondaries: true
+    },
+    'Ivy Cudgel': {
+        bp: 100,
+        type: 'Grass',
+        category: 'Physical',
+        zp: 180,
+        maxPower: 130
     },
     'Jet Punch': {
         bp: 60,
@@ -4468,6 +4520,33 @@ var SV_PATCH = {
         target: 'allAdjacentFoes',
         self: { boosts: { spa: -1 } }
     },
+    'Malignant Chain': {
+        bp: 100,
+        type: 'Poison',
+        category: 'Special',
+        zp: 180,
+        maxPower: 90,
+        secondaries: true
+    },
+    'Matcha Gotcha': {
+        bp: 80,
+        type: 'Grass',
+        category: 'Special',
+        target: 'allAdjacentFoes',
+        zp: 160,
+        maxPower: 130,
+        secondaries: true,
+        drain: [1, 2]
+    },
+    'Mighty Cleave': {
+        bp: 95,
+        type: 'Rock',
+        category: 'Physical',
+        zp: 175,
+        maxPower: 130,
+        makesContact: true,
+        isSlicing: true
+    },
     'Mortal Spin': {
         bp: 30,
         type: 'Poison',
@@ -4509,6 +4588,15 @@ var SV_PATCH = {
         zp: 160,
         maxPower: 130,
         isPulse: true
+    },
+    'Psychic Noise': {
+        bp: 75,
+        type: 'Psychic',
+        category: 'Special',
+        zp: 140,
+        maxPower: 130,
+        secondaries: true,
+        isSound: true
     },
     'Population Bomb': {
         bp: 20,
@@ -4660,10 +4748,45 @@ var SV_PATCH = {
         isSlicing: true,
         secondaries: true
     },
+    'Supercell Slam': {
+        bp: 100,
+        type: 'Electric',
+        category: 'Physical',
+        zp: 180,
+        maxPower: 130,
+        makesContact: true,
+        hasCrashDamage: true
+    },
+    'Syrup Bomb': {
+        bp: 60,
+        type: 'Grass',
+        category: 'Special',
+        zp: 120,
+        maxPower: 110,
+        isBullet: true,
+        secondaries: true
+    },
+    'Tachyon Cutter': {
+        bp: 50,
+        type: 'Steel',
+        category: 'Special',
+        zp: 180,
+        maxPower: 140,
+        multihit: 2,
+        isSlicing: true
+    },
     'Take Heart': {
         bp: 0,
         type: 'Psychic',
         category: 'Status'
+    },
+    'Temper Flare': {
+        bp: 75,
+        type: 'Fire',
+        category: 'Physical',
+        zp: 140,
+        maxPower: 130,
+        makesContact: true
     },
     'Tera Blast': {
         bp: 80,
@@ -4671,6 +4794,21 @@ var SV_PATCH = {
         category: 'Special',
         zp: 160,
         maxPower: 130
+    },
+    'Tera Starstorm': {
+        bp: 120,
+        type: 'Normal',
+        category: 'Special',
+        zp: 190,
+        maxPower: 140
+    },
+    'Thunderclap': {
+        bp: 70,
+        type: 'Electric',
+        category: 'Special',
+        zp: 140,
+        maxPower: 120,
+        priority: 1
     },
     'Tidy Up': {
         bp: 0,
@@ -4720,6 +4858,16 @@ var SV_PATCH = {
         maxPower: 90,
         multihit: 2
     },
+    'Upper Hand': {
+        bp: 65,
+        type: 'Fighting',
+        category: 'Physical',
+        zp: 120,
+        maxPower: 85,
+        makesContact: true,
+        secondaries: true,
+        priority: 3
+    },
     'Victory Dance': {
         bp: 0,
         type: 'Fighting',
@@ -4752,424 +4900,13 @@ var SV_PATCH = {
         isWind: true,
         target: 'allAdjacentFoes'
     },
-    'Achilles Heel': {
-        bp: 45,
-        type: 'Normal',
-        category: 'Physical',
-        makesContact: true,
-        zp: 100,
-        maxPower: 90
-    },
-    'Ancient Roar': {
-        bp: 80,
-        type: 'Rock',
-        category: 'Special',
-        isSound: true,
-        target: 'allAdjacentFoes',
-        zp: 160,
-        maxPower: 130
-    },
-    Corrode: {
-        bp: 70,
-        type: 'Poison',
-        category: 'Special',
-        zp: 140,
-        maxPower: 100
-    },
-    'Crystal Rush': {
-        bp: 45,
-        type: 'Crystal',
-        category: 'Physical',
-        makesContact: true,
-        priority: 1,
-        zp: 100,
-        maxPower: 90
-    },
-    'Custom Move': {
-        bp: 70,
-        type: 'Normal',
-        category: 'Physical',
-        makesContact: true,
-        zp: 100,
-        maxPower: 90
-    },
-    'Dark Matter': {
-        bp: 150,
-        type: 'Dark',
-        category: 'Special',
-        zp: 200,
-        maxPower: 150
-    },
-    'Draco Jet': {
-        bp: 40,
-        type: 'Dragon',
-        category: 'Physical',
-        makesContact: true,
-        priority: 1,
-        zp: 100,
-        maxPower: 90
-    },
-    'Drakon Voice': {
-        bp: 105,
-        type: 'Dragon',
-        category: 'Special',
-        isSound: true,
-        target: 'allAdjacent',
-        zp: 185,
-        maxPower: 135
-    },
-    Dragonify: {
-        bp: 0,
-        type: 'Dragon',
-        category: 'Status'
-    },
-    'Jet Stream': {
-        bp: 0,
-        type: 'Dragon',
-        category: 'Status'
-    },
-    Livewire: {
-        bp: 0,
-        type: 'Electric',
-        category: 'Status'
-    },
-    'Lunar Cannon': {
-        bp: 105,
-        type: 'Dark',
-        category: 'Special',
-        zp: 185,
-        maxPower: 135
-    },
-    'Medusa Ray': {
-        bp: 0,
-        type: 'Rock',
-        category: 'Status'
-    },
-    Morph: {
-        bp: 0,
-        type: 'Normal',
-        category: 'Status'
-    },
-    Nanorepair: {
-        bp: 0,
-        type: 'Steel',
-        category: 'Status'
-    },
-    'New Moon': {
-        bp: 0,
-        type: 'Dark',
-        category: 'Status'
-    },
-    Permafrost: {
-        bp: 0,
-        type: 'Ice',
-        category: 'Status'
-    },
-    Retrograde: {
-        bp: 0,
-        type: 'Normal',
-        category: 'Status'
-    },
-    'Spirit Away': {
-        bp: 100,
-        type: 'Fairy',
-        category: 'Physical',
-        makesContact: true,
-        zp: 130,
-        maxPower: 180
-    },
-    Wildfire: {
-        bp: 0,
-        type: 'Fire',
-        category: 'Status'
-    },
-    Wormhole: {
-        bp: 40,
-        type: 'Psychic',
-        category: 'Special',
-        priority: 1,
-        zp: 100,
-        maxPower: 90
-    },
-    'Zombie Strike': {
-        bp: 90,
-        type: 'Ghost',
-        category: 'Physical',
-        makesContact: true,
-        zp: 100,
-        maxPower: 90
-    },
-    'Atomic Punch': {
-        bp: 80,
-        type: 'Nuclear',
-        category: 'Physical',
-        makesContact: true,
-        secondaries: true,
-        zp: 100,
-        maxPower: 90
-    },
-    'Caustic Breath': {
-        bp: 60,
-        type: 'Dragon',
-        category: 'Special',
-        secondaries: true,
-        zp: 100,
-        maxPower: 90
-    },
-    'Coral Break': {
-        bp: 80,
-        type: 'Water',
-        category: 'Special',
-        makesContact: true,
-        zp: 100,
-        maxPower: 90,
-        overrideDefensiveStat: 'def'
-    },
-    'Drain Life': {
-        bp: 80,
-        type: 'Dark',
-        category: 'Physical',
-        makesContact: true,
-        drain: [1, 2],
-        zp: 100,
-        maxPower: 90
-    },
-    Expunge: {
-        bp: 110,
-        type: 'Nuclear',
-        category: 'Special',
-        makesContact: true,
-        zp: 100,
-        maxPower: 90
-    },
-    Fallout: {
-        bp: 0,
-        type: 'Nuclear',
-        category: 'Status'
-    },
-    'Fission Burst': {
-        bp: 150,
-        type: 'Nuclear',
-        category: 'Physical',
-        zp: 100,
-        maxPower: 90
-    },
-    'Flame Impact': {
-        bp: 65,
-        type: 'Fire',
-        category: 'Physical',
-        makesContact: true,
-        priority: 2,
-        zp: 100,
-        maxPower: 90
-    },
-    'Gamma Ray': {
-        bp: 40,
-        type: 'Nuclear',
-        category: 'Special',
-        zp: 100,
-        maxPower: 90
-    },
-    'Gemstone Glimmer': {
-        bp: 75,
-        type: 'Rock',
-        category: 'Special',
-        secondaries: true,
-        zp: 100,
-        maxPower: 90
-    },
-    'Get Lucky': {
-        bp: 70,
-        type: 'Psychic',
-        category: 'Special',
-        zp: 100,
-        maxPower: 90
-    },
-    'Golden Fist': {
-        bp: 70,
-        type: 'Fighting',
-        category: 'Physical',
-        makesContact: true,
-        zp: 100,
-        maxPower: 90
-    },
-    'Half-Life': {
-        bp: 0,
-        type: 'Nuclear',
-        category: 'Special'
-    },
-    'Infernal Blade': {
-        bp: 90,
-        type: 'Fire',
-        category: 'Physical',
-        makesContact: true,
-        zp: 100,
-        maxPower: 90
-    },
-    'Instant Crush': {
-        bp: 60,
-        type: 'Psychic',
-        category: 'Special',
-        priority: 1,
-        zp: 100,
-        maxPower: 90
-    },
-    'Laser Pulse': {
-        bp: 90,
-        type: 'Electric',
-        category: 'Special',
-        isBullet: true,
-        zp: 100,
-        maxPower: 90
-    },
-    'Metal Cruncher': {
-        bp: 120,
-        type: 'Steel',
-        category: 'Physical',
-        makesContact: true,
-        zp: 100,
-        maxPower: 90
-    },
-    'Metal Whip': {
-        bp: 50,
-        type: 'Steel',
-        category: 'Physical',
-        makesContact: true,
-        zp: 100,
-        maxPower: 90
-    },
-    'Nuclear Slash': {
-        bp: 55,
-        type: 'Nuclear',
-        category: 'Physical',
-        makesContact: true,
-        zp: 100,
-        maxPower: 90
-    },
-    'Nuclear Waste': {
-        bp: 0,
-        type: 'Nuclear',
-        category: 'Status',
-        makesContact: true
-    },
-    'Nuclear Wind': {
-        bp: 65,
-        type: 'Nuclear',
-        category: 'Special',
-        zp: 100,
-        maxPower: 90
-    },
-    'Oceans Wrath': {
-        bp: 90,
-        type: 'Water',
-        category: 'Special',
-        zp: 100,
-        maxPower: 90
-    },
-    'Proton Beam': {
-        bp: 100,
-        type: 'Nuclear',
-        category: 'Special',
-        zp: 100,
-        maxPower: 90
-    },
-    'Quantum Leap': {
-        bp: 100,
-        type: 'Nuclear',
-        category: 'Physical',
-        makesContact: true,
-        breaksProtect: true,
-        zp: 100,
-        maxPower: 90
-    },
-    Radioacid: {
-        bp: 60,
-        type: 'Nuclear',
-        category: 'Special',
-        zp: 100,
-        maxPower: 90
-    },
-    'Sky Fall': {
-        bp: 85,
-        type: 'Flying',
-        category: 'Special',
-        makesContact: true,
-        secondaries: true,
-        zp: 100,
-        maxPower: 90
-    },
-    Subduction: {
-        bp: 140,
-        type: 'Ground',
-        category: 'Physical',
-        zp: 100,
-        maxPower: 90
-    },
-    'Sudden Strike': {
-        bp: 40,
-        type: 'Dark',
-        category: 'Physical',
-        makesContact: true,
-        priority: 1,
-        zp: 100,
-        maxPower: 90
-    },
-    Thunderstorm: {
-        bp: 0,
-        type: 'Electric',
-        category: 'Status'
-    },
-    'Acid Cyclone': {
-        bp: 65,
-        type: 'Poison',
-        category: 'Special',
-        zp: 100,
-        maxPower: 90
-    },
-    'Acidic Bombardment': {
-        bp: 120,
-        type: 'Poison',
-        category: 'Special',
-        zp: 100,
-        maxPower: 90
-    },
-    'Adaptive Stance': {
-        bp: 0,
-        type: 'Dark',
-        category: 'Status'
-    },
-    Antentacle: {
-        bp: 90,
-        type: 'Bug',
-        category: 'Physical',
-        makesContact: true,
-        secondaries: true,
-        zp: 100,
-        maxPower: 90
-    },
-    'Aqua Shot': {
-        bp: 25,
-        type: 'Water',
-        category: 'Physical',
-        isBullet: true,
-        multihit: [2, 5],
-        zp: 100,
-        maxPower: 90
-    },
     'Blooms Day': {
         bp: 150,
         type: 'Grass',
         category: 'Special',
         zp: 100,
-        maxPower: 90
-    },
-    'Boil Over': {
-        bp: 130,
-        type: 'Water',
-        category: 'Special',
-        secondaries: true,
-        zp: 100,
-        maxPower: 90
+        maxPower: 90,
+        target: 'allAdjacentFoes'
     },
     'Box In': {
         bp: 70,
@@ -5185,75 +4922,10 @@ var SV_PATCH = {
         category: 'Status',
         priority: -1
     },
-    'Clanker Demolition': {
-        bp: 20,
-        type: 'Steel',
-        category: 'Physical',
-        multihit: 4,
-        makesContact: true,
-        zp: 100,
-        maxPower: 90
-    },
-    Coinflip: {
-        bp: 0,
-        type: 'Dark',
-        category: 'Special'
-    },
-    'Crystalline Reaction': {
-        bp: 200,
-        type: 'Crystal',
-        category: 'Special',
-        zp: 100,
-        maxPower: 90
-    },
     'Desert Tempest': {
         bp: 65,
         type: 'Rock',
         category: 'Special',
-        zp: 100,
-        maxPower: 90
-    },
-    'Destruction Dance': {
-        bp: 40,
-        type: 'Fire',
-        category: 'Special',
-        zp: 100,
-        maxPower: 90
-    },
-    'Electroplate': {
-        bp: 0,
-        type: 'Electric',
-        category: 'Status'
-    },
-    'Everybody Explode Now': {
-        bp: 0,
-        type: 'Normal',
-        category: 'Status'
-    },
-    'Ferocious Crash': {
-        bp: 130,
-        type: 'Fighting',
-        category: 'Physical',
-        makesContact: true,
-        recoil: [1, 2],
-        zp: 100,
-        maxPower: 90
-    },
-    'Flame Axe': {
-        bp: 65,
-        type: 'Fire',
-        category: 'Physical',
-        makesContact: true,
-        isSlicing: true,
-        secondaries: true,
-        zp: 100,
-        maxPower: 90
-    },
-    Foreshadowing: {
-        bp: 120,
-        type: 'Normal',
-        category: 'Special',
-        breaksProtect: true,
         zp: 100,
         maxPower: 90
     },
@@ -5265,33 +4937,10 @@ var SV_PATCH = {
         zp: 100,
         maxPower: 90
     },
-    Germinate: {
-        bp: 120,
-        type: 'Grass',
-        category: 'Physical',
-        zp: 100,
-        maxPower: 90
-    },
     Heal: {
         bp: 0,
         type: 'Normal',
         category: 'Status'
-    },
-    'Heavy Bellow': {
-        bp: 90,
-        type: 'Steel',
-        category: 'Special',
-        isSound: true,
-        secondaries: true,
-        zp: 100,
-        maxPower: 90
-    },
-    'Hot Coals': {
-        bp: 0,
-        type: 'Fire',
-        category: 'Status',
-        zp: 100,
-        maxPower: 90
     },
     'Hyper Heal': {
         bp: 0,
@@ -5301,211 +4950,49 @@ var SV_PATCH = {
         zp: 100,
         maxPower: 90
     },
-    Kamikazbee: {
-        bp: 200,
-        type: 'Bug',
-        category: 'Physical',
-        zp: 100,
-        maxPower: 90
-    },
-    Meltdown: {
-        bp: 150,
-        type: 'Fire',
-        category: 'Special',
-        zp: 100,
-        maxPower: 90
-    },
-    'Mental Overload': {
-        bp: 120,
-        type: 'Psychic',
-        category: 'Physical',
-        makesContact: true,
-        zp: 100,
-        maxPower: 90
-    },
-    Mindtrap: {
-        bp: 40,
-        type: 'Psychic',
-        category: 'Physical',
-        makesContact: true,
-        zp: 100,
-        maxPower: 90
-    },
-    Mindwipe: {
-        bp: 90,
-        type: 'Psychic',
-        category: 'Special',
-        secondaries: true,
-        zp: 100,
-        maxPower: 90
-    },
-    'Monkey Arms': {
-        bp: 30,
-        type: 'Psychic',
-        category: 'Physical',
-        makesContact: true,
-        zp: 100,
-        maxPower: 90
-    },
-    'Obsidian Crash': {
-        bp: 80,
-        type: 'Fire',
-        category: 'Physical',
-        makesContact: true,
-        recoil: [1, 3],
-        zp: 100,
-        maxPower: 90
-    },
-    'Out Cold': {
-        bp: 50,
-        type: 'Dark',
-        category: 'Physical',
-        makesContact: true,
-        secondaries: true,
-        zp: 100,
-        maxPower: 90
-    },
-    'Palette Drain': {
-        bp: 20,
-        type: '???',
-        category: 'Physical',
-        multihit: [1, 5],
-        zp: 100,
-        maxPower: 90
-    },
-    'Panic Room': {
+    'Runtime Exception': {
         bp: 0,
-        type: 'Ghost',
+        type: 'Steel',
         category: 'Status',
-        priority: -4
-    },
-    Petrification: {
-        bp: 0,
-        type: 'Rock',
-        category: 'Status'
-    },
-    'Plasma Bolt': {
-        bp: 95,
-        type: 'Electric',
-        category: 'Special',
-        secondaries: true,
         zp: 100,
         maxPower: 90
     },
-    Pollute: {
+    'Fibre Graft': {
         bp: 0,
-        type: 'Poison',
-        category: 'Status'
+        type: 'Fighting',
+        category: 'Status',
+        zp: 100,
+        maxPower: 90
     },
-    'Prize Wheel': {
-        bp: 100,
-        type: '???',
-        category: 'Physical'
-    },
-    Rot: {
-        bp: 60,
-        type: 'Poison',
+    'Pixie Trick': {
+        bp: 70,
+        type: 'Fairy',
         category: 'Physical',
         zp: 100,
-        maxPower: 90
-    },
-    'Scale Blessing': {
-        bp: 0,
-        type: 'Dragon',
-        category: 'Status'
-    },
-    Shadowbound: {
-        bp: 95,
-        type: 'Ghost',
-        category: 'Special',
+        maxPower: 100,
         makesContact: true
     },
-    'Shield Bash': {
-        bp: 80,
-        type: 'Steel',
+    Mudslide: {
+        bp: 95,
+        type: 'Ground',
         category: 'Physical',
         zp: 100,
-        maxPower: 90,
-        overrideDefensiveStat: 'spd'
+        maxPower: 100,
+        secondaries: true
     },
-    'Shock Bombs': {
-        bp: 25,
-        type: 'Electric',
-        category: 'Physical',
-        multihit: [2, 5],
-        zp: 100,
-        maxPower: 90
-    },
-    'Siege Breaker': {
-        bp: 90,
-        type: 'Rock',
-        category: 'Physical',
-        secondaries: true,
-        zp: 100,
-        maxPower: 90
-    },
-    'Sirens Song': {
-        bp: 60,
-        type: 'Psychic',
-        category: 'Special',
-        isSound: true,
-        zp: 100,
-        maxPower: 90
-    },
-    'Sky Strafe': {
-        bp: 85,
-        type: 'Flying',
-        category: 'Physical',
-        makesContact: true,
-        isSlicing: true,
-        zp: 100,
-        maxPower: 90
-    },
-    'Sky Strike': {
-        bp: 60,
-        type: 'Flying',
-        category: 'Physical',
-        zp: 100,
-        maxPower: 90
-    },
-    'Subzero Storm': {
-        bp: 65,
+    'Pack In': {
+        bp: 0,
         type: 'Ice',
-        category: 'Physical',
+        category: 'Status',
         zp: 100,
         maxPower: 90
     },
-    'Tainted Aroma': {
-        bp: 90,
-        type: 'Poison',
-        category: 'Special',
-        makesContact: true,
-        zp: 100,
-        maxPower: 90
-    },
-    'Twin Gust': {
-        bp: 40,
-        type: 'Flying',
-        category: 'Special',
-        target: 'allAdjacentFoes',
-        multihit: 2,
-        zp: 100,
-        maxPower: 90
-    },
-    'Vial Jab': {
-        bp: 90,
+    'Foul Strike': {
+        bp: 100,
         type: 'Steel',
         category: 'Physical',
         zp: 100,
-        maxPower: 90
-    },
-    'Volatile Shower': {
-        bp: 80,
-        type: 'Water',
-        category: 'Special',
-        secondaries: true,
-        zp: 100,
-        maxPower: 90
+        maxPower: 100
     }
 };
 var SV = (0, util_1.extend)(true, {}, SS, SV_PATCH);
