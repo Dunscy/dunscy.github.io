@@ -165,7 +165,7 @@ function calculateSMSSSV(gen, attacker, defender, move, field) {
         if ((isAerilate = attacker.hasAbility('Aerilate') && normal)) {
             type = 'Flying';
         }
-        else if ((isGalvanize = attacker.hasAbility('Galvanize') && normal)) {
+        else if ((isGalvanize = attacker.hasAbility('Galvanize') && normal) || (attacker.hasAbility('Kablooey') && normal)) {
             type = 'Electric';
         }
         else if ((isLiquidVoice = attacker.hasAbility('Liquid Voice') && !!move.flags.sound)) {
