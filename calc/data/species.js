@@ -13283,7 +13283,6 @@ var SV_PATCH = {
         weightkg: 345,
         abilities: { 0: 'Teravolt' }
     },
-    // PoA 
     'Soulply': {
         types: ['Ghost'],
         bs: { hp: 110, at: 90, df: 90, sa: 20, sd: 119, sp: 33 },
@@ -13377,12 +13376,6 @@ var SV_PATCH = {
         weightkg: 90,
         abilities: { 0: 'Phototroph' }
     },
-    'Mosster': {
-        types: ['Rock', 'Grass'],
-        bs: { hp: 120, at: 90, df: 120, sa: 50, sd: 100, sp: 30 },
-        weightkg: 90,
-        abilities: { 0: 'Phototroph' }
-    },
     'Eyespy': {
         types: ['Psychic'],
         bs: { hp: 40, at: 20, df: 20, sa: 40, sd: 20, sp: 40 },
@@ -13394,7 +13387,7 @@ var SV_PATCH = {
         types: ['Psychic'],
         bs: { hp: 100, at: 80, df: 60, sa: 140, sd: 60, sp: 80 },
         weightkg: 52,
-        abilities: { 0: 'Multishot' },
+        abilities: { 0: 'Multishot' }
     },
     'Iron Everlasting': {
         types: ['Normal', 'Steel'],
@@ -13485,8 +13478,7 @@ var SV_PATCH = {
         bs: { hp: 35, at: 11, df: 12, sa: 11, sd: 12, sp: 9 },
         weightkg: 2.4,
         abilities: { 0: 'Necromancy' }
-    },
-    
+    }
 };
 var SV = (0, util_1.extend)(true, {}, SS, SV_PATCH, PLA_PATCH);
 exports.SPECIES = [{}, RBY, GSC, ADV, DPP, BW, XY, SM, SS, SV];
