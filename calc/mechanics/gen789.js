@@ -184,7 +184,7 @@ function calculateSMSSSV(gen, attacker, defender, move, field) {
             desc.attackerAbility = attacker.ability;
             hasAteAbilityTypeChange = true;
         }
-        else if (isLiquidVoice) {
+        else if (isLiquidVoice || attacker.hasAbility('Kablooey')) {
             desc.attackerAbility = attacker.ability;
         }
     }

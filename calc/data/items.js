@@ -400,7 +400,10 @@ exports.MEGA_STONES = {
     Steelixite: 'Steelix',
     Swampertite: 'Swampert',
     Tyranitarite: 'Tyranitar',
-    Venusaurite: 'Venusaur'
+    Venusaurite: 'Venusaur',
+    Florgesite: 'Florges',
+    Electrodite: 'Electrode',
+    'Frosty Snorlaxite': 'Snorlax Frost'
 };
 var XY = BW.concat(__spreadArray(__spreadArray([], __read(Object.keys(exports.MEGA_STONES)), false), [
     'Assault Vest',
