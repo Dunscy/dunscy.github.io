@@ -384,7 +384,8 @@ var SV = SS.concat([
     'Sanctuary',
     'Counterclockwise',
     'Undeterred',
-    'Necromancy'
+    'Necromancy',
+    'Clean Sweep'
 ]);
 exports.ABILITIES = [[], RBY, GSC, ADV, DPP, BW, XY, SM, SS, SV];
 var Abilities = (function () {

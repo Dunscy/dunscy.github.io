@@ -183,6 +183,10 @@ function getMoveEffectiveness(gen, move, type, isGhostRevealed, isGravity, isRin
         return (gen.types.get('fighting').effectiveness[type] *
             gen.types.get('flying').effectiveness[type]);
     }
+    else if (move.named('Siren Song')) {
+        return (gen.types.get('normal').effectiveness[type] *
+            gen.types.get('fairy').effectiveness[type]);
+    }
     else {
         return gen.types.get((0, util_1.toID)(move.type)).effectiveness[type];
     }

@@ -4993,6 +4993,14 @@ var SV_PATCH = {
         category: 'Physical',
         zp: 100,
         maxPower: 100
+    },
+    'Siren Song': {
+        bp: 120,
+        type: 'Normal',
+        category: 'Special',
+        isSound: true,
+        zp: 100,
+        maxPower: 100
     }
 };
 var SV = (0, util_1.extend)(true, {}, SS, SV_PATCH);

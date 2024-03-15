@@ -13478,6 +13478,18 @@ var SV_PATCH = {
         bs: { hp: 35, at: 11, df: 12, sa: 11, sd: 12, sp: 9 },
         weightkg: 2.4,
         abilities: { 0: 'Necromancy' }
+    },
+    'Sweepdol': {
+        types: ['Grass', 'Fairy'],
+        bs: { hp: 80, at: 55, df: 80, sa: 90, sd: 105, sp: 78 },
+        weightkg: 24.5,
+        abilities: { 0: 'Clean Sweep' }
+    },
+    'Paldemaria': {
+        types: ['Water', 'Fairy'],
+        bs: { hp: 90, at: 59, df: 70, sa: 110, sd: 100, sp: 106 },
+        weightkg: 60,
+        abilities: { 0: 'Liquid Voice' }
     }
 };
 var SV = (0, util_1.extend)(true, {}, SS, SV_PATCH, PLA_PATCH);
