@@ -139,8 +139,9 @@ function getFinalSpeed(gen, pokemon, field, side) {
         (pokemon.hasAbility('Chlorophyll') && weather.includes('Sun')) ||
         (pokemon.hasAbility('Sand Rush') && weather === 'Sand') ||
         (pokemon.hasAbility('Swift Swim') && weather.includes('Rain')) ||
-        (pokemon.hasAbility('Slush Rush') && ['Hail', 'Snow'].includes(weather)) ||
-        (pokemon.hasAbility('Surge Surfer') && terrain === 'Electric')) {
+        (pokemon.hasAbility('Slush Rush', 'Ice Cleats') && ['Hail', 'Snow'].includes(weather)) ||
+        (pokemon.hasAbility('Surge Surfer') && terrain === 'Electric') ||
+        (pokemon.hasAbility('Shadow Dance') && weather.includes('Darkness'))) {
         speedMods.push(8192);
     }
     else if (pokemon.hasAbility('Quick Feet') && pokemon.status) {
@@ -158,7 +159,7 @@ function getFinalSpeed(gen, pokemon, field, side) {
     else if (pokemon.hasItem.apply(pokemon, __spreadArray(['Iron Ball'], __read(EV_ITEMS), false))) {
         speedMods.push(2048);
     }
-    else if (pokemon.hasItem('Quick Powder') && pokemon.named('Ditto')) {
+    else if (pokemon.hasItem('Quick Powder') && pokemon.named('Ditto', 'Ditto-Delta')) {
         speedMods.push(8192);
     }
     speed = OF32(pokeRound((speed * chainMods(speedMods, 410, 131172)) / 4096));
@@ -186,6 +187,9 @@ function getMoveEffectiveness(gen, move, type, isGhostRevealed, isGravity, isRin
     else if (move.named('Siren Song')) {
         return (gen.types.get('normal').effectiveness[type] *
             gen.types.get('fairy').effectiveness[type]);
+    }
+    else if (move.named('Corrode') && type === 'Steel') {
+        return 2;
     }
     else {
         return gen.types.get((0, util_1.toID)(move.type)).effectiveness[type];
@@ -219,6 +223,12 @@ function checkForecast(pokemon, weather) {
             case 'Hail':
             case 'Snow':
                 pokemon.types = ['Ice'];
+                break;
+            case 'Sand':
+                pokemon.types = ['Rock'];
+                break;
+            case 'Darkness':
+                pokemon.types = ['Dark'];
                 break;
             default:
                 pokemon.types = ['Normal'];
@@ -560,6 +570,10 @@ function getStabMod(pokemon, move, desc) {
         stabMod += 2048;
     }
     else if (pokemon.hasAbility('Protean', 'Libero') && !pokemon.teraType) {
+        stabMod += 2048;
+        desc.attackerAbility = pokemon.ability;
+    }
+    else if (pokemon.hasAbility('Ancient Presence')) {
         stabMod += 2048;
         desc.attackerAbility = pokemon.ability;
     }

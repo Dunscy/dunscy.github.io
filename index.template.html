@@ -480,6 +480,13 @@
                         <option value="4">Four allies fainted</option>
                         <option value="5">Five allies fainted</option>
                     </select>
+                    <select hidden aria-label="Heads" class="heads calc-trigger">
+                        <option value="5">Five heads</option>
+                        <option value="6">Six heads</option>
+                        <option value="7">Seven heads</option>
+                        <option value="8">Eight heads</option>
+                        <option value="9">Nine heads</option>
+                    </select>
                     <select hidden aria-label="Boosted Stat" title="What stat is boosted by this ability?" class="boostedStat calc-trigger">
                         <option value="auto">Auto-Select</option>
                         <option value="">Inactive</option>
@@ -488,6 +495,11 @@
                         <option value="spa">Special Attack</option>
                         <option value="spd">Special Defense</option>
                         <option value="spe">Speed</option>
+                    </select>
+                    <select hidden aria-label="Season" title="What season is it?" class="season calc-trigger">
+                        <option value="0">None</option>
+                        <option value="1">Summer</option>
+                        <option value="2">Winter</option>
                     </select>
                 </div>
                 <div class="gen-specific g2 g3 g4 g5 g6 g7 g8 g9">
@@ -750,7 +762,13 @@
                             <input class="visually-hidden calc-trigger" type="radio" name="weather" value="Snow" id="snow" />
                             <label class="btn btn-small btn-right" for="snow">Snow</label>
                         </span>
+                    </div> 
+
+                    <div class="gen-specific g3 g4 g5 g6 g7 g8 g9" style="width: 22.2em; margin: 5px auto;" title="Select the current weather condition.">
+                        <input class="visually-hidden calc-trigger" type="radio" name="weather" value="Darkness" id="darkness" />
+                        <label class="btn" for="darkness">Darkness</label>
                     </div>
+
                     <div class="gen-specific g6 g7 g8 g9" title="Select the current weather condition.">
                         <input class="visually-hidden calc-trigger" type="radio" name="weather" value="Harsh Sunshine" id="harsh-sunshine" />
                         <label class="btn btn-xxxwide btn-left" for="harsh-sunshine">Harsh Sunshine</label>
@@ -1023,6 +1041,17 @@
                             <td><div class="right" title="Is the defending Pok&eacute;mon switching out?">
                                 <input aria-describedby="selectSwitchingInstruction" class="visually-hidden calc-trigger" type="checkbox" id="switchingR" />
                                 <label class="btn btn-xxwide" for="switchingR">Switching Out</label>
+                            </div></td>
+                        </tr>
+                        <tr>
+                            <td><div class="left" title="Has this Pok&eacute;mon been affected by Zealous Flock?">
+                                <div hidden id="selectZealousFlockInstruction">Has this Pok&eacute;mon been affected by Zealous Flock?</div>
+                                <input aria-describedby="selectZealousFlockInstruction" class="visually-hidden calc-trigger" type="checkbox" id="zealousFlockL" />
+                                <label class="btn btn-xxwide" for="zealousFlockL">Zealous Flock</label>
+                            </div></td>
+                            <td><div class="right" title="Has this Pok&eacute;mon been affected by Zealous Flock?">
+                                <input aria-describedby="selectZealousFlockInstruction" class="visually-hidden calc-trigger" type="checkbox" id="zealousFlockR" />
+                                <label class="btn btn-xxwide" for="zealousFlockR">Zealous Flock</label>
                             </div></td>
                         </tr>
                         <tr>
@@ -1379,6 +1408,13 @@
                             <option value="4">Four allies fainted</option>
                             <option value="5">Five allies fainted</option>
                         </select>
+                        <select hidden aria-label="Heads" class="heads calc-trigger">
+                            <option value="5">Five heads</option>
+                            <option value="6">Six heads</option>
+                            <option value="7">Seven heads</option>
+                            <option value="8">Eight heads</option>
+                            <option value="9">Nine heads</option>
+                        </select>
                         <select hidden aria-label="Boosted Stat" title="What stat is boosted by this ability?" class="boostedStat calc-trigger">
                             <option value="auto">Auto-Select</option>
                             <option value="">Inactive</option>
@@ -1387,6 +1423,11 @@
                             <option value="spa">Special Attack</option>
                             <option value="spd">Special Defense</option>
                             <option value="spe">Speed</option>
+                        </select>
+                        <select hidden aria-label="Season" title="What season is it?" class="season calc-trigger">
+                            <option value="0">None</option>
+                            <option value="1">Summer</option>
+                            <option value="2">Winter</option>
                         </select>
                 </div>
                 <div class="gen-specific g2 g3 g4 g5 g6 g7 g8 g9">

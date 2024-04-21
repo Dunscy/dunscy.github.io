@@ -480,6 +480,13 @@
                         <option value="4">Four allies fainted</option>
                         <option value="5">Five allies fainted</option>
                     </select>
+                    <select hidden aria-label="Heads" class="heads calc-trigger">
+                        <option value="5">Five heads</option>
+                        <option value="6">Six heads</option>
+                        <option value="7">Seven heads</option>
+                        <option value="8">Eight heads</option>
+                        <option value="9">Nine heads</option>
+                    </select>
                     <select hidden aria-label="Boosted Stat" title="What stat is boosted by this ability?" class="boostedStat calc-trigger">
                         <option value="auto">Auto-Select</option>
                         <option value="">Inactive</option>
@@ -488,6 +495,11 @@
                         <option value="spa">Special Attack</option>
                         <option value="spd">Special Defense</option>
                         <option value="spe">Speed</option>
+                    </select>
+                    <select hidden aria-label="Season" title="What season is it?" class="season calc-trigger">
+                        <option value="0">None</option>
+                        <option value="1">Summer</option>
+                        <option value="2">Winter</option>
                     </select>
                 </div>
                 <div class="gen-specific g2 g3 g4 g5 g6 g7 g8 g9">
@@ -750,7 +762,13 @@
                             <input class="visually-hidden calc-trigger" type="radio" name="weather" value="Snow" id="snow" />
                             <label class="btn btn-small btn-right" for="snow">Snow</label>
                         </span>
+                    </div> 
+
+                    <div class="gen-specific g3 g4 g5 g6 g7 g8 g9" style="width: 22.2em; margin: 5px auto;" title="Select the current weather condition.">
+                        <input class="visually-hidden calc-trigger" type="radio" name="weather" value="Darkness" id="darkness" />
+                        <label class="btn" for="darkness">Darkness</label>
                     </div>
+
                     <div class="gen-specific g6 g7 g8 g9" title="Select the current weather condition.">
                         <input class="visually-hidden calc-trigger" type="radio" name="weather" value="Harsh Sunshine" id="harsh-sunshine" />
                         <label class="btn btn-xxxwide btn-left" for="harsh-sunshine">Harsh Sunshine</label>
@@ -1023,6 +1041,17 @@
                             <td><div class="right" title="Is the defending Pok&eacute;mon switching out?">
                                 <input aria-describedby="selectSwitchingInstruction" class="visually-hidden calc-trigger" type="checkbox" id="switchingR" />
                                 <label class="btn btn-xxwide" for="switchingR">Switching Out</label>
+                            </div></td>
+                        </tr>
+                        <tr>
+                            <td><div class="left" title="Has this Pok&eacute;mon been affected by Zealous Flock?">
+                                <div hidden id="selectZealousFlockInstruction">Has this Pok&eacute;mon been affected by Zealous Flock?</div>
+                                <input aria-describedby="selectZealousFlockInstruction" class="visually-hidden calc-trigger" type="checkbox" id="zealousFlockL" />
+                                <label class="btn btn-xxwide" for="zealousFlockL">Zealous Flock</label>
+                            </div></td>
+                            <td><div class="right" title="Has this Pok&eacute;mon been affected by Zealous Flock?">
+                                <input aria-describedby="selectZealousFlockInstruction" class="visually-hidden calc-trigger" type="checkbox" id="zealousFlockR" />
+                                <label class="btn btn-xxwide" for="zealousFlockR">Zealous Flock</label>
                             </div></td>
                         </tr>
                         <tr>
@@ -1379,6 +1408,13 @@
                             <option value="4">Four allies fainted</option>
                             <option value="5">Five allies fainted</option>
                         </select>
+                        <select hidden aria-label="Heads" class="heads calc-trigger">
+                            <option value="5">Five heads</option>
+                            <option value="6">Six heads</option>
+                            <option value="7">Seven heads</option>
+                            <option value="8">Eight heads</option>
+                            <option value="9">Nine heads</option>
+                        </select>
                         <select hidden aria-label="Boosted Stat" title="What stat is boosted by this ability?" class="boostedStat calc-trigger">
                             <option value="auto">Auto-Select</option>
                             <option value="">Inactive</option>
@@ -1387,6 +1423,11 @@
                             <option value="spa">Special Attack</option>
                             <option value="spd">Special Defense</option>
                             <option value="spe">Speed</option>
+                        </select>
+                        <select hidden aria-label="Season" title="What season is it?" class="season calc-trigger">
+                            <option value="0">None</option>
+                            <option value="1">Summer</option>
+                            <option value="2">Winter</option>
                         </select>
                 </div>
                 <div class="gen-specific g2 g3 g4 g5 g6 g7 g8 g9">
@@ -1603,7 +1644,7 @@
     </script>
     <script type="text/javascript" src="./calc/util.js?8fa0c7ff"></script>
     <script type="text/javascript" src="./calc/stats.js?9220179f"></script>
-    <script type="text/javascript" src="./calc/data/species.js?2d479354"></script>
+    <script type="text/javascript" src="./calc/data/species.js?d9ff6572"></script>
     <script type="text/javascript" src="./js/data/sets/gen9.js?f0d3a645"></script>
     <script type="text/javascript" src="./js/data/sets/gen8.js?19fe9da0"></script>
     <script type="text/javascript" src="./js/data/sets/gen7.js?17da0a9b"></script>
@@ -1615,26 +1656,26 @@
     <script type="text/javascript" src="./js/data/sets/gen1.js?8c71d659"></script>
     <script type="text/javascript" src="./calc/data/types.js?2fbce890"></script>
     <script type="text/javascript" src="./calc/data/natures.js?04f00dc5"></script>
-    <script type="text/javascript" src="./calc/data/abilities.js?886972d6"></script>
-    <script type="text/javascript" src="./calc/data/moves.js?cef3401c"></script>
-    <script type="text/javascript" src="./calc/data/items.js?42e6a86c"></script>
+    <script type="text/javascript" src="./calc/data/abilities.js?b149d567"></script>
+    <script type="text/javascript" src="./calc/data/moves.js?2a306c7b"></script>
+    <script type="text/javascript" src="./calc/data/items.js?5e5f959c"></script>
     <script type="text/javascript" src="./calc/data/index.js?083d2bc9"></script>
     <script type="text/javascript" src="./calc/move.js?01e033ea"></script>
-    <script type="text/javascript" src="./calc/pokemon.js?e0fe71b6"></script>
-    <script type="text/javascript" src="./calc/field.js?2c7f95da"></script>
+    <script type="text/javascript" src="./calc/pokemon.js?21c9790d"></script>
+    <script type="text/javascript" src="./calc/field.js?d5cfd38d"></script>
     <script type="text/javascript" src="./calc/items.js?3cbea98f"></script>
-    <script type="text/javascript" src="./calc/mechanics/util.js?6eafa2c0"></script>
-    <script type="text/javascript" src="./calc/mechanics/gen789.js?503d2e53"></script>
-    <script type="text/javascript" src="./calc/mechanics/gen56.js?03d88ea2"></script>
+    <script type="text/javascript" src="./calc/mechanics/util.js?ae52d67e"></script>
+    <script type="text/javascript" src="./calc/mechanics/gen789.js?77279270"></script>
+    <script type="text/javascript" src="./calc/mechanics/gen56.js?ff3cad3d"></script>
     <script type="text/javascript" src="./calc/mechanics/gen4.js?9282e6f7"></script>
     <script type="text/javascript" src="./calc/mechanics/gen3.js?1c9c21f5"></script>
     <script type="text/javascript" src="./calc/mechanics/gen12.js?9c9fcd6e"></script>
     <script type="text/javascript" src="./calc/calc.js?cd072314"></script>
-    <script type="text/javascript" src="./calc/desc.js?8f2d8947"></script>
+    <script type="text/javascript" src="./calc/desc.js?5a046da5"></script>
     <script type="text/javascript" src="./calc/result.js?d5c7552b"></script>
     <script type="text/javascript" src="./calc/adaptable.js?afeb3759"></script>
     <script type="text/javascript" src="./calc/index.js?2377cbc8"></script>
-    <script type="text/javascript" src="./js/shared_controls.js?16a19fc8"></script>
+    <script type="text/javascript" src="./js/shared_controls.js?ac70eff4"></script>
     <script type="text/javascript" src="./js/index_randoms_controls.js?13799446"></script>
     <script type="text/javascript" src="./js/moveset_import.js?988db89f"></script>
 </div>

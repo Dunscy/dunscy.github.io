@@ -50,7 +50,8 @@ function calculateBWXY(gen, attacker, defender, move, field) {
                 : field.hasWeather('Rain', 'Heavy Rain') ? 'Water'
                     : field.hasWeather('Sand') ? 'Rock'
                         : field.hasWeather('Hail') ? 'Ice'
-                            : 'Normal';
+                            : field.hasWeather('Darkness') ? 'Dark'
+                                : 'Normal';
         desc.weather = field.weather;
         desc.moveType = move.type;
     }
@@ -85,6 +86,8 @@ function calculateBWXY(gen, attacker, defender, move, field) {
     var isPixilate = false;
     var isRefrigerate = false;
     var isNormalize = false;
+    var isFoundry = false;
+    var isIntoxicate = false;
     var noTypeChange = move.named('Judgment', 'Nature Power', 'Techo Blast', 'Natural Gift', 'Weather Ball', 'Struggle');
     if (!move.isZ && !noTypeChange) {
         var normal = move.hasType('Normal');
@@ -97,13 +100,19 @@ function calculateBWXY(gen, attacker, defender, move, field) {
         else if ((isRefrigerate = attacker.hasAbility('Refrigerate') && normal)) {
             move.type = 'Ice';
         }
+        else if ((isFoundry = attacker.hasAbility('Foundry') && move.hasType('Rock'))) {
+            move.type = 'Fire';
+        }
+        else if ((isIntoxicate = attacker.hasAbility('Intoxicate') && normal)) {
+            move.type = 'Poison';
+        }
         else if ((isNormalize = attacker.hasAbility('Normalize'))) {
             move.type = 'Normal';
         }
-        if (isPixilate || isRefrigerate || isAerilate || isNormalize) {
+        if (isPixilate || isRefrigerate || isAerilate || isNormalize || isFoundry || isIntoxicate) {
             desc.attackerAbility = attacker.ability;
         }
-        if (isPixilate || isRefrigerate || isAerilate) {
+        if (isPixilate || isRefrigerate || isAerilate || isFoundry || isIntoxicate) {
             hasAteAbilityTypeChange = true;
         }
     }
@@ -143,7 +152,8 @@ function calculateBWXY(gen, attacker, defender, move, field) {
         (move.named('Dream Eater') && !defender.hasStatus('slp'))) {
         return result;
     }
-    if ((field.hasWeather('Harsh Sunshine') && move.hasType('Water')) ||
+    if (((field.hasWeather('Harsh Sunshine') || attacker.hasAbility('Vaporization') || defender.hasAbility('Vaporization'))
+        && move.hasType('Water')) ||
         (field.hasWeather('Heavy Rain') && move.hasType('Fire'))) {
         desc.weather = field.weather;
         return result;
@@ -163,7 +173,8 @@ function calculateBWXY(gen, attacker, defender, move, field) {
             !field.isGravity && !move.named('Thousand Arrows') &&
             !defender.hasItem('Iron Ball') && defender.hasAbility('Levitate')) ||
         (move.flags.bullet && defender.hasAbility('Bulletproof')) ||
-        (move.flags.sound && defender.hasAbility('Soundproof'))) {
+        (move.flags.sound && defender.hasAbility('Soundproof')) ||
+        (move.hasType('Flying') && defender.hasAbility('Wind Force'))) {
         desc.defenderAbility = defender.ability;
         return result;
     }
@@ -245,7 +256,7 @@ function calculateBWXY(gen, attacker, defender, move, field) {
             var newAtk = calculateAttackBWXY(gen, attacker, defender, move, field, desc, isCritical);
             var newDef = calculateDefenseBWXY(gen, attacker, defender, move, field, desc, isCritical);
             hasAteAbilityTypeChange = hasAteAbilityTypeChange &&
-                attacker.hasAbility('Aerilate', 'Galvanize', 'Pixilate', 'Refrigerate');
+                attacker.hasAbility('Aerilate', 'Galvanize', 'Pixilate', 'Refrigerate', 'Foundry', 'Intoxicate');
             if ((move.dropsStats && move.timesUsed > 1)) {
                 stabMod = (0, util_2.getStabMod)(attacker, move, desc);
             }
@@ -506,6 +517,16 @@ function calculateBPModsBWXY(gen, attacker, defender, move, field, desc, basePow
         desc.moveBP = basePower / 2;
         desc.weather = field.weather;
     }
+    else if (move.named('Solar Beam') && field.hasWeather('Darkness')) {
+        bpMods.push(2867);
+        desc.moveBP = basePower * 0.7;
+        desc.weather = field.weather;
+    }
+    else if (move.named('Surf') && field.hasWeather('Darkness')) {
+        bpMods.push(6144);
+        desc.moveBP = basePower * 1.5;
+        desc.weather = field.weather;
+    }
     if (field.attackerSide.isHelpingHand) {
         bpMods.push(6144);
         desc.isHelpingHand = true;
@@ -534,12 +555,19 @@ function calculateBPModsBWXY(gen, attacker, defender, move, field, desc, basePow
     var auraBreak = isFieldAuraBreak || isUserAuraBreak;
     if (auraActive) {
         if (auraBreak) {
-            bpMods.push(3072);
+            bpMods.push(field.hasWeather('Darkness') ? 2458 : 3072);
             desc.attackerAbility = attacker.ability;
             desc.defenderAbility = defender.ability;
         }
+        else if (aura === 'Dark Aura' && field.hasWeather('Darkness')) {
+            bpMods.push(6827);
+            if (isAttackerAura)
+                desc.attackerAbility = attacker.ability;
+            if (isDefenderAura)
+                desc.defenderAbility = defender.ability;
+        }
         else {
-            bpMods.push(5448);
+            bpMods.push((aura === 'Fairy Aura' && field.hasWeather('Darkness')) ? 4096 : 5448);
             if (isAttackerAura)
                 desc.attackerAbility = attacker.ability;
             if (isDefenderAura)
@@ -572,6 +600,9 @@ function calculateAttackBWXY(gen, attacker, defender, move, field, desc, isCriti
         move.named('Foul Play')
             ? (0, util_2.getEVDescriptionText)(gen, defender, attackStat, defender.nature)
             : (0, util_2.getEVDescriptionText)(gen, attacker, attackStat, attacker.nature);
+    if (attacker.hasAbility('Spectral Jaws') && move.flags.bite) {
+        move.category = 'Special';
+    }
     if (attackSource.boosts[attackStat] === 0 ||
         (isCritical && attackSource.boosts[attackStat] < 0)) {
         attack = attackSource.rawStats[attackStat];
@@ -604,7 +635,10 @@ function calculateAtModsBWXY(attacker, defender, move, field, desc) {
             ((attacker.hasAbility('Overgrow') && move.hasType('Grass')) ||
                 (attacker.hasAbility('Blaze') && move.hasType('Fire')) ||
                 (attacker.hasAbility('Torrent') && move.hasType('Water')) ||
-                (attacker.hasAbility('Swarm') && move.hasType('Bug')))) ||
+                (attacker.hasAbility('Swarm') && move.hasType('Bug')) ||
+                (attacker.hasAbility('Psycho Call') && move.hasType('Psychic')) ||
+                (attacker.hasAbility('Spirit Call') && move.hasType('Ghost')) ||
+                (attacker.hasAbility('Shadow Call') && move.hasType('Dark')))) ||
         (move.category === 'Special' && attacker.abilityOn && attacker.hasAbility('Plus', 'Minus'))) {
         atMods.push(6144);
         desc.attackerAbility = attacker.ability;
@@ -619,7 +653,9 @@ function calculateAtModsBWXY(attacker, defender, move, field, desc) {
         (attacker.named('Cherrim') &&
             attacker.hasAbility('Flower Gift') &&
             field.hasWeather('Sun', 'Harsh Sunshine') &&
-            move.category === 'Physical')) {
+            move.category === 'Physical') ||
+        (attacker.hasAbility('Supercell') &&
+            field.hasWeather('Rain', 'Heavy Rain', 'Darkness', 'Thunderstorm'))) {
         atMods.push(6144);
         desc.attackerAbility = attacker.ability;
         desc.weather = field.weather;
@@ -644,7 +680,7 @@ function calculateAtModsBWXY(attacker, defender, move, field, desc) {
         attacker.named('Cubone', 'Marowak', 'Marowak-Alola') &&
         move.category === 'Physical') ||
         (attacker.hasItem('Deep Sea Tooth') &&
-            attacker.named('Clamperl') &&
+            attacker.named('Clamperl', 'Clamperl-Delta') &&
             move.category === 'Special') ||
         (attacker.hasItem('Light Ball') && attacker.name.startsWith('Pikachu') && !move.isZ)) {
         atMods.push(8192);
@@ -723,8 +759,8 @@ function calculateDfModsBWXY(gen, defender, field, desc, hitsPhysical) {
         dfMods.push(6144);
         desc.defenderItem = defender.item;
     }
-    if ((defender.hasItem('Metal Powder') && defender.named('Ditto') && hitsPhysical) ||
-        (defender.hasItem('Deep Sea Scale') && defender.named('Clamperl') && !hitsPhysical)) {
+    if ((defender.hasItem('Metal Powder') && defender.named('Ditto', 'Ditto-Delta') && hitsPhysical) ||
+        (defender.hasItem('Deep Sea Scale') && defender.named('Clamperl', 'Clamperl-Delta') && !hitsPhysical)) {
         dfMods.push(8192);
         desc.defenderItem = defender.item;
     }
@@ -756,6 +792,14 @@ function calculateBaseDamageBWXY(gen, attacker, basePower, attack, defense, move
         baseDamage = (0, util_2.pokeRound)((0, util_2.OF32)(baseDamage * 2048) / 4096);
         desc.weather = field.weather;
     }
+    else if ((field.hasWeather('Darkness') && move.hasType('Dark', 'Ghost'))) {
+        baseDamage = (0, util_2.pokeRound)((0, util_2.OF32)(baseDamage * 5529) / 4096);
+        desc.weather = field.weather;
+    }
+    else if ((field.hasWeather('Darkness') && move.hasType('Fairy'))) {
+        baseDamage = (0, util_2.pokeRound)((0, util_2.OF32)(baseDamage * 3072) / 4096);
+        desc.weather = field.weather;
+    }
     if (isCritical) {
         baseDamage = Math.floor((0, util_2.OF32)(baseDamage * (gen.num > 5 ? 1.5 : 2)));
         desc.isCritical = isCritical;
@@ -767,11 +811,11 @@ function calculateFinalModsBWXY(gen, attacker, defender, move, field, desc, isCr
     if (hitCount === void 0) { hitCount = 0; }
     var finalMods = [];
     if (field.defenderSide.isReflect && move.category === 'Physical' && !isCritical) {
-        finalMods.push(field.gameType !== 'Singles' ? (gen.num > 5 ? 2732 : 2703) : 2048);
+        finalMods.push(field.gameType !== 'Singles' ? (gen.num > 5 ? 2732 : 2703) : (field.hasWeather('Darkness') ? 2184 : 2048));
         desc.isReflect = true;
     }
     else if (field.defenderSide.isLightScreen && move.category === 'Special' && !isCritical) {
-        finalMods.push(field.gameType !== 'Singles' ? (gen.num > 5 ? 2732 : 2703) : 2048);
+        finalMods.push(field.gameType !== 'Singles' ? (gen.num > 5 ? 2732 : 2703) : (field.hasWeather('Darkness') ? 2184 : 2048));
         desc.isLightScreen = true;
     }
     if (defender.hasAbility('Multiscale') && defender.curHP() === defender.maxHP() &&
@@ -806,6 +850,16 @@ function calculateFinalModsBWXY(gen, attacker, defender, move, field, desc, isCr
             finalMods.push(8192);
         }
         desc.attackerItem = attacker.item;
+    }
+    if (attacker.hasAbility('Pendulum') && move.timesUsedWithMetronome >= 1) {
+        var timesUsedWithMetronome = Math.floor(move.timesUsedWithMetronome);
+        if (timesUsedWithMetronome <= 4) {
+            finalMods.push(4096 + timesUsedWithMetronome * 819);
+        }
+        else {
+            finalMods.push(8192);
+        }
+        desc.attackerAbility = attacker.ability;
     }
     if (attacker.hasItem('Expert Belt') && typeEffectiveness > 1 && !move.isZ) {
         finalMods.push(4915);

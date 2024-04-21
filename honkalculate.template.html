@@ -423,6 +423,13 @@
                                 <option value="4">Four allies fainted</option>
                                 <option value="5">Five allies fainted</option>
                             </select>
+                            <select hidden aria-label="Heads" class="heads calc-trigger">
+                                <option value="5">Five heads</option>
+                                <option value="6">Six heads</option>
+                                <option value="7">Seven heads</option>
+                                <option value="8">Eight heads</option>
+                                <option value="9">Nine heads</option>
+                            </select>
                             <select hidden aria-label="Boosted Stat" title="What stat is boosted by this ability?" class="boostedStat calc-trigger">
                                 <option value="auto">Auto-Select</option>
                                 <option value="">Inactive</option>
@@ -673,6 +680,12 @@
                             <label class="btn btn-small btn-right" for="snow">Snow</label>
                         </span>
                     </div>
+
+                    <div class="gen-specific g3 g4 g5 g6 g7 g8 g9" style="width: 22.2em; margin: 5px auto;" title="Select the current weather condition.">
+                        <input class="visually-hidden calc-trigger" type="radio" name="weather" value="Darkness" id="darkness" />
+                        <label class="btn btn-small btn-mid" for="darkness">Darkness</label>
+                    </div>
+
                     <div class="gen-specific g6 g7 g8 g9" title="Select the current weather condition.">
                         <input class="visually-hidden" type="radio" name="weather" value="Harsh Sunshine" id="harsh-sunshine" />
                         <label class="btn btn-xxxwide btn-left" for="harsh-sunshine">Harsh Sunshine</label>

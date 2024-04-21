@@ -100,6 +100,7 @@ var Side = (function () {
         this.isBattery = !!side.isBattery;
         this.isPowerSpot = !!side.isPowerSpot;
         this.isSwitching = side.isSwitching;
+        this.isZealousFlock = !!side.isZealousFlock;
     }
     Side.prototype.clone = function () {
         return new Side(this);

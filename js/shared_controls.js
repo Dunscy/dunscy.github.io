@@ -273,11 +273,26 @@ $(".ability").bind("keyup change", function () {
 		boostedStat.hide();
 	}
 
+	var season = $(this).closest(".poke-info").find(".season");
+
+	if (ability === "Winter Joy") {
+		season.show();
+		autosetQP($(this).closest(".poke-info"));
+	} else {
+		season.hide();
+	}
+
 	if (ability === "Supreme Overlord") {
 		$(this).closest(".poke-info").find(".alliesFainted").show();
 	} else {
 		$(this).closest(".poke-info").find(".alliesFainted").val('0');
 		$(this).closest(".poke-info").find(".alliesFainted").hide();
+	}
+	if (ability === "Lernean") {
+		$(this).closest(".poke-info").find(".heads").show();
+	} else {
+		$(this).closest(".poke-info").find(".heads").val('5');
+		$(this).closest(".poke-info").find(".heads").hide();
 	}
 	if (ability === "Slow Light") {
 		$("#gravity").prop("checked", true);
@@ -289,6 +304,12 @@ $(".ability").bind("keyup change", function () {
 	} else {
 		$(this).closest(".poke-info").find(".move-hits").val('0');
 		$(this).closest(".poke-info").find(".move-hits").hide();
+	} 
+	var $metronomeControl = $(this).closest('.poke-info').find('.metronome');
+	if (ability === "Pendulum") {
+		$metronomeControl.show();
+	} else {
+		$metronomeControl.hide()
 	}
 });
 
@@ -349,6 +370,7 @@ function autosetWeather(ability, i) {
 		$("#sand").prop("checked", true);
 		break;
 	case "Snow Warning":
+	case "Sleet":
 		if (gen >= 9) {
 			lastAutoWeather[i] = "Snow";
 			$("#snow").prop("checked", true);
@@ -368,6 +390,10 @@ function autosetWeather(ability, i) {
 	case "Delta Stream":
 		lastAutoWeather[i] = "Strong Winds";
 		$("#strong-winds").prop("checked", true);
+		break;
+	case "Noctem":
+		lastAutoWeather[i] = "Darkness";
+		$("#darkness").prop("checked", true);
 		break;
 	default:
 		lastAutoWeather[i] = "";
@@ -1021,7 +1047,9 @@ function createPokemon(pokeInfo) {
 			isDynamaxed: isDynamaxed,
 			isSaltCure: pokeInfo.find(".saltcure").is(":checked"),
 			alliesFainted: parseInt(pokeInfo.find(".alliesFainted").val()),
+			heads: parseInt(pokeInfo.find(".heads").val()),
 			boostedStat: pokeInfo.find(".boostedStat").val() || undefined,
+			season: pokeInfo.find(".season").val() || undefined,
 			teraType: teraType,
 			boosts: boosts,
 			curHP: curHP,
@@ -1104,6 +1132,7 @@ function createField() {
 	var isAuroraVeil = [$("#auroraVeilL").prop("checked"), $("#auroraVeilR").prop("checked")];
 	var isBattery = [$("#batteryL").prop("checked"), $("#batteryR").prop("checked")];
 	var isPowerSpot = [$("#powerSpotL").prop("checked"), $("#powerSpotR").prop("checked")];
+	var isZealousFlock = [$("#zealousFlockL").prop("checked"), $("#zealousFlockR").prop("checked")];
 	// TODO: support switching in as well!
 	var isSwitchingOut = [$("#switchingL").prop("checked"), $("#switchingR").prop("checked")];
 
@@ -1112,7 +1141,7 @@ function createField() {
 			spikes: spikes[i], isSR: isSR[i], steelsurge: steelsurge[i],
 			vinelash: vinelash[i], wildfire: wildfire[i], cannonade: cannonade[i], volcalith: volcalith[i],
 			isReflect: isReflect[i], isLightScreen: isLightScreen[i],
-			isProtected: isProtected[i], isSeeded: isSeeded[i], isForesight: isForesight[i],
+			isProtected: isProtected[i], isSeeded: isSeeded[i], isForesight: isForesight[i], isZealousFlock: isZealousFlock[i],
 			isTailwind: isTailwind[i], isHelpingHand: isHelpingHand[i], isFlowerGift: isFlowerGift[i], isFriendGuard: isFriendGuard[i],
 			isAuroraVeil: isAuroraVeil[i], isBattery: isBattery[i], isPowerSpot: isPowerSpot[i], isSwitching: isSwitchingOut[i] ? 'out' : undefined
 		});
@@ -1311,6 +1340,8 @@ function clearField() {
 	$("#batteryR").prop("checked", false);
 	$("#switchingL").prop("checked", false);
 	$("#switchingR").prop("checked", false);
+	$("#zealousFlockL").prop("checked", false);
+	$("#zealousFlockR").prop("checked", false);
 	$("input:checkbox[name='terrain']").prop("checked", false);
 }
 

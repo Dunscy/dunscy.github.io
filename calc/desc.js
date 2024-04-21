@@ -348,7 +348,7 @@ function getEndOfTurn(gen, attacker, defender, move, field) {
     var damage = 0;
     var texts = [];
     if (field.hasWeather('Sun', 'Harsh Sunshine')) {
-        if (defender.hasAbility('Dry Skin', 'Solar Power')) {
+        if (defender.hasAbility('Dry Skin', 'Solar Power', 'Heliophobia')) {
             damage -= Math.floor(defender.maxHP() / 8);
             texts.push(defender.ability + ' damage');
         }
@@ -379,10 +379,32 @@ function getEndOfTurn(gen, attacker, defender, move, field) {
         else if (!defender.hasType('Ice') &&
             !defender.hasAbility('Magic Guard', 'Overcoat', 'Snow Cloak') &&
             !defender.hasItem('Safety Goggles') &&
+            attacker.hasAbility('Sleet')) {
+            damage -= Math.floor(defender.maxHP() / 5);
+            texts.push('Sleet damage');
+        }
+        else if (!defender.hasType('Ice') &&
+            !defender.hasAbility('Magic Guard', 'Overcoat', 'Snow Cloak') &&
+            !defender.hasItem('Safety Goggles') &&
             field.hasWeather('Hail')) {
             damage -= Math.floor(defender.maxHP() / 16);
             texts.push('hail damage');
         }
+    }
+    else if (field.hasWeather('Darkness')) {
+        if (defender.hasAbility('Absolution')) {
+            damage -= Math.floor(defender.maxHP() / 8);
+            texts.push(defender.ability + ' damage');
+        }
+        else if (defender.hasAbility('Heliophobia')) {
+            damage += Math.floor(defender.maxHP() / 8);
+            texts.push('Heliophobia recovery');
+        }
+    }
+    else if ((attacker.hasAbility('Vaporization') || defender.hasAbility('Vaporization'))
+        && defender.hasType('Water')) {
+        damage -= Math.floor(defender.maxHP() / 8);
+        texts.push('Vaporization damage');
     }
     var loseItem = move.named('Knock Off', 'Pixie Trick') && !defender.hasAbility('Sticky Hold');
     if (defender.hasItem('Leftovers') && !loseItem) {
@@ -403,10 +425,20 @@ function getEndOfTurn(gen, attacker, defender, move, field) {
         damage -= Math.floor(defender.maxHP() / 8);
         texts.push('Sticky Barb damage');
     }
+    else if (defender.hasAbility('Phototroph') && !field.hasWeather('Darkness', 'Rain', 'Heavy Rain')) {
+        damage += Math.floor(defender.maxHP() / (field.hasWeather('Harsh Sunshine', 'Sun') ? 8 : 16));
+        texts.push('Phototroph recovery');
+    }
     if (field.defenderSide.isSeeded) {
         if (!defender.hasAbility('Magic Guard', 'Ivy Wall')) {
             damage -= Math.floor(defender.maxHP() / (gen.num >= 2 ? 8 : 16));
             texts.push('Leech Seed damage');
+        }
+    }
+    if (field.defenderSide.isZealousFlock) {
+        if (!defender.hasAbility('Magic Guard')) {
+            damage -= Math.floor(defender.maxHP() / 16);
+            texts.push('Zealous Flock damage');
         }
     }
     if (field.attackerSide.isSeeded && !attacker.hasAbility('Magic Guard', 'Ivy Wall')) {
@@ -458,9 +490,9 @@ function getEndOfTurn(gen, attacker, defender, move, field) {
         }
     }
     else if ((defender.hasStatus('slp') || defender.hasAbility('Comatose')) &&
-        attacker.hasAbility('isBadDreams') &&
+        attacker.hasAbility('Bad Dreams') &&
         !defender.hasAbility('Magic Guard')) {
-        damage -= Math.floor(defender.maxHP() / 8);
+        damage -= Math.floor(defender.maxHP() / (field.hasWeather('Darkness') ? 4 : 8));
         texts.push('Bad Dreams');
     }
     if (!defender.hasAbility('Magic Guard') && TRAPPING.includes(move.name)) {
@@ -691,6 +723,9 @@ function buildDescription(description, attacker, defender) {
     if (description.alliesFainted) {
         output += Math.min(5, description.alliesFainted) +
             " ".concat(description.alliesFainted === 1 ? 'ally' : 'allies', " fainted ");
+    }
+    if (description.heads) {
+        output += Math.min(5, description.heads) + " heads ";
     }
     if (description.attackerTera) {
         output += "Tera ".concat(description.attackerTera, " ");

@@ -46,7 +46,9 @@ var Pokemon = (function () {
             ? (options.dynamaxLevel === undefined ? 10 : options.dynamaxLevel) : undefined;
         this.isSaltCure = !!options.isSaltCure;
         this.alliesFainted = options.alliesFainted;
+        this.heads = options.heads;
         this.boostedStat = options.boostedStat;
+        this.season = options.season;
         this.teraType = options.teraType;
         this.item = options.item;
         this.nature = options.nature || 'Serious';
@@ -182,7 +184,9 @@ var Pokemon = (function () {
             dynamaxLevel: this.dynamaxLevel,
             isSaltCure: this.isSaltCure,
             alliesFainted: this.alliesFainted,
+            heads: this.heads,
             boostedStat: this.boostedStat,
+            season: this.season,
             item: this.item,
             gender: this.gender,
             nature: this.nature,

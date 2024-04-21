@@ -4900,6 +4900,161 @@ var SV_PATCH = {
         isWind: true,
         target: 'allAdjacentFoes'
     },
+    'Ancient Roar': {
+        bp: 80,
+        type: 'Rock',
+        category: 'Special',
+        zp: 100,
+        target: 'allAdjacentFoes',
+        isSound: true
+    },
+    'Achilles Heel': {
+        bp: 40,
+        type: 'Normal',
+        category: 'Physical',
+        zp: 100,
+        target: 'normal',
+        makesContact: true
+    },
+    'Corrode': {
+        bp: 70,
+        type: 'Poison',
+        category: 'Special',
+        zp: 100,
+        target: 'normal'
+    },
+    'Crystal Rush': {
+        bp: 45,
+        type: 'Crystal',
+        category: 'Physical',
+        zp: 100,
+        target: 'normal',
+        makesContact: true,
+        priority: 1
+    },
+    'Custom Move': {
+        bp: 70,
+        type: '???',
+        category: 'Physical',
+        zp: 100,
+        target: 'normal',
+        makesContact: true
+    },
+    'Dark Matter': {
+        bp: 150,
+        type: 'Dark',
+        category: 'Special',
+        zp: 200,
+        target: 'normal'
+    },
+    'Draco Jet': {
+        bp: 40,
+        type: 'Dragon',
+        category: 'Physical',
+        zp: 100,
+        target: 'normal',
+        makesContact: true,
+        priority: 1
+    },
+    'Dragonify': {
+        bp: 0,
+        type: 'Dragon',
+        category: 'Status',
+        target: 'normal'
+    },
+    'Drakon Voice': {
+        bp: 105,
+        type: 'Dragon',
+        category: 'Special',
+        zp: 150,
+        target: 'allAdjacentFoes',
+        isSound: true
+    },
+    'Jet Stream': {
+        bp: 0,
+        type: 'Dragon',
+        category: 'Status',
+        target: 'normal'
+    },
+    'Livewire': {
+        bp: 0,
+        type: 'Electric',
+        category: 'Status',
+        target: 'normal'
+    },
+    'Lunar Cannon': {
+        bp: 105,
+        type: 'Dark',
+        category: 'Special',
+        zp: 200,
+        target: 'normal'
+    },
+    'Medusa Ray': {
+        bp: 0,
+        type: 'Rock',
+        category: 'Status',
+        target: 'normal'
+    },
+    'Morph': {
+        bp: 0,
+        type: 'Normal',
+        category: 'Status',
+        target: 'normal'
+    },
+    'Nanorepair': {
+        bp: 0,
+        type: 'Steel',
+        category: 'Status',
+        target: 'normal'
+    },
+    'New Moon': {
+        bp: 0,
+        type: 'Dark',
+        category: 'Status',
+        target: 'normal'
+    },
+    'Permafrost': {
+        bp: 0,
+        type: 'Ice',
+        category: 'Status',
+        target: 'normal'
+    },
+    'Retrograde': {
+        bp: 0,
+        type: 'Normal',
+        category: 'Status',
+        target: 'normal'
+    },
+    'Spirit Away': {
+        bp: 100,
+        type: 'Fairy',
+        category: 'Physical',
+        zp: 200,
+        target: 'normal',
+        makesContact: true
+    },
+    'Wildfire': {
+        bp: 0,
+        type: 'Fire',
+        category: 'Status',
+        target: 'normal'
+    },
+    'Wormhole': {
+        bp: 40,
+        type: 'Psychic',
+        category: 'Special',
+        zp: 100,
+        target: 'normal',
+        priority: 1
+    },
+    'Zombie Strike': {
+        bp: 90,
+        type: 'Ghost',
+        category: 'Physical',
+        zp: 200,
+        target: 'normal',
+        makesContact: true
+    },
     'Blooms Day': {
         bp: 150,
         type: 'Grass',
@@ -5001,6 +5156,43 @@ var SV_PATCH = {
         isSound: true,
         zp: 100,
         maxPower: 100
+    },
+    'Mindwipe': {
+        bp: 90,
+        type: 'Psychic',
+        category: 'Special',
+        zp: 100,
+        maxPower: 100,
+        secondaries: true
+    },
+    'Twin Gust': {
+        bp: 40,
+        type: 'Flying',
+        category: 'Special',
+        zp: 100,
+        maxPower: 100,
+        multihit: 2
+    },
+    'Currency Flow': {
+        bp: 85,
+        type: 'Ground',
+        category: 'Physical',
+        zp: 100,
+        maxPower: 100
+    },
+    'Rocket Grab': {
+        bp: 90,
+        type: 'Steel',
+        category: 'Physical',
+        zp: 100,
+        maxPower: 100
+    },
+    'Jump Ship': {
+        bp: 0,
+        type: 'Ghost',
+        category: 'Status',
+        zp: 100,
+        maxPower: 90
     }
 };
 var SV = (0, util_1.extend)(true, {}, SS, SV_PATCH);

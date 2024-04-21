@@ -9,7 +9,9 @@ export declare namespace State {
         dynamaxLevel?: number;
         isSaltCure?: boolean;
         alliesFainted?: number;
+        heads?: number;
         boostedStat?: I.StatIDExceptHP | 'auto';
+        season?: number;
         item?: I.ItemName;
         gender?: I.GenderName;
         nature?: I.NatureName;
@@ -72,5 +74,6 @@ export declare namespace State {
         isBattery?: boolean;
         isPowerSpot?: boolean;
         isSwitching?: 'out' | 'in';
+        isZealousFlock?: boolean;
     }
 }
