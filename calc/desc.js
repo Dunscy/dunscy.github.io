@@ -318,6 +318,13 @@ function getHazards(gen, defender, defenderSide) {
         damage += Math.floor((effectiveness * defender.maxHP()) / 8);
         texts.push('Steelsurge');
     }
+    if (defenderSide.isStealthCoals && !defender.hasAbility('Magic Guard', 'Mountaineer', 'Undeterred')) {
+        var fireType = gen.types.get('fire');
+        var effectiveness = fireType.effectiveness[defender.types[0]] *
+            (defender.types[1] ? fireType.effectiveness[defender.types[1]] : 1);
+        damage += Math.floor((effectiveness * defender.maxHP()) / 8);
+        texts.push('Stealth Coals');
+    }
     if (!defender.hasType('Flying') &&
         !defender.hasAbility('Magic Guard', 'Levitate', 'Undeterred') &&
         !defender.hasItem('Air Balloon')) {
@@ -405,6 +412,20 @@ function getEndOfTurn(gen, attacker, defender, move, field) {
         && defender.hasType('Water')) {
         damage -= Math.floor(defender.maxHP() / 8);
         texts.push('Vaporization damage');
+    }
+    else if (field.hasWeather('Thunderstorm') && (!defender.hasType("Electric", "Ground") || !defender.hasAbility("Lightning Rod", "Motor Drive", "Volt Absorb", "Magic Guard"))) {
+        var electricType = gen.types.get('electric');
+        var effectiveness = electricType.effectiveness[defender.types[0]] *
+            (defender.types[1] ? electricType.effectiveness[defender.types[1]] : 1);
+        damage -= Math.floor((effectiveness * defender.maxHP()) / 8);
+        texts.push('Thunderstorm');
+    }
+    else if (field.hasWeather('Fallout') && (!defender.hasType("Nuclear", "Steel") || !defender.hasAbility("Magic Guard"))) {
+        var nuclearType = gen.types.get('nuclear');
+        var effectiveness = nuclearType.effectiveness[defender.types[0]] *
+            (defender.types[1] ? nuclearType.effectiveness[defender.types[1]] : 1);
+        damage -= Math.floor((effectiveness * defender.maxHP()) / 8);
+        texts.push('Fallout');
     }
     var loseItem = move.named('Knock Off', 'Pixie Trick') && !defender.hasAbility('Sticky Hold');
     if (defender.hasItem('Leftovers') && !loseItem) {

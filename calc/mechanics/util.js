@@ -272,6 +272,28 @@ function checkIntimidate(gen, source, target) {
     }
 }
 exports.checkIntimidate = checkIntimidate;
+function checkPetrify(gen, source, target) {
+    var blocked = target.hasAbility('Clear Body', 'White Smoke', 'Hyper Cutter', 'Full Metal Body') ||
+        target.hasItem('Clear Amulet');
+    if (source.hasAbility('Petrify') && source.abilityOn && !blocked) {
+        if (target.hasAbility('Contrary')) {
+            target.boosts.spe = Math.min(6, target.boosts.spe + 1);
+        }
+        else if (target.hasAbility('Simple')) {
+            target.boosts.spe = Math.max(-6, target.boosts.spe - 2);
+        }
+        else {
+            target.boosts.spe = Math.max(-6, target.boosts.spe - 1);
+        }
+        if (target.hasAbility('Competitive')) {
+            target.boosts.spa = Math.min(6, target.boosts.spa + 2);
+        }
+        if (target.hasAbility('Defiant')) {
+            target.boosts.atk = Math.min(6, target.boosts.atk + 2);
+        }
+    }
+}
+exports.checkPetrify = checkPetrify;
 function checkDownload(source, target, wonderRoomActive) {
     var _a;
     if (source.hasAbility('Download')) {

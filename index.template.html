@@ -766,12 +766,16 @@
                         </span>
                     </div> 
 
-                    <div class="gen-specific g3 g4 g5 g6 g7 g8 g9" style="width: 22.2em; margin: 5px auto;" title="Select the current weather condition.">
+                    <div class="gen-specific g3 g4 g5 g6 g7 g8 g9" title="Select the current weather condition.">
                         <input class="visually-hidden calc-trigger" type="radio" name="weather" value="Darkness" id="darkness" />
-                        <label class="btn" for="darkness">Darkness</label>
+                        <label class="btn btn-xxxwide btn-left" for="darkness">Darkness</label>
+                        <input class="visually-hidden calc-trigger" type="radio" name="weather" value="Fallout" id="fallout" />
+                        <label class="btn btn-xxxwide btn-mid" for="fallout">Fallout</label>
+                        <input class="visually-hidden calc-trigger" type="radio" name="weather" value="Thunderstorm" id="thunderstorm" />
+                        <label class="btn btn-xxxwide btn-right" for="thunderstorm">Thunderstorm</label>
                     </div>
 
-                    <div class="gen-specific g6 g7 g8 g9" title="Select the current weather condition.">
+                    <div class="gen-specific g6 g7 g8 g9" style="margin: 5px auto;" title="Select the current weather condition.">
                         <input class="visually-hidden calc-trigger" type="radio" name="weather" value="Harsh Sunshine" id="harsh-sunshine" />
                         <label class="btn btn-xxxwide btn-left" for="harsh-sunshine">Harsh Sunshine</label>
                         <input class="visually-hidden calc-trigger" type="radio" name="weather" value="Heavy Rain" id="heavy-rain" />
@@ -822,6 +826,17 @@
                             <td><div class="right" title="Is Stealth Rock affecting this side of the field?">
                                 <input aria-describedby="selectStealthRockInstruction" class="visually-hidden calc-trigger" type="checkbox" id="srR" />
                                 <label class="btn btn-xwide" for="srR">Stealth Rock</label>
+                            </div></td>
+                        </tr>
+                        <tr class="gen-specific g4 g5 g6 g7 g8 g9">
+                            <div hidden id="selectStealthCoalsInstruction">Is Stealth Coals affecting this side of the field?</div>
+                            <td><div class="left" title="Is Stealth Coals affecting this side of the field?">
+                                <input aria-describedby="selectStealthCoalsInstruction" class="visually-hidden calc-trigger" type="checkbox" id="stealthcoalsL" />
+                                <label class="btn btn-xwide" for="stealthcoalsL">Stealth Coals</label>
+                            </div></td>
+                            <td><div class="right" title="Is Stealth Coals affecting this side of the field?">
+                                <input aria-describedby="selectStealthCoalsInstruction" class="visually-hidden calc-trigger" type="checkbox" id="stealthcoalsR" />
+                                <label class="btn btn-xwide" for="stealthcoalsR">Stealth Coals</label>
                             </div></td>
                         </tr>
                         <tr class="gen-specific g8 hide">

@@ -257,7 +257,7 @@ $(".ability").bind("keyup change", function () {
 
 	var ability = $(this).closest(".poke-info").find(".ability").val();
 
-	var TOGGLE_ABILITIES = ['Flash Fire', 'Intimidate', 'Minus', 'Plus', 'Slow Start', 'Unburden', 'Stakeout', 'Teraform Zero'];
+	var TOGGLE_ABILITIES = ['Flash Fire', 'Intimidate', 'Minus', 'Plus', 'Slow Start', 'Unburden', 'Stakeout', 'Teraform Zero', 'Petrify'];
 
 	if (TOGGLE_ABILITIES.indexOf(ability) >= 0) {
 		$(this).closest(".poke-info").find(".abilityToggle").show();
@@ -394,6 +394,14 @@ function autosetWeather(ability, i) {
 	case "Noctem":
 		lastAutoWeather[i] = "Darkness";
 		$("#darkness").prop("checked", true);
+		break;
+	case "Stormbringer":
+			lastAutoWeather[i] = "Thunderstorm";
+			$("#thunderstorm").prop("checked", true);
+			break;
+	case "Chernobyl":
+		lastAutoWeather[i] = "Fallout";
+		$("#fallout").prop("checked", true);
 		break;
 	default:
 		lastAutoWeather[i] = "";
@@ -654,6 +662,12 @@ $(".set-selector").change(function () {
 			if (regSets) {
 				pokeObj.find(".teraType").val(set.teraType || getForcedTeraType(pokemonName) || pokemon.types[0]);
 			}
+
+			if ($("#default-level-120").prop("checked")) {
+				set.level = 120;
+				$("#default-level-120").change();
+			}
+
 			pokeObj.find(".level").val(set.level === undefined ? 100 : set.level);
 			pokeObj.find(".hp .evs").val((set.evs && set.evs.hp !== undefined) ? set.evs.hp : 0);
 			pokeObj.find(".hp .ivs").val((set.ivs && set.ivs.hp !== undefined) ? set.ivs.hp : 31);
@@ -1105,6 +1119,7 @@ function createField() {
 	var isWonderRoom = $("#wonderroom").prop("checked");
 	var isGravity = $("#gravity").prop("checked");
 	var isSR = [$("#srL").prop("checked"), $("#srR").prop("checked")];
+	var isStealthCoals = [$("#stealthcoalsL").prop("checked"), $("#stealthcoalsR").prop("checked")];
 	var weather;
 	var spikes;
 	if (gen === 2) {
@@ -1138,7 +1153,7 @@ function createField() {
 
 	var createSide = function (i) {
 		return new calc.Side({
-			spikes: spikes[i], isSR: isSR[i], steelsurge: steelsurge[i],
+			spikes: spikes[i], isSR: isSR[i], isStealthCoals: isStealthCoals[i], steelsurge: steelsurge[i],
 			vinelash: vinelash[i], wildfire: wildfire[i], cannonade: cannonade[i], volcalith: volcalith[i],
 			isReflect: isReflect[i], isLightScreen: isLightScreen[i],
 			isProtected: isProtected[i], isSeeded: isSeeded[i], isForesight: isForesight[i], isZealousFlock: isZealousFlock[i],
@@ -1304,6 +1319,8 @@ function clearField() {
 	$("#gravity").prop("checked", false);
 	$("#srL").prop("checked", false);
 	$("#srR").prop("checked", false);
+	$("#stealthcoalsL").prop("checked", false);
+	$("#stealthcoalsR").prop("checked", false);
 	$("#spikesL0").prop("checked", true);
 	$("#spikesR0").prop("checked", true);
 	$("#gscSpikesL").prop("checked", false);
