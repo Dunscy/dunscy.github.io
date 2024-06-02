@@ -13539,7 +13539,7 @@ var SV_PATCH = {
     },
     'Sirentom': {
         types: ['Ghost', 'Water'],
-        bs: { hp: 150, at: 50, df: 85, sa: 96, sd: 115, sp: 19 },
+        bs: { hp: 140, at: 70, df: 62, sa: 96, sd: 105, sp: 25 },
         weightkg: 449,
         abilities: { 0: 'Undeterred' }
     },
