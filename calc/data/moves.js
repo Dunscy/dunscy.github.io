@@ -5193,6 +5193,63 @@ var SV_PATCH = {
         category: 'Status',
         zp: 100,
         maxPower: 90
+    },
+    'Molten Glaze': {
+        bp: 60,
+        type: 'Fire',
+        category: 'Special',
+        zp: 100,
+        maxPower: 100,
+        target: 'allAdjacentFoes'
+    },
+    'Psycho Barrage': {
+        bp: 120,
+        type: 'Psychic',
+        category: 'Physical',
+        zp: 100,
+        maxPower: 100,
+        makesContact: true
+    },
+    'Severing Wind': {
+        bp: 90,
+        type: 'Flying',
+        category: 'Special',
+        zp: 100,
+        maxPower: 100,
+        isSlicing: true,
+        isWind: true,
+        target: 'allAdjacentFoes'
+    },
+    'Mindtrap': {
+        bp: 40,
+        type: 'Psychic',
+        category: 'Physical',
+        zp: 100,
+        maxPower: 100,
+        makesContact: true
+    },
+    'Megaton Slice': {
+        bp: 120,
+        type: 'Dark',
+        category: 'Physical',
+        zp: 100,
+        maxPower: 100,
+        isSlicing: true
+    },
+    'Lycan Pounce': {
+        bp: 100,
+        type: 'Fighting',
+        category: 'Physical',
+        zp: 100,
+        maxPower: 100,
+        makesContact: true
+    },
+    'Spud Mortar': {
+        bp: 120,
+        type: 'Grass',
+        category: 'Special',
+        zp: 100,
+        maxPower: 100
     }
 };
 var SV = (0, util_1.extend)(true, {}, SS, SV_PATCH);

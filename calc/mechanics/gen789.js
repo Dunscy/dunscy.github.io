@@ -520,6 +520,7 @@ function calculateBasePowerSMSSSV(gen, attacker, defender, move, field, hasAteAb
             desc.moveBP = basePower;
             break;
         case 'Pursuit':
+        case 'Mindtrap':
             var switching = field.defenderSide.isSwitching === 'out';
             basePower = move.bp * (switching ? 2 : 1);
             if (switching)
@@ -711,6 +712,7 @@ function calculateBasePowerSMSSSV(gen, attacker, defender, move, field, hasAteAb
 }
 exports.calculateBasePowerSMSSSV = calculateBasePowerSMSSSV;
 function calculateBPModsSMSSSV(gen, attacker, defender, move, field, desc, basePower, hasAteAbilityTypeChange, turnOrder) {
+    var _a;
     var bpMods = [];
     var resistedKnockOffDamage = (!defender.item || (0, util_2.isQPActive)(defender, field)) ||
         (defender.named('Dialga-Origin') && defender.hasItem('Adamant Crystal')) ||
@@ -962,6 +964,10 @@ function calculateBPModsSMSSSV(gen, attacker, defender, move, field, desc, baseP
         bpMods.push(4506);
         desc.attackerItem = attacker.item;
     }
+    if (((_a = attacker.item) === null || _a === void 0 ? void 0 : _a.endsWith('Berry')) && move.named('Spud Mortar')) {
+        bpMods.push(6144);
+        desc.attackerItem = attacker.item;
+    }
     return bpMods;
 }
 exports.calculateBPModsSMSSSV = calculateBPModsSMSSSV;
@@ -976,12 +982,12 @@ function calculateAttackSMSSSV(gen, attacker, defender, move, field, desc, isCri
     if (attacker.hasAbility('Spectral Jaws') && move.flags.bite) {
         move.category = 'Special';
     }
-    var attackStat = move.named('Shell Side Arm') &&
-        (0, util_2.getShellSideArmCategory)(attacker, defender) === 'Physical'
+    var attackStat = (move.named('Shell Side Arm') &&
+        (0, util_2.getShellSideArmCategory)(attacker, defender) === 'Physical') || (attacker.hasAbility('Multitasker') && (attacker.stats.atk > attacker.stats.spa))
         ? 'atk'
         : move.named('Body Press')
             ? 'def'
-            : move.category === 'Special'
+            : move.category === 'Special' || (attacker.hasAbility('Multitasker') && (attacker.stats.spa > attacker.stats.atk))
                 ? 'spa'
                 : 'atk';
     desc.attackEVs =
