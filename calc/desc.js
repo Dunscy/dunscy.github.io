@@ -757,7 +757,8 @@ function buildDescription(description, attacker, defender) {
     if (description.isSwordOfRuin) {
         output += 'Sword of Ruin ';
     }
-    output += description.attackerName + ' ';
+    output += description.attackerName;
+    output += ' ';
     if (description.isHelpingHand) {
         output += 'Helping Hand ';
     }

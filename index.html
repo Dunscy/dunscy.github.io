@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <title>Pok&eacute;mon Damage Calculator</title>
     <link type="text/css" rel="stylesheet" href="./js/vendor/select2/select2.css" />
-    <link type="text/css" rel="stylesheet" href="./css/main.css?788583a2" />
+    <link type="text/css" rel="stylesheet" href="./css/main.css?f6ecebbd" />
     <link type="text/css" rel="stylesheet" href="./css/vendor/bootstrap.css" />
     <link type="text/css" rel="stylesheet" href="./css/dark-theme.css" id="dark-theme-styles">
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -144,6 +144,19 @@
         <fieldset class="poke-info" id="p1">
             <legend align="center">Pok&eacute;mon 1</legend>
             <input type="text" class="set-selector calc-trigger" />
+            <!---->
+            <fieldset class="fusion-info">
+                <legend align="center" class="collapsible" onclick="collapse(this)">Fuse</legend>
+                <div class="content">
+                    <input type="text" class="fusion-selector calc-trigger" />
+                    <input type="checkbox" id="fusionToggle" class="fusionToggle terrain-trigger calc-trigger">
+                    <!--
+                    <button id="swap1" class="swap-button">Swap</button>
+                    -->
+                </div>
+            </fieldset>
+            
+           <!---->
             <span id="importedSetsOptions" style="width:auto; display:none">
                 <input type="checkbox" id="importedSets" /> Only show imported sets <br />
                 <button id="clearSets">Clear Imported Sets</button>
@@ -176,13 +189,6 @@
                     -->
                     <input class="level calc-trigger" id="levelL1" value="100" inputmode="decimal" />
                 </div>
-                   <!--
-                    THE CODE BELOW THIS IS FOR FUSION COMPONENT
-                    
-                <input type="text" class="set-selector calc-trigger" />
-                    
-                    THE CODE ABOVE THIS IS FOR FUSION COMPONENT
-                    -->
                 <div class="hide">
                     <label for="weightL1">Weight (kg)</label>
                     <input class="weight calc-trigger" id="weightL1" value="10.0" />
@@ -1100,6 +1106,18 @@
         <fieldset class="poke-info" id="p2">
             <legend align="center">Pok&eacute;mon 2</legend>
             <input type="text" class="set-selector calc-trigger" />
+             <!---->
+             <fieldset class="fusion-info">
+                <legend align="center" class="collapsible" onclick="collapse(this)">Fuse</legend>
+                <div class="content">
+                <input type="text" class="fusion-selector calc-trigger" />
+                <input type="checkbox" id="fusionToggle" class="fusionToggle terrain-trigger calc-trigger">
+                <!--
+                <button id="swap2" class="swap-button">Swap</button>
+                -->
+                </div>
+            </fieldset>
+            <!---->
             <span id="importedSetsOptions" style="width:auto; display:none">
                 <input type="checkbox" id="importedSets" /> Only show imported sets <br />
                 <button id="clearSets">Clear Imported Sets</button>
@@ -1662,7 +1680,7 @@
     <script type="text/javascript" src="./calc/util.js?8fa0c7ff"></script>
     <script type="text/javascript" src="./calc/stats.js?9220179f"></script>
     <script type="text/javascript" src="./calc/data/species.js?f930462f"></script>
-    <script type="text/javascript" src="./js/data/sets/gen9.js?a436bf01"></script>
+    <script type="text/javascript" src="./js/data/sets/gen9.js?3d8c6acf"></script>
     <script type="text/javascript" src="./js/data/sets/gen8.js?19fe9da0"></script>
     <script type="text/javascript" src="./js/data/sets/gen7.js?17da0a9b"></script>
     <script type="text/javascript" src="./js/data/sets/gen6.js?3d9a6c29"></script>
@@ -1688,11 +1706,11 @@
     <script type="text/javascript" src="./calc/mechanics/gen3.js?1c9c21f5"></script>
     <script type="text/javascript" src="./calc/mechanics/gen12.js?9c9fcd6e"></script>
     <script type="text/javascript" src="./calc/calc.js?cd072314"></script>
-    <script type="text/javascript" src="./calc/desc.js?3d755c0c"></script>
+    <script type="text/javascript" src="./calc/desc.js?cfc72729"></script>
     <script type="text/javascript" src="./calc/result.js?d5c7552b"></script>
     <script type="text/javascript" src="./calc/adaptable.js?afeb3759"></script>
     <script type="text/javascript" src="./calc/index.js?2377cbc8"></script>
-    <script type="text/javascript" src="./js/shared_controls.js?a7b8f42c"></script>
+    <script type="text/javascript" src="./js/shared_controls.js?6b271ecf"></script>
     <script type="text/javascript" src="./js/index_randoms_controls.js?13799446"></script>
     <script type="text/javascript" src="./js/moveset_import.js?988db89f"></script>
 </div>
