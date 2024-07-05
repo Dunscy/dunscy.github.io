@@ -11599,7 +11599,7 @@ var SV_PATCH = {
     },
     'Dugtrio-Delta': {
         types: ['Ice', 'Normal'],
-        bs: { hp: 35, at: 100, df: 50, sa: 50, sd: 70, sp: 120 },
+        bs: { hp: 35, at: 80, df: 50, sa: 50, sd: 70, sp: 120 },
         weightkg: 33.3,
         abilities: { 0: 'Snow Cloak' }
     },
