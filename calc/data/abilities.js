@@ -449,6 +449,7 @@ var SV = SS.concat([
     'Starfall',
     'Zealous Flock',
     'Multitasker',
+    'Glutinous Rice'
 ]);
 exports.ABILITIES = [[], RBY, GSC, ADV, DPP, BW, XY, SM, SS, SV];
 var Abilities = (function () {

@@ -690,6 +690,10 @@ function calculateBasePowerSMSSSV(gen, attacker, defender, move, field, hasAteAb
             basePower = attacker.teraType === 'Stellar' ? 100 : 80;
             desc.moveBP = basePower;
             break;
+        case 'Quaking Thrust':
+            basePower = move.bp * (turnOrder !== 'last' ? 1.5 : 1);
+            desc.moveBP = basePower;
+            break;
         default:
             basePower = move.bp;
     }
@@ -1092,6 +1096,10 @@ function calculateAtModsSMSSSV(gen, attacker, defender, move, field, desc) {
     }
     if (gen.num >= 9 && defender.hasAbility('Heatproof') && move.hasType('Fire')) {
         atMods.push(2048);
+        desc.defenderAbility = defender.ability;
+    }
+    if (defender.hasAbility('Glutinous Rice') && move.hasType('Fighting')) {
+        atMods.push(1024);
         desc.defenderAbility = defender.ability;
     }
     var isTabletsOfRuinActive = (defender.hasAbility('Tablets of Ruin') || field.isTabletsOfRuin) &&

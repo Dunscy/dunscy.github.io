@@ -5250,6 +5250,21 @@ var SV_PATCH = {
         category: 'Special',
         zp: 100,
         maxPower: 100
+    },
+    'Gorgon Fang': {
+        bp: 75,
+        type: 'Rock',
+        makesContact: true,
+        isBite: true,
+        secondaries: true,
+        category: 'Physical'
+    },
+    'Quaking Thrust': {
+        bp: 75,
+        type: 'Ground',
+        makesContact: true,
+        isSlicing: true,
+        category: 'Physical'
     }
 };
 var SV = (0, util_1.extend)(true, {}, SS, SV_PATCH);
