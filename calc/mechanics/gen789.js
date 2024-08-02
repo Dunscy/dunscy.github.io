@@ -955,7 +955,9 @@ function calculateBPModsSMSSSV(gen, attacker, defender, move, field, desc, baseP
         (attacker.name.includes('Ogerpon-Cornerstone') && attacker.hasItem('Cornerstone Mask')) ||
         (attacker.name.includes('Ogerpon-Hearthflame') && attacker.hasItem('Hearthflame Mask')) ||
         (attacker.name.includes('Ogerpon-Wellspring') && attacker.hasItem('Wellspring Mask')) ||
-        (attacker.hasItem('Smooth Rock') && move.name === 'Desert Tempest')) {
+        (attacker.hasItem('Smooth Rock') && move.name === 'Desert Tempest') ||
+        (attacker.hasItem('Icy Rock') && move.name === 'Subzero Storm') ||
+        (attacker.hasItem('Heat Rock') && move.name === 'Fiery Maelstrom')) {
         bpMods.push(4915);
         desc.attackerItem = attacker.item;
     }
@@ -1276,7 +1278,7 @@ function calculateBaseDamageSMSSSV(gen, attacker, defender, basePower, attack, d
             desc.weather = field.weather;
         }
         else if ((field.hasWeather('Sun') && move.hasType('Water')) ||
-            (field.hasWeather('Rain') && move.hasType('Fire'))) {
+            (field.hasWeather('Rain') && move.hasType('Fire') && !move.named('Superheated Crash'))) {
             baseDamage = (0, util_2.pokeRound)((0, util_2.OF32)(baseDamage * 2048) / 4096);
             desc.weather = field.weather;
         }

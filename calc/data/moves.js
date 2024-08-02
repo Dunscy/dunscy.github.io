@@ -5078,8 +5078,22 @@ var SV_PATCH = {
         priority: -1
     },
     'Desert Tempest': {
-        bp: 65,
+        bp: 80,
         type: 'Rock',
+        category: 'Special',
+        zp: 100,
+        maxPower: 90
+    },
+    'Subzero Storm': {
+        bp: 80,
+        type: 'Ice',
+        category: 'Special',
+        zp: 100,
+        maxPower: 90
+    },
+    'Fiery Maelstrom': {
+        bp: 80,
+        type: 'Fire',
         category: 'Special',
         zp: 100,
         maxPower: 90
@@ -5265,6 +5279,22 @@ var SV_PATCH = {
         makesContact: true,
         isSlicing: true,
         category: 'Physical'
+    },
+    'Rift Jump': {
+        bp: 0,
+        type: 'Electric',
+        category: 'Status',
+        zp: 100,
+        maxPower: 90
+    },
+    'Superheated Crash': {
+        bp: 90,
+        type: 'Fire',
+        category: 'Physical',
+        zp: 190,
+        maxPower: 140,
+        makesContact: true,
+        recoil: [33, 100]
     }
 };
 var SV = (0, util_1.extend)(true, {}, SS, SV_PATCH);

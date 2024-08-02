@@ -729,7 +729,8 @@ var RBY = {
     Starmie: {
         types: ['Water', 'Psychic'],
         bs: { hp: 60, at: 75, df: 85, sp: 115, sl: 100 },
-        weightkg: 80
+        weightkg: 80,
+        nfe: true
     },
     Staryu: {
         types: ['Water'],
@@ -2541,7 +2542,8 @@ var ADV_PATCH = {
         types: ['Normal'],
         bs: { hp: 60, at: 60, df: 60, sa: 60, sd: 60, sp: 60 },
         weightkg: 5,
-        abilities: { 0: 'Own Tempo' }
+        abilities: { 0: 'Own Tempo' },
+        nfe: true
     },
     Spoink: {
         types: ['Psychic'],
@@ -13433,7 +13435,7 @@ var SV_PATCH = {
     },
     'Wrighvern': {
         types: ['Dragon', 'Flying'],
-        bs: { hp: 90, at: 90, df: 80, sa: 125, sd: 85, sp: 130 },
+        bs: { hp: 90, at: 85, df: 80, sa: 130, sd: 85, sp: 130 },
         weightkg: 90,
         abilities: { 0: 'Technician' }
     },
@@ -13509,7 +13511,7 @@ var SV_PATCH = {
     },
     'Bewitwing': {
         types: ['Ghost', 'Fairy'],
-        bs: { hp: 95, at: 100, df: 85, sa: 85, sd: 130, sp: 90 },
+        bs: { hp: 85, at: 100, df: 85, sa: 62, sd: 125, sp: 90 },
         weightkg: 9,
         abilities: { 0: 'Prankster' }
     },
@@ -13539,7 +13541,7 @@ var SV_PATCH = {
     },
     'Sirentom': {
         types: ['Ghost', 'Water'],
-        bs: { hp: 140, at: 70, df: 62, sa: 96, sd: 105, sp: 25 },
+        bs: { hp: 150, at: 70, df: 62, sa: 99, sd: 105, sp: 19 },
         weightkg: 449,
         abilities: { 0: 'Undeterred' }
     },
@@ -13704,6 +13706,50 @@ var SV_PATCH = {
         bs: { hp: 60, at: 105, df: 97, sa: 45, sd: 97, sp: 106 },
         weightkg: 159,
         abilities: { 0: "Dry Skin" }
+    },
+    "Harportia": {
+        types: ["Electric", "Flying"],
+        bs: { hp: 91, at: 105, df: 73, sa: 62, sd: 90, sp: 124 },
+        weightkg: 238,
+        abilities: { 0: "Tough Claws" }
+    },
+    "Suenami": {
+        types: ["Water"],
+        bs: { hp: 85, at: 63, df: 70, sa: 120, sd: 95, sp: 37 },
+        weightkg: 62.3,
+        abilities: { 0: "Magic Bounce" }
+    },
+    "Cetitan-Hisui": {
+        types: ["Water", "Fire"],
+        bs: { hp: 170, at: 113, df: 75, sa: 40, sd: 60, sp: 63 },
+        weightkg: 750,
+        abilities: { 0: "Swift Swim" }
+    },
+    "Suicune-Supra": {
+        types: ["Fire"],
+        bs: { hp: 100, at: 75, df: 115, sa: 90, sd: 115, sp: 85 },
+        weightkg: 187,
+        abilities: { 0: "Drought" }
+    },
+    "Entei-Supra": {
+        types: ["Ice"],
+        bs: { hp: 115, at: 115, df: 85, sa: 90, sd: 75, sp: 100 },
+        weightkg: 198,
+        abilities: { 0: "Snow Warning" }
+    },
+    "Premotee": {
+        types: ["Water"],
+        bs: { hp: 100, at: 30, df: 50, sa: 70, sd: 75, sp: 35 },
+        weightkg: 31.7,
+        abilities: { 0: "Stalwart" },
+        nfe: true
+    },
+    "Voliable": {
+        types: ["Grass", "Flying"],
+        bs: { hp: 74, at: 40, df: 115, sa: 56, sd: 50, sp: 70 },
+        weightkg: 131.5,
+        abilities: { 0: "Overcoat" },
+        nfe: true
     }
 };
 var SV = (0, util_1.extend)(true, {}, SS, SV_PATCH, PLA_PATCH);

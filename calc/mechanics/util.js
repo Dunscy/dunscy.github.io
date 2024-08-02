@@ -177,6 +177,9 @@ function getMoveEffectiveness(gen, move, type, isGhostRevealed, isGravity, isRin
     else if ((isRingTarget || isGravity) && type === 'Flying' && move.hasType('Ground')) {
         return 1;
     }
+    else if (move.named('Superheated Crash') && type === 'Water') {
+        return 1;
+    }
     else if (move.named('Freeze-Dry') && type === 'Water') {
         return 2;
     }

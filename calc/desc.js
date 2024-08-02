@@ -67,6 +67,18 @@ function getRecovery(gen, attacker, defender, move, damage, notation) {
     if (move.named('G-Max Finale')) {
         recovery[0] = recovery[1] = Math.round(attacker.maxHP() / 6);
     }
+    if (attacker.hasAbility('Vampiric') && move.flags.contact) {
+        for (var i = 0; i < minD.length; i++) {
+            recovery[0] += Math.round(minD[i] * move.hits / 4);
+            recovery[1] += Math.round(maxD[i] * move.hits / 4);
+        }
+    }
+    if (attacker.hasAbility('Blood Lust')) {
+        for (var i = 0; i < minD.length; i++) {
+            recovery[0] += Math.round(minD[i] * move.hits / 6);
+            recovery[1] += Math.round(maxD[i] * move.hits / 6);
+        }
+    }
     if (move.drain) {
         var percentHealed = move.drain[0] / move.drain[1];
         var max = Math.round(defender.maxHP() * percentHealed);
