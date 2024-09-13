@@ -141,7 +141,8 @@ function getFinalSpeed(gen, pokemon, field, side) {
         (pokemon.hasAbility('Swift Swim') && weather.includes('Rain')) ||
         (pokemon.hasAbility('Slush Rush', 'Ice Cleats') && ['Hail', 'Snow'].includes(weather)) ||
         (pokemon.hasAbility('Surge Surfer') && terrain === 'Electric') ||
-        (pokemon.hasAbility('Shadow Dance') && weather.includes('Darkness'))) {
+        (pokemon.hasAbility('Shadow Dance') && weather.includes('Darkness')) ||
+        (pokemon.hasAbility('Psycho Slider') && terrain === 'Psychic')) {
         speedMods.push(8192);
     }
     else if (pokemon.hasAbility('Quick Feet') && pokemon.status) {
@@ -594,7 +595,7 @@ function getStabMod(pokemon, move, desc) {
     if (pokemon.hasOriginalType(move.type)) {
         stabMod += 2048;
     }
-    else if (pokemon.hasAbility('Protean', 'Libero') && !pokemon.teraType) {
+    else if (pokemon.hasAbility('Protean', 'Libero', 'Hue Shift') && !pokemon.teraType) {
         stabMod += 2048;
         desc.attackerAbility = pokemon.ability;
     }

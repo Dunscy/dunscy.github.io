@@ -405,8 +405,8 @@ function calculateSMSSSV(gen, attacker, defender, move, field) {
         return result;
     }
     var attack = calculateAttackSMSSSV(gen, attacker, defender, move, field, desc, isCritical);
-    var attackSource = move.named('Foul Play') ? defender : attacker;
-    if (move.named('Photon Geyser', 'Light That Burns the Sky') ||
+    var attackSource = move.named('Foul Play', 'Shadowbound') ? defender : attacker;
+    if (move.named('Photon Geyser', 'Light That Burns the Sky', 'Jagged Shot') ||
         (move.named('Tera Blast') && attackSource.teraType)) {
         move.category = attackSource.stats.atk > attackSource.stats.spa ? 'Physical' : 'Special';
     }
@@ -818,7 +818,8 @@ function calculateBPModsSMSSSV(gen, attacker, defender, move, field, desc, baseP
         (attacker.hasAbility('Strong Jaw') && move.flags.bite) ||
         (attacker.hasAbility('Steely Spirit') && move.hasType('Steel')) ||
         (attacker.hasAbility('Sharpness') && move.flags.slicing) ||
-        (attacker.hasAbility('Acceleration') && move.priority > 0)) {
+        (attacker.hasAbility('Acceleration') && move.priority > 0) ||
+        (attacker.hasAbility('Cannoneer') && move.flags.bullet)) {
         bpMods.push(6144);
         desc.attackerAbility = attacker.ability;
     }
@@ -896,8 +897,12 @@ function calculateBPModsSMSSSV(gen, attacker, defender, move, field, desc, baseP
     if (!move.isMax && hasAteAbilityTypeChange) {
         bpMods.push(4915);
     }
+    if (attacker.hasAbility('Spitting Fire') && move.hasType('Fire')) {
+        move.flags.sound = 1;
+    }
     if ((attacker.hasAbility('Reckless') && (move.recoil || move.hasCrashDamage)) ||
-        (attacker.hasAbility('Iron Fist') && move.flags.punch)) {
+        (attacker.hasAbility('Iron Fist') && move.flags.punch) ||
+        (attacker.hasAbility('Spitting Fire') && move.flags.sound)) {
         bpMods.push(4915);
         desc.attackerAbility = attacker.ability;
     }
@@ -980,8 +985,8 @@ exports.calculateBPModsSMSSSV = calculateBPModsSMSSSV;
 function calculateAttackSMSSSV(gen, attacker, defender, move, field, desc, isCritical) {
     if (isCritical === void 0) { isCritical = false; }
     var attack;
-    var attackSource = move.named('Foul Play') ? defender : attacker;
-    if (move.named('Photon Geyser', 'Light That Burns The Sky') ||
+    var attackSource = move.named('Foul Play', 'Shadowbound') ? defender : attacker;
+    if (move.named('Photon Geyser', 'Light That Burns The Sky', 'Jagged Shot') ||
         (move.named('Tera Blast') && attackSource.teraType)) {
         move.category = attackSource.stats.atk > attackSource.stats.spa ? 'Physical' : 'Special';
     }

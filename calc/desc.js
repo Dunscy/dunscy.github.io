@@ -92,6 +92,12 @@ function getRecovery(gen, attacker, defender, move, damage, notation) {
             }
         }
     }
+    if (attacker.hasAbility('Belligerent Quills') && move.flags.contact) {
+        var dmg = Math.round(defender.maxHP() / 16);
+        var dmgDisplay = toDisplay(notation, dmg, defender.maxHP());
+        text = "".concat(dmgDisplay).concat(notation, " additional damage");
+        return { recovery: recovery, text: text };
+    }
     if (recovery[1] === 0)
         return { recovery: recovery, text: text };
     var minHealthRecovered = toDisplay(notation, recovery[0], attacker.maxHP());
@@ -473,6 +479,10 @@ function getEndOfTurn(gen, attacker, defender, move, field) {
             damage -= Math.floor(defender.maxHP() / 16);
             texts.push('Zealous Flock damage');
         }
+    }
+    if (attacker.hasAbility('Belligerent Quills') && move.flags.contact) {
+        damage -= Math.floor(defender.maxHP() / 16);
+        texts.push('Belligerent Quills damage');
     }
     if (field.attackerSide.isSeeded && !attacker.hasAbility('Magic Guard', 'Ivy Wall')) {
         var recovery = Math.floor(attacker.maxHP() / (gen.num >= 2 ? 8 : 16));

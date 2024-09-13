@@ -13861,7 +13861,7 @@ var SV_PATCH = {
     },
     'Meditao': {
         types: ['Psychic', 'Fighting'],
-        bs: { hp: 60, at: 65, df: 65, sa: 65, sd: 65, sp: 90 },
+        bs: { hp: 80, at: 80, df: 80, sa: 80, sd: 80, sp: 80 },
         weightkg: 31.5,
         abilities: { 0: 'Inner Focus' },
         origin: "Pokeathlon"
@@ -13940,7 +13940,7 @@ var SV_PATCH = {
     },
     'Lunachi': {
         types: ['Fairy', 'Dark'],
-        bs: { hp: 108, at: 87, df: 72, sa: 87, sd: 72, sp: 114 },
+        bs: { hp: 108, at: 87, df: 82, sa: 87, sd: 82, sp: 114 },
         weightkg: 11,
         abilities: { 0: 'Sacred Treasures' },
         origin: "Pokeathlon"
@@ -14305,7 +14305,7 @@ var SV_PATCH = {
         types: ["Water", "Fire"],
         bs: { hp: 170, at: 113, df: 75, sa: 40, sd: 60, sp: 63 },
         weightkg: 750,
-        abilities: { 0: "Swift Swim" },
+        abilities: { 0: "Reckless" },
         origin: "Pokeathlon"
     },
     "Suicune-Supra": {
@@ -14336,6 +14336,98 @@ var SV_PATCH = {
         weightkg: 131.5,
         abilities: { 0: "Overcoat" },
         nfe: true,
+        origin: "Pokeathlon"
+    },
+    "Primarina-Olul": {
+        types: ["Psychic", "Fire"],
+        bs: { hp: 80, at: 50, df: 84, sa: 130, sd: 116, sp: 70 },
+        weightkg: 44,
+        abilities: { 0: "Spitting Fire" },
+        origin: "Pokeathlon"
+    },
+    "Decidueye-Olul": {
+        types: ["Rock", "Dark"],
+        bs: { hp: 80, at: 110, df: 85, sa: 110, sd: 90, sp: 55 },
+        weightkg: 44,
+        abilities: { 0: "Sniper" },
+        origin: "Pokeathlon"
+    },
+    "Kaleidleon": {
+        types: ["Normal", "Dragon"],
+        bs: { hp: 70, at: 100, df: 60, sa: 100, sd: 140, sp: 80 },
+        weightkg: 80,
+        abilities: { 0: "Hue Shift" },
+        origin: "Pokeathlon"
+    },
+    "Parashukado": {
+        types: ["Bug", "Ghost"],
+        bs: { hp: 85, at: 115, df: 100, sa: 85, sd: 120, sp: 20 },
+        weightkg: 44,
+        abilities: { 0: "Effect Spore" },
+        origin: "Pokeathlon"
+    },
+    "Sekrilon": {
+        types: ["Fighting", "Flying"],
+        bs: { hp: 80, at: 120, df: 70, sa: 40, sd: 70, sp: 99 },
+        weightkg: 72,
+        abilities: { 0: "Keen Eye" },
+        origin: "Pokeathlon"
+    },
+    "Sekrilon-Mega": {
+        types: ["Fighting", "Flying"],
+        bs: { hp: 80, at: 135, df: 109, sa: 55, sd: 85, sp: 115 },
+        weightkg: 805,
+        abilities: { 0: "Scrappy" },
+        origin: "Pokeathlon"
+    },
+    "Penumbralith": {
+        types: ["Rock", "Psychic"],
+        bs: { hp: 80, at: 45, df: 120, sa: 100, sd: 100, sp: 55 },
+        weightkg: 420,
+        abilities: { 0: "Clairvoyance" },
+        origin: "Pokeathlon"
+    },
+    "Growlsome": {
+        types: ["Normal", "Fighting"],
+        bs: { hp: 124, at: 128, df: 70, sa: 52, sd: 62, sp: 104 },
+        weightkg: 160,
+        abilities: { 0: "Thick Fat" },
+        origin: "Pokeathlon"
+    },
+    "Scaleslash": {
+        types: ["Ground", "Fairy"],
+        bs: { hp: 90, at: 115, df: 120, sa: 45, sd: 75, sp: 105 },
+        weightkg: 110,
+        abilities: { 0: "Belligerent Quills" },
+        origin: "Pokeathlon"
+    },
+    "Dracat": {
+        types: ["Dragon", "Fairy"],
+        bs: { hp: 40, at: 85, df: 45, sa: 20, sd: 85, sp: 75 },
+        weightkg: 0.2,
+        abilities: { 0: "Technician" },
+        origin: "Pokeathlon",
+        nfe: true
+    },
+    "Catzelwyrm": {
+        types: ["Dragon", "Fairy"],
+        bs: { hp: 80, at: 135, df: 65, sa: 55, sd: 135, sp: 85 },
+        weightkg: 84,
+        abilities: { 0: "Fluffy" },
+        origin: "Pokeathlon"
+    },
+    "Hydroupa": {
+        types: ["Ghost", "Dragon"],
+        bs: { hp: 81, at: 81, df: 108, sa: 81, sd: 99, sp: 45 },
+        weightkg: 28.3,
+        abilities: { 0: "Lernean" },
+        origin: "Pokeathlon"
+    },
+    "Chronobour": {
+        types: ["Grass", "Ground"],
+        bs: { hp: 115, at: 92, df: 129, sa: 92, sd: 66, sp: 66 },
+        weightkg: 323.3,
+        abilities: { 0: "Shed Skin" },
         origin: "Pokeathlon"
     }
 };

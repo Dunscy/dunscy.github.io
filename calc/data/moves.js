@@ -5295,6 +5295,61 @@ var SV_PATCH = {
         maxPower: 140,
         makesContact: true,
         recoil: [33, 100]
+    },
+    'Grounding Stomp': {
+        bp: 85,
+        type: 'Fighting',
+        category: 'Physical',
+        zp: 190,
+        maxPower: 140,
+        makesContact: true
+    },
+    'Spirit Siphon': {
+        bp: 65,
+        type: 'Ghost',
+        category: 'Special',
+        zp: 190,
+        maxPower: 140,
+        drain: [1, 2]
+    },
+    'Comet Strike': {
+        bp: 130,
+        type: 'Rock',
+        category: 'Special',
+        zp: 190,
+        maxPower: 140
+    },
+    'Shock Bombs': {
+        bp: 25,
+        type: 'Electric',
+        category: 'Physical',
+        isBullet: true,
+        zp: 190,
+        maxPower: 140,
+        multihit: [2, 5]
+    },
+    'Jagged Shot': {
+        bp: 70,
+        type: 'Rock',
+        category: 'Special',
+        zp: 190,
+        maxPower: 140
+    },
+    'Shadow Bound': {
+        bp: 95,
+        type: 'Ghost',
+        category: 'Special',
+        zp: 190,
+        maxPower: 140,
+        overrideOffensivePokemon: 'target'
+    },
+    'Fae Quills': {
+        bp: 25,
+        type: 'Fairy',
+        category: 'Physical',
+        zp: 190,
+        maxPower: 140,
+        multihit: [2, 5]
     }
 };
 var SV = (0, util_1.extend)(true, {}, SS, SV_PATCH);
