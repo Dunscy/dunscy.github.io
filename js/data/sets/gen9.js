@@ -8044,7 +8044,140 @@ var SETDEX_SV = {
       },
       'moves': ['Thunderbolt', 'Dazzling Gleam', 'Volt Switch', 'Overheat']
   }
-}
+},
+
+'Metagross-Delta-Ruin': {
+  'Choice Band': {
+      "level": 120,
+      'ability': 'Rock Head',
+      'item': 'Choice Band',
+      'nature': 'Adamant',
+      'evs': {
+          'hp': 252,
+          'at': 252,
+          'sd': 4
+      },
+      'moves': ['Head Smash', 'Wood Hammer', 'Earthquake', 'Crystal Rush']
+  }
+},
+'Metagross-Delta-Ruin': {
+  'Rock Polish': {
+      "level": 120,
+      'ability': 'Rock Head',
+      'item': 'Lum Berry',
+      'nature': 'Adamant',
+      'evs': {
+          'at': 252,
+          'sd': 4,
+          'sp': 252
+      },
+      'moves': ['Head Smash', 'Wood Hammer', 'Earthquake', 'Rock Polish']
+  }
+},
+'Metagross-Delta-Spider': {
+  'Bulky Hazards': {
+      "level": 120,
+      'ability': 'Poison Heal',
+      'item': 'Toxic Orb',
+      'nature': 'Impish',
+      'evs': {
+          'hp': 252,
+          'df': 252,
+          'sd': 4
+      },
+      'moves': ['Sticky Web', 'Spikes', 'Earthquake', 'U-turn']
+  }
+},
+'Metang-Delta-Spider': {
+  'Bulky Hazards': {
+      "level": 120,
+      'ability': 'Poison Heal',
+      'item': 'Eviolite',
+      'nature': 'Impish',
+      'evs': {
+          'hp': 252,
+          'df': 252,
+          'sd': 4
+      },
+      'moves': ['Sticky Web', 'Stealth Rock', 'Earthquake', 'U-turn']
+  }
+},
+'Garbodor': {
+  'Physically Defensive': {
+      "level": 120,
+      'ability': 'Aftermath',
+      'item': 'Rocky Helmet',
+      'nature': 'Impish',
+      'evs': {
+          'hp': 252,
+          'df': 252,
+          'sd': 4
+      },
+      'moves': ['Toxic Spikes', 'Spikes', 'Gunk Shot', 'Stomping Tantrum']
+  }
+},
+'Porygon': {
+  'Porygod': {
+      "level": 120,
+      'ability': 'Trace',
+      'item': 'Eviolite',
+      'nature': 'Calm',
+      'ivs': {
+          'at': 0
+      },
+      'evs': {
+          'hp': 252,
+          'sa': 4,
+          'sd': 252
+      },
+      'moves': ['Recover', 'Teleport', 'Thunder Wave', 'Ice Beam']
+  }
+},
+'Dottler': {
+  'Sticky Web': {
+      "level": 120,
+      'ability': 'Compound Eyes',
+      'item': 'Eviolite',
+      'nature': 'Bold',
+      'ivs': {
+          'at': 0
+      },
+      'evs': {
+          'hp': 252,
+          'df': 252,
+          'sd': 4
+      },
+      'moves': ['Sticky Web', 'Recover', 'Body Press', 'Iron Defense']
+  }
+},
+'Meloetta-Delta': {
+  'Choice Band': {
+      "level": 120,
+      'ability': 'Filter',
+      'item': 'Choice Band',
+      'nature': 'Jolly',
+      'evs': {
+          'at': 252,
+          'sd': 4,
+          'sp': 252
+      },
+      'moves': ['Knock Off', 'Play Rough', 'Sucker Punch', 'U-turn']
+  }
+},
+'Meloetta-Delta': {
+  'Boots Pivot': {
+      "level": 120,
+      'ability': 'Filter',
+      'item': 'Heavy-Duty Boots',
+      'nature': 'Jolly',
+      'evs': {
+          'at': 252,
+          'sd': 4,
+          'sp': 252
+      },
+      'moves': ['Knock Off', 'Play Rough', 'Sucker Punch', 'U-turn']
+  }
+},
 
 
 
