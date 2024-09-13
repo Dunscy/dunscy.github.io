@@ -611,6 +611,15 @@ $(".set-selector").change(function () {
 	var fusion = pokedex[fusionName];
 
 	if (pokemon) {
+
+		// Setting up icons
+		if ($(this).hasClass("p2")) {
+			topPokemonIcon(fullSetName, $("#p2mon")[0])
+		} else {
+			topPokemonIcon(fullSetName, $("#p1mon")[0])
+		}
+
+
 		var isAutoTera =
 		(startsWith(pokemonName, "Ogerpon") && endsWith(pokemonName, "Tera")) ||
 		pokemonName === 'Terapagos-Stellar';
@@ -1850,6 +1859,10 @@ function loadCustomList(id) {
 function openCloseItemBox(){
 	document.getElementById("item-box-frame").toggleAttribute("hidden");
 }
+function openCloseItemBoxR(){
+	document.getElementById("item-box-frame-right").toggleAttribute("hidden");
+}
+
 
 function openCloseNoteBox(){
 	document.getElementById("note-box-frame").toggleAttribute("hidden");
@@ -1862,7 +1875,11 @@ function openCloseNoteBox(){
 
 function selectItem(ev){
 	var newItem = ev.target.getAttribute("data-id");
-	document.getElementById("itemL1").value=newItem;
+	if ($(this).hasClass("icr")) {
+		document.getElementById("itemR1").value=newItem
+	} else {
+		document.getElementById("itemL1").value=newItem
+	}
 }
 
 function onFirstTime(){
@@ -1889,8 +1906,12 @@ function addBoxed(poke, box) {
 }
 
 function topPokemonIcon(fullname, node) {
+	pokedex = calc.SPECIES[9]; // Import full dex
 	var mon = { name: fullname.split(" (")[0] };
-	var src = getSrcImgPokemon(mon);
+	var name = mon.name
+	var origin = pokedex[name].origin
+	var poke = {name: name, origin: origin}; // Building custom object
+	var src = getSrcImgPokemon(poke);
 	node.src = src;
 }
 
@@ -2285,8 +2306,9 @@ $(document).ready(function () {
 	$('#fusionToggle').click(createPokemon);
 	$('#save-change').click(saveTrainerPokemon);
 	$('#close-item-box, #ball-item').click(openCloseItemBox);
+	$('#close-item-box, #ball-item-r').click(openCloseItemBoxR);
 	$('#close-note-box, #open-note').click(openCloseNoteBox);
-	$('.ic').click(selectItem);
+	$('.ic, .icr').click(selectItem);
 	for (let dropzone of document.getElementsByClassName("dropzone")){
 		dropzone.ondragenter=handleDragEnter;
 		dropzone.ondragleave=handleDragLeave;

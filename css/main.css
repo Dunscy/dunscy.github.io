@@ -247,7 +247,7 @@ th {
     display: inline-block; /* required for honkaculate to work */
 }
 .poke-info {
-    width: 30em;
+    width: 31em;
 }
 .field-info, .poke-import , .note-button{
     text-align: center;
@@ -692,7 +692,7 @@ table.field {
     border: 1px solid #AAA;
     padding: 3px;
 }
-#item-box-frame{
+#item-box-frame, #item-box-frame-right{
     z-index: 3;
     width: 630px;
     height: 300px;
@@ -789,6 +789,7 @@ table.field {
     position: absolute;
     top: 16px;
     right: 4px;
+    z-index: -1;
   }
 
 /* Style the button that is used to open and close the collapsible content */

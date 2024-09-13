@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <title>Pok&eacute;mon Damage Calculator</title>
     <link type="text/css" rel="stylesheet" href="./js/vendor/select2/select2.css" />
-    <link type="text/css" rel="stylesheet" href="./css/main.css?13b5ce0e" />
+    <link type="text/css" rel="stylesheet" href="./css/main.css?39626bf3" />
     <link type="text/css" rel="stylesheet" href="./css/vendor/bootstrap.css" />
     <link type="text/css" rel="stylesheet" href="./css/dark-theme.css" id="dark-theme-styles">
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -151,15 +151,15 @@
             <i class="s-arrow arrowdown"></i>
             <span>Moves</span>
         </button>
-        </div>
-        <div class="panel">
+    </div>
+    <div class="panel">
             <div aria-label="Pok&eacute;mon 1" role="region">
                 <fieldset class="poke-info" id="p1">
                     <legend align="center">
                         Pok&eacute;mon 1 
                         <img id="p1mon" src="" alt="">
                     </legend>
-                    <input type="text" class="set-selector calc-trigger player" />
+                    <input type="text" class="set-selector calc-trigger player p1" />
                     <!---->
                     <div>
                     <fieldset class="fusion-info">
@@ -754,7 +754,11 @@
     <div class="panel">
         <div aria-label="Field information" role="region">
             <fieldset class="field-info">
-                <legend align="center">Field</legend>
+                <legend align="center">
+                    <img id="monSingle" src="https://raw.githubusercontent.com/May8th1995/sprites/master/Pyukumuku.png" alt="">
+                    Field
+                    <img id="monSingle" src="https://raw.githubusercontent.com/May8th1995/sprites/master/Dunsparce.png" alt="">
+                </legend>
                 <div aria-labelledby="selectBattleFormatInstruction" class="gen-specific g3 g4 g5 g6 g7 g8 g9" role="radiogroup" style="width: 10.6em; margin: 0 auto 5px;" title="Select the battle format.">
                     <span class="visually-hidden" id="selectBattleFormatInstruction">Select the battle format.</span>
                     <input class="visually-hidden calc-trigger" type="radio" name="format" value="Singles" id="singles-format" />
@@ -1148,11 +1152,31 @@
                 </fieldset>
             </div>
     </div>
+    <div class="right-side-pannel side-pannel" hidden>
+        <button data-set="i-f-o-type" class="r-side-button">
+            <i class="s-arrow arrowdown"></i>
+            <span>Type</span>
+        </button>
+        <button data-set="i-f-o-stats" class="r-side-button">
+            <i class="s-arrow arrowdown"></i>
+            <span>Stats</span>
+        </button>
+        <button data-set="i-f-o-hp" class="r-side-button">
+            <i class="s-arrow arrowdown"></i>
+            <span>HP</span>
+        </button>
+        <button data-set="i-f-o-move" class="r-side-button">
+            <i class="s-arrow arrowdown"></i>
+            <span>Moves</span>
+        </button>
+    </div>
     <div class="panel">
         <div aria-label="Pok&eacute;mon 2" role="region">
             <fieldset class="poke-info" id="p2">
-                <legend align="center">Pok&eacute;mon 2</legend>
-                <input type="text" class="set-selector calc-trigger" />
+                <legend align="center">Pok&eacute;mon 2
+                    <img id="p2mon" src="" alt="">
+                </legend>
+                <input type="text" class="set-selector calc-trigger p2" />
                 <!---->
                 <fieldset class="fusion-info">
                     <legend align="center" class="collapsible" onclick="collapse(this)">Fuse</legend>
@@ -1165,10 +1189,12 @@
                     </div>
                 </fieldset>
                 <!---->
-                <span id="importedSetsOptions" style="width:auto; display:none">
-                    <input type="checkbox" id="importedSets" /> Only show imported sets <br />
-                    <button id="clearSets">Clear Imported Sets</button>
-                </span>
+                <span id="importedSetsOptions" style="width:auto;">
+                    <input type="checkbox" id="importedSets" /> Only show imported sets
+                    <!-- <button id="clearSets">Clear Imported Sets</button> -->
+                    <button class="right" id="save-change">Save Changes</button>
+                    <div class="right" id="savedTooltip">Saved!</div>
+                <br></br>
                 <div class="info-group top">
                     <div>
                         <label>Type</label>
@@ -1512,9 +1538,10 @@
                                 <option value="2">Winter</option>
                             </select>
                     </div>
-                    <div class="gen-specific g2 g3 g4 g5 g6 g7 g8 g9">
-                        <label for="itemR1">Item</label>
-                        <select class="item terrain-trigger calc-trigger" id="itemR1"></select>
+                    <div class="gen-specific g2 g3 g4 g5 g6 g7 g8 g9 p2">
+                        <label for="itemL1">Item</label>
+                        <select class="item terrain-trigger save-trigger calc-trigger" id="itemR1"></select>
+                        <button id="ball-item-r"><img id="p2item" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/makeup-bag.png" alt=""></button>
                     </div>
                     <div>
                         <label for="statusR1">Status</label>
@@ -1732,7 +1759,7 @@
                 <img class="ic save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/protective-pads.png" data-id="Protective Pads">
                 <img class="ic save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/expert-belt.png" data-id="Expert Belt">
                 <img class="ic save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rocky-helmet.png" data-id="Rocky Helmet">
-                <img class="ic save-trigger"src="https://archives.bulbagarden.net/media/upload/0/01/Bag_Heavy-Duty_Boots_Sprite.png" data-id="Heavy Duty Boots">
+                <img class="ic save-trigger"src="https://archives.bulbagarden.net/media/upload/0/01/Bag_Heavy-Duty_Boots_Sprite.png" data-id="Heavy-Duty Boots">
                 <img class="ic save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/white-herb.png" data-id="White Herb">
                 <img class="ic save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/electric-seed.png" data-id="Electric Seed">
                 <img class="ic save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/grassy-seed.png" data-id="Grassy Seed">
@@ -1795,7 +1822,7 @@
                     <img src="https://play.pokemonshowdown.com/sprites/types/Ground.png" class="imtip" width="30" height = "10"/>
                 </div>
                 <div class="iconImage">
-                    <img class="ic save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/never-melt-ice.png" data-id="Nevermelt Ice">
+                    <img class="ic save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/never-melt-ice.png" data-id="Never-Melt Ice">
                     <img src="https://play.pokemonshowdown.com/sprites/types/Ice.png" class="imtip" width="30" height = "10"/>
                 </div>
                 <div class="iconImage">
@@ -1985,6 +2012,279 @@
             </div>
         </div>
     </div>
+    <div id="item-box-frame-right" class="box-frame" hidden>
+        <div class="box-frame-header" data-x="500"data-y="500">
+            <legend>Items</legend>
+            <div class="close-frame" id="close-item-box">X</div>
+        </div>
+        <div class="item-box-body">
+            <legend>Common</legend>
+            <div class="box-item-list"></div>
+                <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/choice-band.png" data-id="Choice Band">
+                <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/choice-specs.png" data-id="Choice Specs">
+                <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/choice-scarf.png" data-id="Choice Scarf">
+                <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/life-orb.png" data-id="Life Orb">
+                <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/assault-vest.png" data-id="Assault Vest">
+                <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/leftovers.png" data-id="Leftovers">
+                <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/focus-sash.png" data-id="Focus Sash">
+                <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/muscle-band.png" data-id="Muscle Band">
+                <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/wise-glasses.png" data-id="Wise Glasses">
+                <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/protective-pads.png" data-id="Protective Pads">
+                <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/expert-belt.png" data-id="Expert Belt">
+                <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rocky-helmet.png" data-id="Rocky Helmet">
+                <img class="icr save-trigger"src="https://archives.bulbagarden.net/media/upload/0/01/Bag_Heavy-Duty_Boots_Sprite.png" data-id="Heavy-Duty Boots">
+                <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/white-herb.png" data-id="White Herb">
+                <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/electric-seed.png" data-id="Electric Seed">
+                <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/grassy-seed.png" data-id="Grassy Seed">
+                <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/misty-seed.png" data-id="Misty Seed">
+                <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/psychic-seed.png" data-id="Psychic Seed">
+                <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/power-herb.png" data-id="Power Herb">
+                <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/mental-herb.png" data-id="Mental Herb">
+                <img class="icr save-trigger" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sitrus-berry.png" data-id="Sitrus Berry">
+                <img class="icr save-trigger" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lum-berry.png" data-id="Lum Berry">
+            </div>
+            <hr>
+            <legend>Type-Specific</legend>
+            <div class="box-item-list">
+                <div class="iconImage">
+                    <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/silk-scarf.png" data-id="Silk Scarf">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Normal.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/silver-powder.png" data-id="Silver Powder">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Bug.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/black-glasses.png" data-id="Black Glasses">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Dark.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dragon-fang.png" data-id="Dragon Fang">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Dragon.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/magnet.png" data-id="Magnet">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Electric.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"src="https://archives.bulbagarden.net/media/upload/thumb/9/97/Bag_Fairy_Feather_SV_Sprite.png/24px-Bag_Fairy_Feather_SV_Sprite.png" data-id="Fairy Feather" width="30" height="30">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Fairy.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/black-belt.png" data-id="Black Belt">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Fighting.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/charcoal.png" data-id="Charcoal">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Fire.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sharp-beak.png" data-id="Sharp Beak">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Flying.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/spell-tag.png" data-id="Spell Tag">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Ghost.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/miracle-seed.png" data-id="Miracle Seed">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Grass.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/soft-sand.png" data-id="Soft Sand">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Ground.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/never-melt-ice.png" data-id="Never-Melt Ice">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Ice.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poison-barb.png" data-id="Poison Barb">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Poison.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/twisted-spoon.png" data-id="Twisted Spoon">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Psychic.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/hard-stone.png" data-id="Hard Stone">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Rock.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/metal-coat.png" data-id="Metal Coat">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Steel.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/mystic-water.png" data-id="Mystic Water">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Water.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"src="" data-id="Mystic Water">
+                    <img src="" class="imtip" width="30" height = "10"/>
+                </div>
+            </div>
+            <hr>
+            <legend>Gems</legend>
+            <div class="box-item-list">
+                <div class="iconImage">
+                    <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/normal-gem.png" data-id="Normal Gem">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Normal.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/bug-gem.png" data-id="Bug Gem">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Bug.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dark-gem.png" data-id="Dark Gem">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Dark.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dragon-gem.png" data-id="Dragon Gem">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Dragon.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/electric-gem.png" data-id="Electric Gem">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Electric.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/fairy-gem.png" data-id="Fairy Gem">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Fairy.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/fighting-gem.png" data-id="Fighting Gem">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Fighting.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/fire-gem.png" data-id="Fire Gem">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Fire.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/flying-gem.png" data-id="Flying Gem">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Flying.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ghost-gem.png" data-id="Ghost Gem">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Ghost.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/grass-gem.png" data-id="Grass Gem">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Grass.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ground-gem.png" data-id="Ground Gem">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Ground.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ice-gem.png" data-id="Ice Gem">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Ice.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poison-gem.png" data-id="Poison Gem">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Poison.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/psychic-gem.png" data-id="Psychic Gem">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Psychic.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rock-gem.png" data-id="Rock Gem">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Rock.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/steel-gem.png" data-id="Steel Gem">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Steel.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/water-gem.png" data-id="Water Gem">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Water.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"src="" data-id="Water Gem">
+                    <img src="" class="imtip" width="30" height = "10"/>
+                </div>
+            </div>
+            <hr>
+            <legend>Damage reduction Berries</legend>
+            <div class="box-item-list"> 
+                <div class="iconImage">
+                    <img class="icr save-trigger"  src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/chilan-berry.png" data-id="Chilan Berry">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Normal.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"  src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tanga-berry.png" data-id="Tanga Berry">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Bug.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"  src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/colbur-berry.png" data-id="Colbur Berry">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Dark.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"  src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/haban-berry.png" data-id="Haban Berry">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Dragon.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"  src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/wacan-berry.png" data-id="Wacan Berry">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Electric.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"  src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/roseli-berry.png" data-id="Roseli Berry">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Fairy.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"  src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/chople-berry.png" data-id="Chople Berry">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Fighting.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"  src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/occa-berry.png" data-id="Occa Berry">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Fire.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"  src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/coba-berry.png" data-id="Coba Berry">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Flying.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"  src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/kasib-berry.png" data-id="Kasib Berry">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Ghost.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"  src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rindo-berry.png" data-id="Rindo Berry">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Grass.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"  src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/shuca-berry.png" data-id="Shuca Berry">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Ground.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"  src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/yache-berry.png" data-id="Yache Berry">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Ice.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"  src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/kebia-berry.png" data-id="Kebia Berry">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Poison.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"  src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/payapa-berry.png" data-id="Payapa Berry">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Psychic.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"  src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/charti-berry.png" data-id="Charti Berry">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Rock.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"  src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/babiri-berry.png" data-id="Babiri Berry">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Steel.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"  src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/passho-berry.png" data-id="Passho Berry">
+                    <img src="https://play.pokemonshowdown.com/sprites/types/Water.png" class="imtip" width="30" height = "10"/>
+                </div>
+                <div class="iconImage">
+                    <img class="icr save-trigger"  src="" data-id="Passho Berry">
+                    <img src="" class="imtip" width="30" height = "10"/>
+                </div>
+            </div>
+        </div>
+    </div>
     <script type="text/javascript">
         var linkExtension = '.html';
     </script>
@@ -2032,7 +2332,7 @@
     <script type="text/javascript" src="./calc/result.js?d5c7552b"></script>
     <script type="text/javascript" src="./calc/adaptable.js?afeb3759"></script>
     <script type="text/javascript" src="./calc/index.js?2377cbc8"></script>
-    <script type="text/javascript" src="./js/shared_controls.js?939212f3"></script>
+    <script type="text/javascript" src="./js/shared_controls.js?15cd13a2"></script>
     <script type="text/javascript" src="./js/index_randoms_controls.js?e53c78dc"></script>
     <script type="text/javascript" src="./js/moveset_import.js?1b00314d"></script>
 </div>
