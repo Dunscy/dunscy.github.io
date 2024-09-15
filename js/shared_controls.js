@@ -2306,7 +2306,7 @@ $(document).ready(function () {
 	$('#fusionToggle').click(createPokemon);
 	$('#save-change').click(saveTrainerPokemon);
 	$('#close-item-box, #ball-item').click(openCloseItemBox);
-	$('#close-item-box, #ball-item-r').click(openCloseItemBoxR);
+	$('#close-item-box-r, #ball-item-r').click(openCloseItemBoxR);
 	$('#close-note-box, #open-note').click(openCloseNoteBox);
 	$('.ic, .icr').click(selectItem);
 	for (let dropzone of document.getElementsByClassName("dropzone")){

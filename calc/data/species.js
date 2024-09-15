@@ -13954,7 +13954,7 @@ var SV_PATCH = {
     },
     'Ockthane': {
         types: ['Ice', 'Electric'],
-        bs: { hp: 87, at: 93, df: 62, sa: 144, sd: 116, sp: 78 },
+        bs: { hp: 87, at: 73, df: 62, sa: 144, sd: 116, sp: 78 },
         weightkg: 17,
         abilities: { 0: 'Supreme Overlord' },
         origin: "Pokeathlon"
