@@ -14141,7 +14141,7 @@ var SV_PATCH = {
     },
     'Drifbozu': {
         types: ['Ghost', 'Water'],
-        bs: { hp: 150, at: 34, df: 60, sa: 74, sd: 70, sp: 120 },
+        bs: { hp: 150, at: 34, df: 60, sa: 74, sd: 70, sp: 122 },
         weightkg: 2.5,
         abilities: { 0: 'Flare Boost' },
         origin: "Pokeathlon"
@@ -14155,7 +14155,7 @@ var SV_PATCH = {
     },
     'Loxicant': {
         types: ['Steel', 'Poison'],
-        bs: { hp: 85, at: 102, df: 120, sa: 45, sd: 100, sp: 68 },
+        bs: { hp: 134, at: 102, df: 65, sa: 41, sd: 55, sp: 68 },
         weightkg: 125,
         abilities: { 0: 'Levitate' },
         origin: "Pokeathlon"
@@ -14428,6 +14428,27 @@ var SV_PATCH = {
         bs: { hp: 115, at: 92, df: 129, sa: 92, sd: 66, sp: 66 },
         weightkg: 323.3,
         abilities: { 0: "Shed Skin" },
+        origin: "Pokeathlon"
+    },
+    "Gilotherma": {
+        types: ["Dragon", "Ground"],
+        bs: { hp: 111, at: 65, df: 99, sa: 103, sd: 82, sp: 70 },
+        weightkg: 124.3,
+        abilities: { 0: "Intimidate" },
+        origin: "Pokeathlon"
+    },
+    "Tyranisacer": {
+        types: ["Bug", "Dark"],
+        bs: { hp: 100, at: 134, df: 110, sa: 95, sd: 100, sp: 61 },
+        weightkg: 202,
+        abilities: { 0: "Tough Claws" },
+        origin: "Pokeathlon"
+    },
+    "Mephistoxin": {
+        types: ["Poison", "Steel"],
+        bs: { hp: 70, at: 126, df: 70, sa: 76, sd: 60, sp: 117 },
+        weightkg: 90,
+        abilities: { 0: "Unaware" },
         origin: "Pokeathlon"
     }
 };

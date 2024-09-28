@@ -5350,6 +5350,25 @@ var SV_PATCH = {
         zp: 190,
         maxPower: 140,
         multihit: [2, 5]
+    },
+    'Venomous Roar': {
+        bp: 90,
+        type: 'Dragon',
+        category: 'Special',
+        zp: 190,
+        maxPower: 140,
+        isSound: true,
+        secondaries: true
+    },
+    'Scarabs Sting': {
+        bp: 50,
+        type: 'Bug',
+        category: 'Physical',
+        zp: 190,
+        maxPower: 140,
+        multihit: 2,
+        makesContact: true,
+        secondaries: true
     }
 };
 var SV = (0, util_1.extend)(true, {}, SS, SV_PATCH);
