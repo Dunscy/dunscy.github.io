@@ -867,7 +867,8 @@ function calculateBPModsSMSSSV(gen, attacker, defender, move, field, desc, baseP
         (attacker.hasAbility('Tough Claws') && move.flags.contact) ||
         (attacker.hasAbility('Punk Rock') && move.flags.sound) ||
         (attacker.hasAbility('Bushido') &&
-            (turnOrder === 'first' || field.defenderSide.isSwitching === 'out'))) {
+            (turnOrder === 'first' || field.defenderSide.isSwitching === 'out')) ||
+        (move.named('Comet Strike') && field.isGravity)) {
         bpMods.push(5325);
         desc.attackerAbility = attacker.ability;
     }
