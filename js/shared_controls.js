@@ -850,19 +850,19 @@ $(".set-selector").change(function () {
 	}
 });
 
-//$(".fusionToggle").change(function () {
-//	var pokeObj = $(this).closest(".poke-info");
-//	var oldSet = pokeObj.find("input.set-selector").val()
-//	var setVal = pokeObj.find(".set-selector").val(oldSet); 
-//	setVal.change();
-//});
+$(".fusionToggle").change(function () {
+	var pokeObj = $(this).closest(".poke-info");
+	var oldSet = pokeObj.find("input.set-selector").val()
+	var setVal = pokeObj.find(".set-selector").val(oldSet); 
+	setVal.change();
+});
 
-//$(".fusion-selector").change(function () {
-//	var pokeObj = $(this).closest(".poke-info");
-//	var oldSet = pokeObj.find("input.set-selector").val()
-//	var setVal = pokeObj.find(".set-selector").val(oldSet);  
-//	setVal.change();
-//});
+$(".fusion-selector").change(function () {
+	var pokeObj = $(this).closest(".poke-info");
+	var oldSet = pokeObj.find("input.set-selector").val()
+	var setVal = pokeObj.find(".set-selector").val(oldSet);  
+	setVal.change();
+});
 
 $("#swap1").click(function () {
 	
