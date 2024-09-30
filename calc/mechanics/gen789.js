@@ -867,8 +867,7 @@ function calculateBPModsSMSSSV(gen, attacker, defender, move, field, desc, baseP
         (attacker.hasAbility('Tough Claws') && move.flags.contact) ||
         (attacker.hasAbility('Punk Rock') && move.flags.sound) ||
         (attacker.hasAbility('Bushido') &&
-            (turnOrder === 'first' || field.defenderSide.isSwitching === 'out')) ||
-        (move.named('Comet Strike') && field.isGravity)) {
+            (turnOrder === 'first' || field.defenderSide.isSwitching === 'out'))) {
         bpMods.push(5325);
         desc.attackerAbility = attacker.ability;
     }
@@ -883,6 +882,10 @@ function calculateBPModsSMSSSV(gen, attacker, defender, move, field, desc, baseP
     if (field.attackerSide.isPowerSpot) {
         bpMods.push(5325);
         desc.isPowerSpot = true;
+    }
+    if (move.named('Comet Strike') && field.isGravity) {
+        bpMods.push(5325);
+        desc.moveBP = basePower * 1.5;
     }
     if (attacker.hasAbility('Rivalry') && ![attacker.gender, defender.gender].includes('N')) {
         if (attacker.gender === defender.gender) {
