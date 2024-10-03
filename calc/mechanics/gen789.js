@@ -757,7 +757,7 @@ function calculateBPModsSMSSSV(gen, attacker, defender, move, field, desc, baseP
     }
     else if ((move.named('Knock Off') && !resistedKnockOffDamage) ||
         (move.named('Misty Explosion') && (0, util_2.isGrounded)(attacker, field) && field.hasTerrain('Misty')) ||
-        (move.named('Grav Apple') && field.isGravity)) {
+        (move.named('Grav Apple', 'Void Tentacle') && field.isGravity)) {
         bpMods.push(6144);
         desc.moveBP = basePower * 1.5;
     }

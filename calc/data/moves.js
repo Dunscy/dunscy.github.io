@@ -5369,6 +5369,14 @@ var SV_PATCH = {
         multihit: 2,
         makesContact: true,
         secondaries: true
+    },
+    'Void Tentacle': {
+        bp: 80,
+        type: 'Poison',
+        category: 'Physical',
+        zp: 190,
+        maxPower: 140,
+        secondaries: true
     }
 };
 var SV = (0, util_1.extend)(true, {}, SS, SV_PATCH);

@@ -456,7 +456,8 @@ var SV = SS.concat([
     'Spitting Fire',
     'Hue Shift',
     'Bursting Spores',
-    'Belligerent Quills'
+    'Belligerent Quills',
+    'Full Plate'
 ]);
 exports.ABILITIES = [[], RBY, GSC, ADV, DPP, BW, XY, SM, SS, SV];
 var Abilities = (function () {

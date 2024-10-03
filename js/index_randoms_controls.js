@@ -298,6 +298,7 @@ $(".notation").change(function () {
 
 
 function saveTrigger(ev) {
+	console.log("Save Trigger")
 	var isUser = ev.originalEvent ? ev.originalEvent.isTrusted : false;
 	if (isUser || ev.added) { //ev.added is for the moves buttons
 		$('#save-change').attr("hidden", false);
@@ -349,6 +350,7 @@ function loadSavedMon(data) {
 }
 
 function calcTrigger() {
+	console.log("Calc Trigger")
 	/*
 		This prevents like 8 performCalculations out of 8 that were useless
 		without causing bugs (so far)
@@ -430,8 +432,8 @@ $(document).ready(function () {
 	}
 	$(".calc-trigger").bind("change keyup drop", calcTrigger);
 	$(".save-trigger").bind("change keyup", saveTrigger);
-	$(".ic").click(calcTrigger);
-	$(".ic").click(saveTrigger);
+	$(".ic, .icr").click(calcTrigger);
+	$(".ic, .icr").click(saveTrigger);
 	//performCalculations(); i think it's no longer usefull
 });
 

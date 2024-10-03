@@ -6950,7 +6950,7 @@ var SETDEX_SV = {
         'moves': ['Shell Smash', 'Moonblast', 'Dragon Pulse', 'Draco Meteor']
     }
 },
-'Metagross-Delta-S': {
+'Metagross-Delta-Spider': {
     'Hazard Support': {
         "level": 120,
         'ability': 'Poison Heal',
@@ -6962,9 +6962,33 @@ var SETDEX_SV = {
             'sd': 4
         },
         'moves': ['Sticky Web', 'Stealth Rock', 'U-turn', 'Earthquake']
-    }
+    },
+    'Bulky Hazards Spikes': {
+      "level": 120,
+      'ability': 'Poison Heal',
+      'item': 'Toxic Orb',
+      'nature': 'Impish',
+      'evs': {
+          'hp': 252,
+          'df': 252,
+          'sd': 4
+      },
+      'moves': ['Sticky Web', 'Spikes', 'Earthquake', 'U-turn']
+  },
+  'Bulky Hazards Rocks': {
+    "level": 120,
+    'ability': 'Poison Heal',
+    'item': 'Eviolite',
+    'nature': 'Impish',
+    'evs': {
+        'hp': 252,
+        'df': 252,
+        'sd': 4
+    },
+    'moves': ['Sticky Web', 'Stealth Rock', 'Earthquake', 'U-turn']
+}
 },
-'Metagross-Delta-S-Mega': {
+'Metagross-Delta-Spider-Mega': {
     'Offensive Pivot': {
         "level": 120,
         'ability': 'Mold Breaker',
@@ -6978,8 +7002,8 @@ var SETDEX_SV = {
         'moves': ['Earthquake', 'U-turn', 'Stone Edge', 'Knock Off']
     }
 },
-'Metagross-Delta-R': {
-    'Choice Banded': {
+'Metagross-Delta-Ruin': {
+    'Fast Band': {
         "level": 120,
         'ability': 'Rock Head',
         'item': 'Choice Band',
@@ -6990,9 +7014,33 @@ var SETDEX_SV = {
             'sp': 252
         },
         'moves': ['Head Smash', 'Wood Hammer', 'Earthquake', 'Crystal Rush']
-    }
+    },
+    'Bulky Band': {
+      "level": 120,
+      'ability': 'Rock Head',
+      'item': 'Choice Band',
+      'nature': 'Adamant',
+      'evs': {
+          'hp': 252,
+          'at': 252,
+          'sd': 4
+      },
+      'moves': ['Head Smash', 'Wood Hammer', 'Earthquake', 'Crystal Rush']
+  },
+  'Rock Polish': {
+    "level": 120,
+    'ability': 'Rock Head',
+    'item': 'Lum Berry',
+    'nature': 'Adamant',
+    'evs': {
+        'at': 252,
+        'sd': 4,
+        'sp': 252
+    },
+    'moves': ['Head Smash', 'Wood Hammer', 'Earthquake', 'Rock Polish']
+}
 },
-'Metagross-Delta-R-Mega': {
+'Metagross-Delta-Ruin-Mega': {
     'Physical Breaker': {
         "level": 120,
         'ability': 'Rock Head',
@@ -7006,7 +7054,7 @@ var SETDEX_SV = {
         'moves': ['Head Smash', 'Wood Hammer', 'Earthquake', 'Volt Switch']
     }
 },
-'Metagross-Delta-R-Crystal': {
+'Metagross-Delta-Ruin-Crystal': {
     'Physical Cleaner': {
         "level": 120,
         'ability': 'Weak Armor',
@@ -7586,6 +7634,30 @@ var SETDEX_SV = {
             'sp': 252
         },
         'moves': ['Knock Off', 'Play Rough', 'U-turn', 'Iron Head']
+    },
+    'Choice Band': {
+      "level": 120,
+      'ability': 'Filter',
+      'item': 'Choice Band',
+      'nature': 'Jolly',
+      'evs': {
+          'at': 252,
+          'sd': 4,
+          'sp': 252
+      },
+      'moves': ['Knock Off', 'Play Rough', 'Sucker Punch', 'U-turn']
+    },
+    'Boots Pivot': {
+      "level": 120,
+      'ability': 'Filter',
+      'item': 'Heavy-Duty Boots',
+      'nature': 'Jolly',
+      'evs': {
+          'at': 252,
+          'sd': 4,
+          'sp': 252
+      },
+    'moves': ['Knock Off', 'Play Rough', 'Sucker Punch', 'U-turn']
     }
 },
 'Meloetta-Delta-Magician': {
@@ -8045,63 +8117,6 @@ var SETDEX_SV = {
       'moves': ['Thunderbolt', 'Dazzling Gleam', 'Volt Switch', 'Overheat']
   }
 },
-
-'Metagross-Delta-Ruin': {
-  'Choice Band': {
-      "level": 120,
-      'ability': 'Rock Head',
-      'item': 'Choice Band',
-      'nature': 'Adamant',
-      'evs': {
-          'hp': 252,
-          'at': 252,
-          'sd': 4
-      },
-      'moves': ['Head Smash', 'Wood Hammer', 'Earthquake', 'Crystal Rush']
-  }
-},
-'Metagross-Delta-Ruin': {
-  'Rock Polish': {
-      "level": 120,
-      'ability': 'Rock Head',
-      'item': 'Lum Berry',
-      'nature': 'Adamant',
-      'evs': {
-          'at': 252,
-          'sd': 4,
-          'sp': 252
-      },
-      'moves': ['Head Smash', 'Wood Hammer', 'Earthquake', 'Rock Polish']
-  }
-},
-'Metagross-Delta-Spider': {
-  'Bulky Hazards': {
-      "level": 120,
-      'ability': 'Poison Heal',
-      'item': 'Toxic Orb',
-      'nature': 'Impish',
-      'evs': {
-          'hp': 252,
-          'df': 252,
-          'sd': 4
-      },
-      'moves': ['Sticky Web', 'Spikes', 'Earthquake', 'U-turn']
-  }
-},
-'Metang-Delta-Spider': {
-  'Bulky Hazards': {
-      "level": 120,
-      'ability': 'Poison Heal',
-      'item': 'Eviolite',
-      'nature': 'Impish',
-      'evs': {
-          'hp': 252,
-          'df': 252,
-          'sd': 4
-      },
-      'moves': ['Sticky Web', 'Stealth Rock', 'Earthquake', 'U-turn']
-  }
-},
 'Garbodor': {
   'Physically Defensive': {
       "level": 120,
@@ -8148,34 +8163,6 @@ var SETDEX_SV = {
           'sd': 4
       },
       'moves': ['Sticky Web', 'Recover', 'Body Press', 'Iron Defense']
-  }
-},
-'Meloetta-Delta': {
-  'Choice Band': {
-      "level": 120,
-      'ability': 'Filter',
-      'item': 'Choice Band',
-      'nature': 'Jolly',
-      'evs': {
-          'at': 252,
-          'sd': 4,
-          'sp': 252
-      },
-      'moves': ['Knock Off', 'Play Rough', 'Sucker Punch', 'U-turn']
-  }
-},
-'Meloetta-Delta': {
-  'Boots Pivot': {
-      "level": 120,
-      'ability': 'Filter',
-      'item': 'Heavy-Duty Boots',
-      'nature': 'Jolly',
-      'evs': {
-          'at': 252,
-          'sd': 4,
-          'sp': 252
-      },
-      'moves': ['Knock Off', 'Play Rough', 'Sucker Punch', 'U-turn']
   }
 },
 

@@ -14450,6 +14450,57 @@ var SV_PATCH = {
         weightkg: 90,
         abilities: { 0: "Unaware" },
         origin: "Pokeathlon"
+    },
+    "Mjochiin": {
+        types: ["Water", "Flying"],
+        bs: { hp: 89, at: 118, df: 75, sa: 98, sd: 104, sp: 76 },
+        weightkg: 190,
+        abilities: { 0: "Wind Rider" },
+        origin: "Pokeathlon"
+    },
+    "Gelazura": {
+        types: ["Water", "Poison"],
+        bs: { hp: 122, at: 116, df: 60, sa: 77, sd: 63, sp: 92 },
+        weightkg: 190,
+        abilities: { 0: "Torrent" },
+        origin: "Pokeathlon"
+    },
+    "Slowpoke-Rhinian": {
+        types: ["Grass", "Water"],
+        bs: { hp: 90, at: 65, df: 65, sa: 40, sd: 40, sp: 15 },
+        weightkg: 48,
+        abilities: { 0: "Berserk" },
+        nfe: true,
+        origin: "Pokeathlon"
+    },
+    "Slowbro-Rhinian": {
+        types: ["Water", "Steel"],
+        bs: { hp: 95, at: 110, df: 100, sa: 75, sd: 80, sp: 30 },
+        weightkg: 118,
+        abilities: { 0: "Full Plate" },
+        origin: "Pokeathlon"
+    },
+    "Slowking-Rhinian": {
+        types: ["Grass", "Steel"],
+        bs: { hp: 95, at: 75, df: 110, sa: 105, sd: 75, sp: 30 },
+        weightkg: 108,
+        abilities: { 0: "Full Plate" },
+        origin: "Pokeathlon"
+    },
+    "Trickin": {
+        types: ["Dark", "Ghost"],
+        bs: { hp: 66, at: 66, df: 39, sa: 66, sd: 41, sp: 31 },
+        weightkg: 14,
+        abilities: { 0: "Pickpocket" },
+        nfe: true,
+        origin: "Pokeathlon"
+    },
+    "Treatern": {
+        types: ["Dark", "Ghost"],
+        bs: { hp: 114, at: 99, df: 80, sa: 99, sd: 84, sp: 55 },
+        weightkg: 60,
+        abilities: { 0: "Pickpocket" },
+        origin: "Pokeathlon"
     }
 };
 var SV = (0, util_1.extend)(true, {}, SS, SV_PATCH, PLA_PATCH);
