@@ -13854,7 +13854,7 @@ var SV_PATCH = {
     },
     'Heatran-Supra': {
         types: ['Fire', 'Grass'],
-        bs: { hp: 91, at: 90, df: 106, sa: 130, sd: 106, sp: 77 },
+        bs: { hp: 91, at: 95, df: 116, sa: 95, sd: 116, sp: 77 },
         weightkg: 430,
         abilities: { 0: 'Dancer' },
         origin: "Pokeathlon"
@@ -14049,7 +14049,7 @@ var SV_PATCH = {
     },
     "Tinkashank": {
         types: ["Steel", "Dark"],
-        bs: { hp: 70, at: 105, df: 85, sa: 70, sd: 77, sp: 95 },
+        bs: { hp: 70, at: 95, df: 85, sa: 70, sd: 87, sp: 95 },
         weightkg: 8.4,
         abilities: { 0: "Mold Breaker" },
         origin: "Pokeathlon"
@@ -14411,7 +14411,7 @@ var SV_PATCH = {
     },
     "Catzelwyrm": {
         types: ["Dragon", "Fairy"],
-        bs: { hp: 80, at: 135, df: 65, sa: 55, sd: 135, sp: 85 },
+        bs: { hp: 75, at: 125, df: 75, sa: 75, sd: 115, sp: 85 },
         weightkg: 84,
         abilities: { 0: "Fluffy" },
         origin: "Pokeathlon"
@@ -14500,6 +14500,13 @@ var SV_PATCH = {
         bs: { hp: 114, at: 99, df: 80, sa: 99, sd: 84, sp: 55 },
         weightkg: 60,
         abilities: { 0: "Pickpocket" },
+        origin: "Pokeathlon"
+    },
+    "Kleavor-Delta": {
+        types: ["Ice", "Fire"],
+        bs: { hp: 70, at: 135, df: 95, sa: 45, sd: 70, sp: 85 },
+        weightkg: 89,
+        abilities: { 0: "Hustle" },
         origin: "Pokeathlon"
     }
 };

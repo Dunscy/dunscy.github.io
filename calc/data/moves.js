@@ -5161,7 +5161,9 @@ var SV_PATCH = {
         type: 'Steel',
         category: 'Physical',
         zp: 100,
-        maxPower: 100
+        maxPower: 100,
+        makesContact: true,
+        isPunch: true
     },
     'Siren Song': {
         bp: 120,
@@ -5377,6 +5379,15 @@ var SV_PATCH = {
         zp: 190,
         maxPower: 140,
         secondaries: true
+    },
+    'Flame Axe': {
+        bp: 80,
+        type: 'Fire',
+        category: 'Physical',
+        zp: 120,
+        maxPower: 120,
+        makesContact: true,
+        isSlicing: true
     }
 };
 var SV = (0, util_1.extend)(true, {}, SS, SV_PATCH);
