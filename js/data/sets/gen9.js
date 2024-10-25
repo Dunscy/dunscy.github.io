@@ -7622,7 +7622,7 @@ var SETDEX_SV = {
         'moves': ['Lava Plume', 'Stealth Rock', 'Knock Off', 'Recover']
     }
 },
-'Meloetta-Delta-Mime': {
+'Meloetta-Delta': {
     'Offensive Pivot': {
         "level": 120,
         'ability': 'Filter',
