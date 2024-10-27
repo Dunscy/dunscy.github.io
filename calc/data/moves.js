@@ -5388,6 +5388,14 @@ var SV_PATCH = {
         maxPower: 120,
         makesContact: true,
         isSlicing: true
+    },
+    'Shrouded Blows': {
+        bp: 85,
+        type: 'Fighting',
+        category: 'Special',
+        zp: 120,
+        maxPower: 120,
+        isPunch: true
     }
 };
 var SV = (0, util_1.extend)(true, {}, SS, SV_PATCH);

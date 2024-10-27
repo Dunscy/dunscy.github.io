@@ -14508,6 +14508,13 @@ var SV_PATCH = {
         weightkg: 89,
         abilities: { 0: "Hustle" },
         origin: "Pokeathlon"
+    },
+    "Miasmiss": {
+        types: ["Fighting", "Poison"],
+        bs: { hp: 74, at: 96, df: 92, sa: 118, sd: 52, sp: 108 },
+        weightkg: 42.6,
+        abilities: { 0: "Neutralizing Gas" },
+        origin: "Pokeathlon"
     }
 };
 var SV = (0, util_1.extend)(true, {}, SS, SV_PATCH, PLA_PATCH);
