@@ -14126,7 +14126,7 @@ var SV_PATCH = {
     },
     'Paldemaria': {
         types: ['Water', 'Fairy'],
-        bs: { hp: 90, at: 59, df: 70, sa: 110, sd: 100, sp: 106 },
+        bs: { hp: 70, at: 59, df: 75, sa: 105, sd: 110, sp: 106 },
         weightkg: 60,
         abilities: { 0: 'Liquid Voice' },
         origin: "Pokeathlon"
