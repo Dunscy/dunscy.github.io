@@ -14155,7 +14155,7 @@ var SV_PATCH = {
     },
     'Loxicant': {
         types: ['Steel', 'Poison'],
-        bs: { hp: 134, at: 102, df: 65, sa: 41, sd: 55, sp: 68 },
+        bs: { hp: 85, at: 102, df: 120, sa: 45, sd: 100, sp: 68 },
         weightkg: 125,
         abilities: { 0: 'Levitate' },
         origin: "Pokeathlon"
@@ -14514,6 +14514,13 @@ var SV_PATCH = {
         bs: { hp: 74, at: 96, df: 92, sa: 118, sd: 52, sp: 108 },
         weightkg: 42.6,
         abilities: { 0: "Neutralizing Gas" },
+        origin: "Pokeathlon"
+    },
+    "Guarig": {
+        types: ["Water", "Steel"],
+        bs: { hp: 80, at: 115, df: 130, sa: 35, sd: 85, sp: 30 },
+        weightkg: 121,
+        abilities: { 0: "Aqua Guard" },
         origin: "Pokeathlon"
     }
 };
