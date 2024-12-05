@@ -303,7 +303,8 @@ var XY = BW.concat([
     'Rebuild',
     'Sharp Coral',
     'Sound Boost',
-    'Stormbringer'
+    'Stormbringer',
+    'Pure Focus'
 ]);
 var SM = XY.concat([
     'Battery',

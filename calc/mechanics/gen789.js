@@ -1096,6 +1096,7 @@ function calculateAtModsSMSSSV(gen, attacker, defender, move, field, desc) {
     }
     else if ((attacker.hasAbility('Water Bubble') && move.hasType('Water')) ||
         (attacker.hasAbility('Huge Power', 'Pure Power') && move.category === 'Physical') ||
+        (attacker.hasAbility('Pure Focus') && move.category === 'Special') ||
         (attacker.hasAbility('Athenian') && move.category === 'Special') ||
         (attacker.hasAbility('Sharp Coral') ||
             (defender.hasAbility('Sharp Coral')))) {

@@ -13794,6 +13794,1273 @@ var SV_PATCH = {
         abilities: { 0: 'Teravolt' },
         origin: "Insurgence"
     },
+    'Bulbasaur-Egho': {
+        types: ['Grass', 'Rock'],
+        bs: { hp: 44, at: 60, df: 54, sa: 50, sd: 64, sp: 37 },
+        weightkg: 16,
+        abilities: { 0: 'Rough Skin' },
+        origin: 'Infinity'
+    },
+    'Ivysaur-Egho': {
+        types: ['Grass', 'Rock'],
+        bs: { hp: 60, at: 80, df: 65, sa: 67, sd: 78, sp: 45 },
+        weightkg: 70,
+        abilities: { 0: 'Rough Skin' },
+        origin: 'Infinity'
+    },
+    'Venusaur-Egho': {
+        types: ['Grass', 'Rock'],
+        bs: { hp: 80, at: 111, df: 100, sa: 90, sd: 88, sp: 65 },
+        weightkg: 280,
+        abilities: { 0: 'Rough Skin' },
+        origin: 'Infinity'
+    },
+    'Charmander-Egho': {
+        types: ['Fire', 'Dragon'],
+        bs: { hp: 39, at: 50, df: 43, sa: 62, sd: 50, sp: 65 },
+        weightkg: 8.5,
+        abilities: { 0: 'Oblivious' },
+        origin: 'Infinity'
+    },
+    'Charmeleon-Egho': {
+        types: ['Fire', 'Dragon'],
+        bs: { hp: 58, at: 64, df: 58, sa: 80, sd: 65, sp: 80 },
+        weightkg: 19,
+        abilities: { 0: 'Oblivious' },
+        origin: 'Infinity'
+    },
+    'Charizard-Egho': {
+        types: ['Fire', 'Dragon'],
+        bs: { hp: 76, at: 75, df: 75, sa: 114, sd: 80, sp: 114 },
+        weightkg: 90.5,
+        abilities: { 0: 'Levitate' },
+        origin: 'Infinity'
+    },
+    'Squirtle-Egho': {
+        types: ['Water'],
+        bs: { hp: 44, at: 48, df: 65, sa: 50, sd: 64, sp: 43 },
+        weightkg: 8.5,
+        abilities: { 0: 'Serene Grace' },
+        origin: 'Infinity'
+    },
+    'Wartortle-Egho': {
+        types: ['Water', 'Flying'],
+        bs: { hp: 59, at: 63, df: 80, sa: 65, sd: 80, sp: 58 },
+        weightkg: 20,
+        abilities: { 0: 'Serene Grace' },
+        origin: 'Infinity'
+    },
+    'Blastoise-Egho': {
+        types: ['Water', 'Flying'],
+        bs: { hp: 70, at: 85, df: 85, sa: 95, sd: 105, sp: 90 },
+        weightkg: 76,
+        abilities: { 0: 'Serene Grace' },
+        origin: 'Infinity'
+    },
+    'Lukpup': {
+        types: ['Fairy'],
+        bs: { hp: 60, at: 75, df: 50, sa: 70, sd: 70, sp: 60 },
+        weightkg: 14.9,
+        abilities: { 0: 'Fluffy' },
+        origin: 'Infinity'
+    },
+    'Lukagon': {
+        types: ['Fairy', 'Dragon'],
+        bs: { hp: 100, at: 124, df: 88, sa: 102, sd: 92, sp: 94 },
+        weightkg: 123,
+        abilities: { 0: 'Fluffy' },
+        origin: 'Infinity'
+    },
+    'Kokiseed': {
+        types: ['Grass'],
+        bs: { hp: 45, at: 55, df: 55, sa: 55, sd: 60, sp: 40 },
+        weightkg: 6,
+        abilities: { 0: 'Own Tempo' },
+        origin: 'Infinity'
+    },
+    'Kokipound': {
+        types: ['Grass', 'Fighting'],
+        bs: { hp: 60, at: 85, df: 70, sa: 53, sd: 65, sp: 60 },
+        weightkg: 36,
+        abilities: { 0: 'Justified' },
+        origin: 'Infinity'
+    },
+    'Kokismash': {
+        types: ['Grass', 'Fighting'],
+        bs: { hp: 80, at: 130, df: 85, sa: 65, sd: 80, sp: 85 },
+        weightkg: 164,
+        abilities: { 0: 'Justified' },
+        origin: 'Infinity'
+    },
+    'Chargo': {
+        types: ['Fire'],
+        bs: { hp: 49, at: 45, df: 50, sa: 64, sd: 54, sp: 58 },
+        weightkg: 14.8,
+        abilities: { 0: 'Reckless' },
+        origin: 'Infinity'
+    },
+    'Burnaram': {
+        types: ['Fire'],
+        bs: { hp: 58, at: 75, df: 61, sa: 83, sd: 68, sp: 75 },
+        weightkg: 53,
+        abilities: { 0: 'Reckless' },
+        origin: 'Infinity'
+    },
+    'Psysteed': {
+        types: ['Fire', 'Psychic'],
+        bs: { hp: 80, at: 90, df: 82, sa: 113, sd: 85, sp: 87 },
+        weightkg: 88,
+        abilities: { 0: 'Reckless' },
+        origin: 'Infinity'
+    },
+    'Darpole': {
+        types: ['Water'],
+        bs: { hp: 56, at: 60, df: 50, sa: 40, sd: 60, sp: 40 },
+        weightkg: 2.8,
+        abilities: { 0: 'Pickpocket' },
+        origin: 'Infinity'
+    },
+    'Brutoad': {
+        types: ['Water', 'Dark'],
+        bs: { hp: 68, at: 80, df: 71, sa: 60, sd: 71, sp: 50 },
+        weightkg: 43,
+        abilities: { 0: 'Pickpocket' },
+        origin: 'Infinity'
+    },
+    'Godfrogger': {
+        types: ['Water', 'Dark'],
+        bs: { hp: 85, at: 102, df: 95, sa: 90, sd: 105, sp: 70 },
+        weightkg: 187,
+        abilities: { 0: 'Bulletproof' },
+        origin: 'Infinity'
+    },
+    'Gorochu': {
+        types: ['Electric', 'Fire'],
+        bs: { hp: 60, at: 112, df: 50, sa: 88, sd: 70, sp: 105 },
+        weightkg: 38.4,
+        abilities: { 0: 'Reckless' },
+        origin: 'Infinity'
+    },
+    'Nidorook': {
+        types: ['Poison', 'Ground'],
+        bs: { hp: 78, at: 97, df: 75, sa: 85, sd: 70, sp: 100 },
+        weightkg: 76.8,
+        abilities: { 0: 'Poison Point' },
+        origin: 'Infinity'
+    },
+    'Quezsparce': {
+        types: ['Fairy', 'Ground'],
+        bs: { hp: 110, at: 105, df: 75, sa: 80, sd: 70, sp: 100 },
+        weightkg: 79.3,
+        abilities: { 0: 'Serene Grace' },
+        origin: 'Infinity'
+    },
+    'Faeralynx': {
+        types: ['Fairy', 'Dark'],
+        bs: { hp: 75, at: 98, df: 73, sa: 88, sd: 75, sp: 126 },
+        weightkg: 51,
+        abilities: { 0: 'Infiltrator' },
+        origin: 'Infinity'
+    },
+    'Shellder-Egho': {
+        types: ['Water', 'Steel'],
+        bs: { hp: 52, at: 40, df: 70, sa: 55, sd: 57, sp: 31 },
+        weightkg: 41,
+        abilities: { 0: 'Iron Barbs' },
+        origin: 'Infinity'
+    },
+    'Skulkraken': {
+        types: ['Water', 'Steel'],
+        bs: { hp: 80, at: 83, df: 123, sa: 83, sd: 110, sp: 46 },
+        weightkg: 212,
+        abilities: { 0: 'Iron Barbs' },
+        origin: 'Infinity'
+    },
+    'Grimer-Egho': {
+        types: ['Poison', 'Rock'],
+        bs: { hp: 60, at: 70, df: 70, sa: 60, sd: 45, sp: 20 },
+        weightkg: 205,
+        abilities: { 0: 'Stench' },
+        origin: 'Infinity'
+    },
+    'Muk-Egho': {
+        types: ['Poison', 'Rock'],
+        bs: { hp: 85, at: 100, df: 105, sa: 90, sd: 80, sp: 40 },
+        weightkg: 395,
+        abilities: { 0: 'Stench' },
+        origin: 'Infinity'
+    },
+    'Oozma': {
+        types: ['Fire', 'Rock'],
+        bs: { hp: 95, at: 134, df: 100, sa: 100, sd: 55, sp: 96 },
+        weightkg: 240,
+        abilities: { 0: 'Iron Fist' },
+        origin: 'Infinity'
+    },
+    'Omeon': {
+        types: ['Ghost'],
+        bs: { hp: 70, at: 124, df: 85, sa: 65, sd: 65, sp: 116 },
+        weightkg: 18,
+        abilities: { 0: 'Super Luck' },
+        origin: 'Infinity'
+    },
+    'Champeon': {
+        types: ['Fighting'],
+        bs: { hp: 65, at: 110, df: 65, sa: 95, sd: 60, sp: 130 },
+        weightkg: 23,
+        abilities: { 0: 'Scrappy' },
+        origin: 'Infinity'
+    },
+    'Lepideon': {
+        types: ['Bug'],
+        bs: { hp: 80, at: 65, df: 72, sa: 115, sd: 90, sp: 103 },
+        weightkg: 22,
+        abilities: { 0: 'Rattled' },
+        origin: 'Infinity'
+    },
+    'Guardeon': {
+        types: ['Steel'],
+        bs: { hp: 65, at: 60, df: 130, sa: 110, sd: 95, sp: 65 },
+        weightkg: 58.5,
+        abilities: { 0: 'Bulletproof' },
+        origin: 'Infinity'
+    },
+    'Obsideon': {
+        types: ['Rock'],
+        bs: { hp: 75, at: 120, df: 75, sa: 60, sd: 115, sp: 80 },
+        weightkg: 33,
+        abilities: { 0: 'Rock Head' },
+        origin: 'Infinity'
+    },
+    'Scorpeon': {
+        types: ['Poison'],
+        bs: { hp: 65, at: 111, df: 105, sa: 84, sd: 50, sp: 110 },
+        weightkg: 23,
+        abilities: { 0: 'Poison Touch' },
+        origin: 'Infinity'
+    },
+    'Sphynxeon': {
+        types: ['Ground'],
+        bs: { hp: 120, at: 88, df: 106, sa: 70, sd: 80, sp: 61 },
+        weightkg: 24,
+        abilities: { 0: 'Synchronize' },
+        origin: 'Infinity'
+    },
+    'Nimbeon': {
+        types: ['Flying'],
+        bs: { hp: 120, at: 88, df: 61, sa: 70, sd: 80, sp: 106 },
+        weightkg: 14,
+        abilities: { 0: 'Aerilate' },
+        origin: 'Infinity'
+    },
+    'Draconeon': {
+        types: ['Dragon'],
+        bs: { hp: 80, at: 127, df: 80, sa: 70, sd: 50, sp: 118 },
+        weightkg: 25,
+        abilities: { 0: 'Tough Claws' },
+        origin: 'Infinity'
+    },
+    'Eeveeon': {
+        types: ['Normal'],
+        bs: { hp: 90, at: 95, df: 70, sa: 95, sd: 70, sp: 105 },
+        weightkg: 25,
+        abilities: { 0: 'Klutz' },
+        origin: 'Infinity'
+    },
+    'Vareon': {
+        types: ['???'],
+        bs: { hp: 100, at: 110, df: 100, sa: 110, sd: 100, sp: 80 },
+        weightkg: 28,
+        abilities: { 0: 'Protean' },
+        origin: 'Infinity'
+    },
+    'Terathwack': {
+        types: ['Normal', 'Ground'],
+        bs: { hp: 100, at: 135, df: 113, sa: 60, sd: 80, sp: 77 },
+        weightkg: 123,
+        abilities: { 0: 'Rock Head' },
+        origin: 'Infinity'
+    },
+    'Spearow-Egho': {
+        types: ['Dark', 'Fighting'],
+        bs: { hp: 40, at: 70, df: 25, sa: 26, sd: 31, sp: 70 },
+        weightkg: 2.8,
+        abilities: { 0: 'Defiant' },
+        origin: 'Infinity'
+    },
+    'Fearow-Egho': {
+        types: ['Dark', 'Fighting'],
+        bs: { hp: 65, at: 112, df: 55, sa: 50, sd: 50, sp: 110 },
+        weightkg: 45,
+        abilities: { 0: 'Defiant' },
+        origin: 'Infinity'
+    },
+    'Hoothoot-Egho': {
+        types: ['Dark', 'Flying'],
+        bs: { hp: 60, at: 30, df: 40, sa: 56, sd: 36, sp: 40 },
+        weightkg: 23.5,
+        abilities: { 0: 'Unnerve' },
+        origin: 'Infinity'
+    },
+    'Noctowl-Egho': {
+        types: ['Dark', 'Flying'],
+        bs: { hp: 86, at: 50, df: 77, sa: 99, sd: 70, sp: 70 },
+        weightkg: 49.8,
+        abilities: { 0: 'Unnerve' },
+        origin: 'Infinity'
+    },
+    'Grimfowl': {
+        types: ['Dark', 'Flying'],
+        bs: { hp: 112, at: 63, df: 80, sa: 130, sd: 77, sp: 78 },
+        weightkg: 70,
+        abilities: { 0: 'Unnerve' },
+        origin: 'Infinity'
+    },
+    'Azurill-Egho': {
+        types: ['Normal', 'Rock'],
+        bs: { hp: 50, at: 40, df: 30, sa: 20, sd: 25, sp: 25 },
+        weightkg: 4,
+        abilities: { 0: 'Huge Power' },
+        origin: 'Infinity'
+    },
+    'Marill-Egho': {
+        types: ['Rock', 'Fighting'],
+        bs: { hp: 70, at: 50, df: 40, sa: 20, sd: 30, sp: 40 },
+        weightkg: 15,
+        abilities: { 0: 'Huge Power' },
+        origin: 'Infinity'
+    },
+    'Azumarill-Egho': {
+        types: ['Rock', 'Fighting'],
+        bs: { hp: 100, at: 80, df: 65, sa: 60, sd: 60, sp: 55 },
+        weightkg: 46,
+        abilities: { 0: 'Huge Power' },
+        origin: 'Infinity'
+    },
+    'Trubbish-Egho': {
+        types: ['Poison', 'Steel'],
+        bs: { hp: 57, at: 22, df: 95, sa: 60, sd: 87, sp: 10 },
+        weightkg: 43,
+        abilities: { 0: 'Filter' },
+        origin: 'Infinity'
+    },
+    'Garbodor-Egho': {
+        types: ['Poison', 'Steel'],
+        bs: { hp: 90, at: 25, df: 147, sa: 95, sd: 107, sp: 15 },
+        weightkg: 177.3,
+        abilities: { 0: 'Unaware' },
+        origin: 'Infinity'
+    },
+    'Swablu-Egho': {
+        types: ['Normal', 'Ice'],
+        bs: { hp: 50, at: 30, df: 55, sa: 60, sd: 45, sp: 70 },
+        weightkg: 4.2,
+        abilities: { 0: 'Levitate' },
+        origin: 'Infinity'
+    },
+    'Altaria-Egho': {
+        types: ['Dragon', 'Ice'],
+        bs: { hp: 80, at: 60, df: 90, sa: 95, sd: 60, sp: 105 },
+        weightkg: 24,
+        abilities: { 0: 'Levitate' },
+        origin: 'Infinity'
+    },
+    'Lotad-Egho': {
+        types: ['Fire', 'Steel'],
+        bs: { hp: 40, at: 30, df: 40, sa: 50, sd: 30, sp: 30 },
+        weightkg: 8,
+        abilities: { 0: 'Harvest' },
+        origin: 'Infinity'
+    },
+    'Lombre-Egho': {
+        types: ['Fire', 'Steel'],
+        bs: { hp: 60, at: 50, df: 60, sa: 70, sd: 50, sp: 50 },
+        weightkg: 73.5,
+        abilities: { 0: 'Harvest' },
+        origin: 'Infinity'
+    },
+    'Ludicolo-Egho': {
+        types: ['Fire', 'Steel'],
+        bs: { hp: 85, at: 50, df: 95, sa: 100, sd: 75, sp: 75 },
+        weightkg: 130,
+        abilities: { 0: 'Harvest' },
+        origin: 'Infinity'
+    },
+    'Sunflorid': {
+        types: ['Grass', 'Fire'],
+        bs: { hp: 110, at: 90, df: 75, sa: 115, sd: 80, sp: 65 },
+        weightkg: 34,
+        abilities: { 0: 'Chlorophyll' },
+        origin: 'Infinity'
+    },
+    'Sorcerice': {
+        types: ['Ice', 'Psychic'],
+        bs: { hp: 75, at: 60, df: 40, sa: 130, sd: 105, sp: 125 },
+        weightkg: 71,
+        abilities: { 0: 'Infiltrator' },
+        origin: 'Infinity'
+    },
+    'Kecleodon': {
+        types: ['Normal'],
+        bs: { hp: 90, at: 110, df: 75, sa: 80, sd: 140, sp: 40 },
+        weightkg: 142,
+        abilities: { 0: 'Protean' },
+        origin: 'Infinity'
+    },
+    'Magnemite-Egho': {
+        types: ['Grass', 'Steel'],
+        bs: { hp: 40, at: 80, df: 55, sa: 40, sd: 65, sp: 45 },
+        weightkg: 20,
+        abilities: { 0: 'Magnet Pull' },
+        origin: 'Infinity'
+    },
+    'Magneton-Egho': {
+        types: ['Grass', 'Steel'],
+        bs: { hp: 65, at: 109, df: 66, sa: 65, sd: 90, sp: 70 },
+        weightkg: 90,
+        abilities: { 0: 'Magnet Pull' },
+        origin: 'Infinity'
+    },
+    'Magnezone-Egho': {
+        types: ['Grass', 'Steel'],
+        bs: { hp: 80, at: 130, df: 85, sa: 75, sd: 105, sp: 60 },
+        weightkg: 285,
+        abilities: { 0: 'Magnet Pull' },
+        origin: 'Infinity'
+    },
+    'Tangela-Egho': {
+        types: ['Electric', 'Steel'],
+        bs: { hp: 63, at: 70, df: 90, sa: 80, sd: 77, sp: 55 },
+        weightkg: 35,
+        abilities: { 0: 'Volt Absorb' },
+        origin: 'Infinity'
+    },
+    'Tangrowth-Egho': {
+        types: ['Electric', 'Steel'],
+        bs: { hp: 110, at: 55, df: 107, sa: 96, sd: 77, sp: 92 },
+        weightkg: 138.6,
+        abilities: { 0: 'Volt Absorb' },
+        origin: 'Infinity'
+    },
+    'Wereyena': {
+        types: ['Dark', 'Fairy'],
+        bs: { hp: 75, at: 129, df: 75, sa: 84, sd: 70, sp: 102 },
+        weightkg: 108,
+        abilities: { 0: 'Intimidate' },
+        origin: 'Infinity'
+    },
+    'Reaptide': {
+        types: ['Water', 'Ghost'],
+        bs: { hp: 28, at: 130, df: 72, sa: 105, sd: 28, sp: 122 },
+        weightkg: 6,
+        abilities: { 0: 'Rattled' },
+        origin: 'Infinity'
+    },
+    'Happiny-Egho': {
+        types: ['Fighting', 'Fairy'],
+        bs: { hp: 65, at: 100, df: 15, sa: 5, sd: 5, sp: 30 },
+        weightkg: 24.4,
+        abilities: { 0: 'Anger Point' },
+        origin: 'Infinity'
+    },
+    'Chansey-Egho': {
+        types: ['Fighting', 'Fairy'],
+        bs: { hp: 105, at: 250, df: 35, sa: 5, sd: 5, sp: 50 },
+        weightkg: 34.6,
+        abilities: { 0: 'Anger Point' },
+        origin: 'Infinity'
+    },
+    'Blissey-Egho': {
+        types: ['Fighting', 'Fairy'],
+        bs: { hp: 135, at: 255, df: 55, sa: 10, sd: 10, sp: 75 },
+        weightkg: 46.8,
+        abilities: { 0: 'Anger Point' },
+        origin: 'Infinity'
+    },
+    'Kidfoot': {
+        types: ['Normal'],
+        bs: { hp: 55, at: 75, df: 45, sa: 45, sd: 45, sp: 60 },
+        weightkg: 70,
+        abilities: { 0: 'Forewarn' },
+        origin: 'Infinity'
+    },
+    'Snosquatch': {
+        types: ['Ice', 'Rock'],
+        bs: { hp: 74, at: 130, df: 100, sa: 80, sd: 60, sp: 96 },
+        weightkg: 450,
+        abilities: { 0: 'Moxie' },
+        origin: 'Infinity'
+    },
+    'Grasquatch': {
+        types: ['Grass', 'Psychic'],
+        bs: { hp: 74, at: 80, df: 60, sa: 130, sd: 100, sp: 96 },
+        weightkg: 370,
+        abilities: { 0: 'Chlorophyll' },
+        origin: 'Infinity'
+    },
+    'Arctusk': {
+        types: ['Ice', 'Normal'],
+        bs: { hp: 45, at: 65, df: 100, sa: 50, sd: 55, sp: 40 },
+        weightkg: 107,
+        abilities: { 0: 'Sturdy' },
+        origin: 'Infinity'
+    },
+    'Gigantusk': {
+        types: ['Ice', 'Steel'],
+        bs: { hp: 85, at: 100, df: 133, sa: 60, sd: 60, sp: 57 },
+        weightkg: 440,
+        abilities: { 0: 'Sturdy' },
+        origin: 'Infinity'
+    },
+    'Iceros': {
+        types: ['Ice', 'Ground'],
+        bs: { hp: 50, at: 85, df: 70, sa: 40, sd: 60, sp: 50 },
+        weightkg: 73,
+        abilities: { 0: 'Ice Body' },
+        origin: 'Infinity'
+    },
+    'Glacieros': {
+        types: ['Ice', 'Ground'],
+        bs: { hp: 75, at: 120, df: 100, sa: 40, sd: 76, sp: 84 },
+        weightkg: 132,
+        abilities: { 0: 'Ice Body' },
+        origin: 'Infinity'
+    },
+    'Mockroach': {
+        types: ['Bug', 'Dark'],
+        bs: { hp: 52, at: 100, df: 70, sa: 40, sd: 90, sp: 138 },
+        weightkg: 10,
+        abilities: { 0: 'Prankster' },
+        origin: 'Infinity'
+    },
+    'Jollibird': {
+        types: ['Ice', 'Fairy'],
+        bs: { hp: 80, at: 50, df: 105, sa: 120, sd: 115, sp: 75 },
+        weightkg: 98,
+        abilities: { 0: 'Thick Fat' },
+        origin: 'Infinity'
+    },
+    'Kablowfish': {
+        types: ['Water', 'Steel'],
+        bs: { hp: 85, at: 95, df: 125, sa: 65, sd: 85, sp: 75 },
+        weightkg: 60,
+        abilities: { 0: 'Poison Point' },
+        origin: 'Infinity'
+    },
+    'Scalarva': {
+        types: ['Bug', 'Dragon'],
+        bs: { hp: 50, at: 70, df: 65, sa: 40, sd: 40, sp: 35 },
+        weightkg: 12.5,
+        abilities: { 0: 'Compound Eyes' },
+        origin: 'Infinity'
+    },
+    'Dragalis': {
+        types: ['Bug', 'Dragon'],
+        bs: { hp: 70, at: 80, df: 100, sa: 70, sd: 65, sp: 25 },
+        weightkg: 12.5,
+        abilities: { 0: 'Compound Eyes' },
+        origin: 'Infinity'
+    },
+    'Ceregal': {
+        types: ['Bug', 'Dragon'],
+        bs: { hp: 80, at: 145, df: 110, sa: 90, sd: 75, sp: 100 },
+        weightkg: 70,
+        abilities: { 0: 'Compound Eyes' },
+        origin: 'Infinity'
+    },
+    'Gargon': {
+        types: ['Rock', 'Dragon'],
+        bs: { hp: 45, at: 65, df: 65, sa: 60, sd: 45, sp: 45 },
+        weightkg: 70,
+        abilities: { 0: 'Intimidate' },
+        origin: 'Infinity'
+    },
+    'Wardern': {
+        types: ['Rock', 'Dragon'],
+        bs: { hp: 65, at: 80, df: 90, sa: 70, sd: 60, sp: 60 },
+        weightkg: 190,
+        abilities: { 0: 'Intimidate' },
+        origin: 'Infinity'
+    },
+    'Dragoyle': {
+        types: ['Rock', 'Dragon'],
+        bs: { hp: 70, at: 113, df: 122, sa: 99, sd: 65, sp: 81 },
+        weightkg: 360,
+        abilities: { 0: 'Intimidate' },
+        origin: 'Infinity'
+    },
+    'Porygon-X': {
+        types: ['Electric', 'Normal'],
+        bs: { hp: 85, at: 70, df: 72, sa: 95, sd: 72, sp: 141 },
+        weightkg: 34,
+        abilities: { 0: 'Adaptability' },
+        origin: 'Infinity'
+    },
+    'Oculeus': {
+        types: ['Psychic', 'Cosmic'],
+        bs: { hp: 120, at: 120, df: 120, sa: 120, sd: 120, sp: 120 },
+        weightkg: 45,
+        abilities: { 0: 'Technician' },
+        origin: 'Infinity'
+    },
+    'Arkhaos': {
+        types: ['Cosmic'],
+        bs: { hp: 140, at: 136, df: 100, sa: 136, sd: 100, sp: 188 },
+        weightkg: 888,
+        abilities: { 0: 'Shed Skin' },
+        origin: 'Infinity'
+    },
+    'Botamon': {
+        types: ['Normal'],
+        bs: { hp: 30, at: 20, df: 20, sa: 25, sd: 25, sp: 25 },
+        weightkg: 2.6,
+        abilities: { 0: 'Klutz' },
+        origin: 'Infinity'
+    },
+    'Koromon': {
+        types: ['Normal'],
+        bs: { hp: 45, at: 35, df: 35, sa: 30, sd: 25, sp: 30 },
+        weightkg: 5,
+        abilities: { 0: 'Adaptability' },
+        origin: 'Infinity'
+    },
+    'Agumon': {
+        types: ['Fire'],
+        bs: { hp: 65, at: 75, df: 75, sa: 80, sd: 65, sp: 60 },
+        weightkg: 80,
+        abilities: { 0: 'Adaptability' },
+        origin: 'Infinity'
+    },
+    'Greymon': {
+        types: ['Fire'],
+        bs: { hp: 80, at: 115, df: 100, sa: 100, sd: 80, sp: 90 },
+        weightkg: 500,
+        abilities: { 0: 'Adaptability' },
+        origin: 'Infinity'
+    },
+    'MetalGreymon': {
+        types: ['Fire', 'Steel'],
+        bs: { hp: 85, at: 120, df: 120, sa: 110, sd: 80, sp: 100 },
+        weightkg: 1220,
+        abilities: { 0: 'Adaptability' },
+        origin: 'Infinity'
+    },
+    'WarGreymon': {
+        types: ['Fire', 'Steel'],
+        bs: { hp: 104, at: 135, df: 150, sa: 135, sd: 100, sp: 86 },
+        weightkg: 1350,
+        abilities: { 0: 'Download' },
+        origin: 'Infinity'
+    },
+    'Tyrannomon': {
+        types: ['Fire'],
+        bs: { hp: 85, at: 115, df: 100, sa: 70, sd: 90, sp: 100 },
+        weightkg: 350,
+        abilities: { 0: 'Adaptability' },
+        origin: 'Infinity'
+    },
+    'SkullGreymon': {
+        types: ['Fire', 'Ghost'],
+        bs: { hp: 75, at: 140, df: 70, sa: 140, sd: 55, sp: 110 },
+        weightkg: 160,
+        abilities: { 0: 'Intimidate' },
+        origin: 'Infinity'
+    },
+    'Betamon': {
+        types: ['Water'],
+        bs: { hp: 70, at: 79, df: 77, sa: 60, sd: 65, sp: 54 },
+        weightkg: 55,
+        abilities: { 0: 'Mold Breaker' },
+        origin: 'Infinity'
+    },
+    'Seadramon': {
+        types: ['Water', 'Dragon'],
+        bs: { hp: 90, at: 110, df: 80, sa: 95, sd: 70, sp: 95 },
+        weightkg: 195,
+        abilities: { 0: 'Mold Breaker' },
+        origin: 'Infinity'
+    },
+    'Numemon': {
+        types: ['Poison', 'Dark'],
+        bs: { hp: 90, at: 90, df: 100, sa: 90, sd: 100, sp: 65 },
+        weightkg: 110,
+        abilities: { 0: 'Limber' },
+        origin: 'Infinity'
+    },
+    'Oddish-Egho': {
+        types: ['Ghost', 'Poison'],
+        bs: { hp: 45, at: 30, df: 65, sa: 75, sd: 55, sp: 50 },
+        weightkg: 3.4,
+        abilities: { 0: 'Levitate' },
+        origin: 'Infinity'
+    },
+    'Gloom-Egho': {
+        types: ['Ghost', 'Poison'],
+        bs: { hp: 60, at: 45, df: 90, sa: 85, sd: 65, sp: 55 },
+        weightkg: 6.5,
+        abilities: { 0: 'Levitate' },
+        origin: 'Infinity'
+    },
+    'Viledoom': {
+        types: ['Ghost', 'Poison'],
+        bs: { hp: 80, at: 52, df: 113, sa: 105, sd: 80, sp: 60 },
+        weightkg: 14.2,
+        abilities: { 0: 'Levitate' },
+        origin: 'Infinity'
+    },
+    'Mortossum': {
+        types: ['Ghost', 'Fairy'],
+        bs: { hp: 90, at: 57, df: 80, sa: 100, sd: 80, sp: 83 },
+        weightkg: 5,
+        abilities: { 0: 'Levitate' },
+        origin: 'Infinity'
+    },
+    'Mushling': {
+        types: ['Grass', 'Psychic'],
+        bs: { hp: 40, at: 30, df: 40, sa: 60, sd: 50, sp: 47 },
+        weightkg: 8,
+        abilities: { 0: 'Magic Guard' },
+        origin: 'Infinity'
+    },
+    'Psycholyte': {
+        types: ['Grass', 'Psychic'],
+        bs: { hp: 55, at: 50, df: 60, sa: 85, sd: 70, sp: 58 },
+        weightkg: 14,
+        abilities: { 0: 'Magic Guard' },
+        origin: 'Infinity'
+    },
+    'Shroomage': {
+        types: ['Grass', 'Psychic'],
+        bs: { hp: 85, at: 60, df: 80, sa: 130, sd: 100, sp: 76 },
+        weightkg: 30,
+        abilities: { 0: 'Magic Guard' },
+        origin: 'Infinity'
+    },
+    'Calfpint': {
+        types: ['Normal'],
+        bs: { hp: 63, at: 65, df: 50, sa: 27, sd: 50, sp: 65 },
+        weightkg: 48,
+        abilities: { 0: 'Forewarn' },
+        origin: 'Infinity'
+    },
+    'Arbird': {
+        types: ['Steel', 'Normal'],
+        bs: { hp: 47, at: 56, df: 95, sa: 18, sd: 52, sp: 52 },
+        weightkg: 15,
+        abilities: { 0: 'Keen Eye' },
+        origin: 'Infinity'
+    },
+    'Girafaraf': {
+        types: ['Fairy', 'Psychic'],
+        bs: { hp: 75, at: 80, df: 70, sa: 120, sd: 105, sp: 95 },
+        weightkg: 95,
+        abilities: { 0: 'Pixilate' },
+        origin: 'Infinity'
+    },
+    'Giragira': {
+        types: ['Dark', 'Psychic'],
+        bs: { hp: 70, at: 120, df: 70, sa: 110, sd: 70, sp: 105 },
+        weightkg: 75,
+        abilities: { 0: 'Strong Jaw' },
+        origin: 'Infinity'
+    },
+    'Whave': {
+        types: ['Water'],
+        bs: { hp: 85, at: 80, df: 75, sa: 55, sd: 60, sp: 70 },
+        weightkg: 124,
+        abilities: { 0: 'Hydration' },
+        origin: 'Infinity'
+    },
+    'Orcabyss': {
+        types: ['Water'],
+        bs: { hp: 110, at: 110, df: 100, sa: 90, sd: 85, sp: 50 },
+        weightkg: 768.5,
+        abilities: { 0: 'Pressure' },
+        origin: 'Infinity'
+    },
+    'Zapalope': {
+        types: ['Electric', 'Grass'],
+        bs: { hp: 40, at: 75, df: 40, sa: 35, sd: 30, sp: 100 },
+        weightkg: 10,
+        abilities: { 0: 'Fluffy' },
+        origin: 'Infinity'
+    },
+    'Joltalope': {
+        types: ['Electric', 'Grass'],
+        bs: { hp: 70, at: 102, df: 80, sa: 47, sd: 55, sp: 131 },
+        weightkg: 24,
+        abilities: { 0: 'Overgrow' },
+        origin: 'Infinity'
+    },
+    'Chikorita-Egho': {
+        types: ['Grass', 'Dragon'],
+        bs: { hp: 85, at: 10, df: 49, sa: 65, sd: 65, sp: 44 },
+        weightkg: 6.4,
+        abilities: { 0: 'Chlorophyll' },
+        origin: 'Infinity'
+    },
+    'Bayleef-Egho': {
+        types: ['Grass', 'Dragon'],
+        bs: { hp: 108, at: 17, df: 63, sa: 80, sd: 80, sp: 57 },
+        weightkg: 15.8,
+        abilities: { 0: 'Chlorophyll' },
+        origin: 'Infinity'
+    },
+    'Meganium-Egho': {
+        types: ['Grass', 'Dragon'],
+        bs: { hp: 143, at: 24, df: 83, sa: 100, sd: 100, sp: 75 },
+        weightkg: 100.5,
+        abilities: { 0: 'Chlorophyll' },
+        origin: 'Infinity'
+    },
+    'Cyndaquil-Egho': {
+        types: ['Fire', 'Electric'],
+        bs: { hp: 50, at: 38, df: 52, sa: 65, sd: 44, sp: 60 },
+        weightkg: 6.3,
+        abilities: { 0: 'Static' },
+        origin: 'Infinity'
+    },
+    'Quilava-Egho': {
+        types: ['Fire', 'Electric'],
+        bs: { hp: 66, at: 52, df: 71, sa: 83, sd: 60, sp: 73 },
+        weightkg: 14,
+        abilities: { 0: 'Static' },
+        origin: 'Infinity'
+    },
+    'Typhlosion-Egho': {
+        types: ['Fire', 'Electric'],
+        bs: { hp: 84, at: 64, df: 94, sa: 120, sd: 78, sp: 97 },
+        weightkg: 68,
+        abilities: { 0: 'Static' },
+        origin: 'Infinity'
+    },
+    'Totodile-Egho': {
+        types: ['Water', 'Poison'],
+        bs: { hp: 45, at: 56, df: 45, sa: 57, sd: 42, sp: 69 },
+        weightkg: 9.5,
+        abilities: { 0: 'Merciless' },
+        origin: 'Infinity'
+    },
+    'Croconaw-Egho': {
+        types: ['Water', 'Poison'],
+        bs: { hp: 65, at: 70, df: 59, sa: 70, sd: 54, sp: 87 },
+        weightkg: 25,
+        abilities: { 0: 'Merciless' },
+        origin: 'Infinity'
+    },
+    'Feraligatr-Egho': {
+        types: ['Water', 'Poison'],
+        bs: { hp: 75, at: 95, df: 70, sa: 103, sd: 66, sp: 121 },
+        weightkg: 88.8,
+        abilities: { 0: 'Merciless' },
+        origin: 'Infinity'
+    },
+    'Mewthree': {
+        types: ['Psychic'],
+        bs: { hp: 150, at: 100, df: 95, sa: 150, sd: 95, sp: 130 },
+        weightkg: 162,
+        abilities: { 0: 'Pressure' },
+        origin: 'Infinity'
+    },
+    'Palmon': {
+        types: ['Grass'],
+        bs: { hp: 70, at: 69, df: 71, sa: 75, sd: 62, sp: 63 },
+        weightkg: 40,
+        abilities: { 0: 'Super Luck' },
+        origin: 'Infinity'
+    },
+    'Togemon': {
+        types: ['Grass', 'Fighting'],
+        bs: { hp: 85, at: 160, df: 85, sa: 80, sd: 65, sp: 55 },
+        weightkg: 197.5,
+        abilities: { 0: 'Super Luck' },
+        origin: 'Infinity'
+    },
+    'Shellmon': {
+        types: ['Water', 'Ground'],
+        bs: { hp: 135, at: 80, df: 120, sa: 75, sd: 110, sp: 45 },
+        weightkg: 420,
+        abilities: { 0: 'Super Luck' },
+        origin: 'Infinity'
+    },
+    'Tsunomon': {
+        types: ['Normal'],
+        bs: { hp: 40, at: 30, df: 30, sa: 35, sd: 30, sp: 35 },
+        weightkg: 5.5,
+        abilities: { 0: 'Defiant' },
+        origin: 'Infinity'
+    },
+    'Motimon': {
+        types: ['Normal'],
+        bs: { hp: 45, at: 30, df: 30, sa: 30, sd: 35, sp: 30 },
+        weightkg: 5,
+        abilities: { 0: 'Super Luck' },
+        origin: 'Infinity'
+    },
+    'Gabumon': {
+        types: ['Ice'],
+        bs: { hp: 70, at: 75, df: 75, sa: 75, sd: 65, sp: 65 },
+        weightkg: 50,
+        abilities: { 0: 'Anger Point' },
+        origin: 'Infinity'
+    },
+    'Elecmon': {
+        types: ['Electric'],
+        bs: { hp: 60, at: 70, df: 70, sa: 75, sd: 65, sp: 75 },
+        weightkg: 30,
+        abilities: { 0: 'Anger Point' },
+        origin: 'Infinity'
+    },
+    'Gomamon': {
+        types: ['Water'],
+        bs: { hp: 69, at: 73, df: 73, sa: 65, sd: 70, sp: 65 },
+        weightkg: 34,
+        abilities: { 0: 'Anger Point' },
+        origin: 'Infinity'
+    },
+    'Crabmon': {
+        types: ['Water'],
+        bs: { hp: 70, at: 65, df: 85, sa: 75, sd: 70, sp: 40 },
+        weightkg: 40,
+        abilities: { 0: 'Rough Skin' },
+        origin: 'Infinity'
+    },
+    'Kunemon': {
+        types: ['Electric', 'Poison'],
+        bs: { hp: 57, at: 75, df: 73, sa: 70, sd: 45, sp: 85 },
+        weightkg: 26,
+        abilities: { 0: 'Poison Point' },
+        origin: 'Infinity'
+    },
+    'Tentomon': {
+        types: ['Bug', 'Flying'],
+        bs: { hp: 65, at: 84, df: 86, sa: 65, sd: 62, sp: 53 },
+        weightkg: 30,
+        abilities: { 0: 'Super Luck' },
+        origin: 'Infinity'
+    },
+    'Biyomon': {
+        types: ['Fairy', 'Flying'],
+        bs: { hp: 80, at: 66, df: 64, sa: 73, sd: 55, sp: 72 },
+        weightkg: 30,
+        abilities: { 0: 'Cute Charm' },
+        origin: 'Infinity'
+    },
+    'Patamon': {
+        types: ['Flying', 'Normal'],
+        bs: { hp: 75, at: 61, df: 64, sa: 65, sd: 55, sp: 95 },
+        weightkg: 19,
+        abilities: { 0: 'Telepathy' },
+        origin: 'Infinity'
+    },
+    'Monochromon': {
+        types: ['Ground', 'Fire'],
+        bs: { hp: 97, at: 105, df: 125, sa: 80, sd: 110, sp: 33 },
+        weightkg: 419,
+        abilities: { 0: 'Anger Point' },
+        origin: 'Infinity'
+    },
+    'Birdramon': {
+        types: ['Fairy', 'Fire'],
+        bs: { hp: 115, at: 110, df: 65, sa: 104, sd: 60, sp: 101 },
+        weightkg: 305,
+        abilities: { 0: 'Levitate' },
+        origin: 'Infinity'
+    },
+    'Drimogemon': {
+        types: ['Ground'],
+        bs: { hp: 90, at: 125, df: 105, sa: 70, sd: 70, sp: 95 },
+        weightkg: 477,
+        abilities: { 0: 'Sand Rush' },
+        origin: 'Infinity'
+    },
+    'Garurumon': {
+        types: ['Ice'],
+        bs: { hp: 80, at: 115, df: 75, sa: 110, sd: 70, sp: 110 },
+        weightkg: 255,
+        abilities: { 0: 'Technician' },
+        origin: 'Infinity'
+    },
+    'Unimon': {
+        types: ['Steel', 'Fairy'],
+        bs: { hp: 105, at: 106, df: 75, sa: 80, sd: 75, sp: 109 },
+        weightkg: 175,
+        abilities: { 0: 'Natural Cure' },
+        origin: 'Infinity'
+    },
+    'Leomon': {
+        types: ['Normal', 'Fighting'],
+        bs: { hp: 85, at: 123, df: 89, sa: 75, sd: 66, sp: 102 },
+        weightkg: 246,
+        abilities: { 0: 'Steadfast' },
+        origin: 'Infinity'
+    },
+    'Ogremon': {
+        types: ['Dark'],
+        bs: { hp: 75, at: 130, df: 85, sa: 70, sd: 80, sp: 100 },
+        weightkg: 221,
+        abilities: { 0: 'Anger Point' },
+        origin: 'Infinity'
+    },
+    'Ikkakumon': {
+        types: ['Ice', 'Water'],
+        bs: { hp: 95, at: 120, df: 90, sa: 85, sd: 80, sp: 70 },
+        weightkg: 460,
+        abilities: { 0: 'Anger Point' },
+        origin: 'Infinity'
+    },
+    'Mojyamon': {
+        types: ['Normal'],
+        bs: { hp: 90, at: 115, df: 100, sa: 75, sd: 100, sp: 75 },
+        weightkg: 254,
+        abilities: { 0: 'Early Bird' },
+        origin: 'Infinity'
+    },
+    'Frigimon': {
+        types: ['Ice'],
+        bs: { hp: 75, at: 125, df: 90, sa: 80, sd: 80, sp: 105 },
+        weightkg: 237,
+        abilities: { 0: 'Iron Fist' },
+        origin: 'Infinity'
+    },
+    'Kuwagamon': {
+        types: ['Bug', 'Fighting'],
+        bs: { hp: 65, at: 135, df: 95, sa: 85, sd: 70, sp: 90 },
+        weightkg: 372.5,
+        abilities: { 0: 'Hyper Cutter' },
+        origin: 'Infinity'
+    },
+    'Kabuterimon': {
+        types: ['Bug', 'Electric'],
+        bs: { hp: 80, at: 110, df: 125, sa: 70, sd: 85, sp: 70 },
+        weightkg: 400,
+        abilities: { 0: 'Levitate' },
+        origin: 'Infinity'
+    },
+    'Flymon': {
+        types: ['Electric', 'Poison'],
+        bs: { hp: 70, at: 122, df: 80, sa: 82, sd: 55, sp: 136 },
+        weightkg: 55,
+        abilities: { 0: 'Static' },
+        origin: 'Infinity'
+    },
+    'Vegiemon': {
+        types: ['Grass', 'Poison'],
+        bs: { hp: 80, at: 104, df: 85, sa: 106, sd: 90, sp: 90 },
+        weightkg: 93,
+        abilities: { 0: 'Prankster' },
+        origin: 'Infinity'
+    },
+    'RedVegiemon': {
+        types: ['Grass', 'Poison'],
+        bs: { hp: 85, at: 120, df: 80, sa: 100, sd: 80, sp: 100 },
+        weightkg: 94,
+        abilities: { 0: 'Poison Touch' },
+        origin: 'Infinity'
+    },
+    'Coelamon': {
+        types: ['Water', 'Steel'],
+        bs: { hp: 90, at: 95, df: 100, sa: 110, sd: 95, sp: 55 },
+        weightkg: 321.5,
+        abilities: { 0: 'Rough Skin' },
+        origin: 'Infinity'
+    },
+    'Airdramon': {
+        types: ['Dragon', 'Flying'],
+        bs: { hp: 90, at: 130, df: 70, sa: 80, sd: 70, sp: 105 },
+        weightkg: 242,
+        abilities: { 0: 'Rock Head' },
+        origin: 'Infinity'
+    },
+    'Angemon': {
+        types: ['Fairy', 'Flying'],
+        bs: { hp: 105, at: 115, df: 70, sa: 90, sd: 70, sp: 105 },
+        weightkg: 133.5,
+        abilities: { 0: 'Long Reach' },
+        origin: 'Infinity'
+    },
+    'WereGarurumon': {
+        types: ['Ice', 'Fighting'],
+        bs: { hp: 85, at: 130, df: 80, sa: 115, sd: 85, sp: 115 },
+        weightkg: 257.5,
+        abilities: { 0: 'Technician' },
+        origin: 'Infinity'
+    },
+    'MegaKabuterimon': {
+        types: ['Bug', 'Electric'],
+        bs: { hp: 105, at: 120, df: 150, sa: 80, sd: 95, sp: 65 },
+        weightkg: 986,
+        abilities: { 0: 'Levitate' },
+        origin: 'Infinity'
+    },
+    'Garudamon': {
+        types: ['Fire', 'Flying'],
+        bs: { hp: 90, at: 138, df: 80, sa: 104, sd: 75, sp: 123 },
+        weightkg: 645,
+        abilities: { 0: 'Guts' },
+        origin: 'Infinity'
+    },
+    'Zudomon': {
+        types: ['Ice', 'Rock'],
+        bs: { hp: 90, at: 140, df: 120, sa: 92, sd: 90, sp: 78 },
+        weightkg: 1547,
+        abilities: { 0: 'Anger Point' },
+        origin: 'Infinity'
+    },
+    'MegaSeadramon': {
+        types: ['Water', 'Dragon'],
+        bs: { hp: 90, at: 120, df: 100, sa: 114, sd: 74, sp: 117 },
+        weightkg: 485,
+        abilities: { 0: 'Lightning Rod' },
+        origin: 'Infinity'
+    },
+    'Okuwamon': {
+        types: ['Bug', 'Fighting'],
+        bs: { hp: 65, at: 150, df: 100, sa: 117, sd: 73, sp: 110 },
+        weightkg: 821,
+        abilities: { 0: 'Hyper Cutter' },
+        origin: 'Infinity'
+    },
+    'Piximon': {
+        types: ['Fairy', 'Fighting'],
+        bs: { hp: 85, at: 120, df: 85, sa: 100, sd: 90, sp: 130 },
+        weightkg: 49,
+        abilities: { 0: 'Levitate' },
+        origin: 'Infinity'
+    },
+    'Lillymon': {
+        types: ['Grass', 'Fairy'],
+        bs: { hp: 100, at: 90, df: 80, sa: 138, sd: 85, sp: 117 },
+        weightkg: 74.5,
+        abilities: { 0: 'Opportunist' },
+        origin: 'Infinity'
+    },
+    'Whamon': {
+        types: ['Water', 'Normal'],
+        bs: { hp: 100, at: 125, df: 110, sa: 110, sd: 105, sp: 60 },
+        weightkg: 1284,
+        abilities: { 0: 'Rough Skin' },
+        origin: 'Infinity'
+    },
+    'Monzaemon': {
+        types: ['Normal', 'Fairy'],
+        bs: { hp: 120, at: 120, df: 100, sa: 100, sd: 95, sp: 70 },
+        weightkg: 470,
+        abilities: { 0: 'Pixilate' },
+        origin: 'Infinity'
+    },
+    'MagnaAngemon': {
+        types: ['Fairy', 'Flying'],
+        bs: { hp: 95, at: 120, df: 85, sa: 120, sd: 85, sp: 110 },
+        weightkg: 238,
+        abilities: { 0: 'Magic Guard' },
+        origin: 'Infinity'
+    },
+    'SaberLeomon': {
+        types: ['Electric', 'Fighting'],
+        bs: { hp: 100, at: 135, df: 120, sa: 105, sd: 90, sp: 140 },
+        weightkg: 525,
+        abilities: { 0: 'Iron Barbs' },
+        origin: 'Infinity'
+    },
+    'MetalGarurumon': {
+        types: ['Ice', 'Steel'],
+        bs: { hp: 100, at: 130, df: 120, sa: 130, sd: 105, sp: 125 },
+        weightkg: 616,
+        abilities: { 0: 'Technician' },
+        origin: 'Infinity'
+    },
+    'Machinedramon': {
+        types: ['Steel', 'Ghost'],
+        bs: { hp: 76, at: 145, df: 135, sa: 155, sd: 125, sp: 79 },
+        weightkg: 1490,
+        abilities: { 0: 'Mega Launcher' },
+        origin: 'Infinity'
+    },
+    'Omnimon': {
+        types: ['Fire', 'Ice'],
+        bs: { hp: 115, at: 145, df: 120, sa: 145, sd: 120, sp: 130 },
+        weightkg: 470,
+        abilities: { 0: 'Magic Guard' },
+        origin: 'Infinity'
+    },
+    'Pagumon': {
+        types: ['Poison'],
+        bs: { hp: 35, at: 30, df: 30, sa: 40, sd: 35, sp: 30 },
+        weightkg: 13,
+        abilities: { 0: 'Prankster' },
+        origin: 'Infinity'
+    },
+    'Gazimon': {
+        types: ['Poison', 'Dark'],
+        bs: { hp: 70, at: 70, df: 60, sa: 80, sd: 70, sp: 70 },
+        weightkg: 49,
+        abilities: { 0: 'Prankster' },
+        origin: 'Infinity'
+    },
+    'Etemon': {
+        types: ['Fighting', 'Ground'],
+        bs: { hp: 80, at: 130, df: 90, sa: 95, sd: 92, sp: 118 },
+        weightkg: 117.5,
+        abilities: { 0: 'Prankster' },
+        origin: 'Infinity'
+    },
+    'MetalEtemon': {
+        types: ['Fighting', 'Steel'],
+        bs: { hp: 100, at: 140, df: 120, sa: 109, sd: 130, sp: 106 },
+        weightkg: 278.5,
+        abilities: { 0: 'Filter' },
+        origin: 'Infinity'
+    },
+    'Demidevimon': {
+        types: ['Flying', 'Poison'],
+        bs: { hp: 70, at: 69, df: 66, sa: 70, sd: 70, sp: 80 },
+        weightkg: 30,
+        abilities: { 0: 'Prankster' },
+        origin: 'Infinity'
+    },
+    'Devimon': {
+        types: ['Flying', 'Poison'],
+        bs: { hp: 85, at: 125, df: 70, sa: 90, sd: 80, sp: 105 },
+        weightkg: 112,
+        abilities: { 0: 'Long Reach' },
+        origin: 'Infinity'
+    },
+    'Bakemon': {
+        types: ['Poison', 'Ghost'],
+        bs: { hp: 55, at: 90, df: 140, sa: 90, sd: 140, sp: 40 },
+        weightkg: 26,
+        abilities: { 0: 'Levitate' },
+        origin: 'Infinity'
+    },
+    'Keramon': {
+        types: ['Poison'],
+        bs: { hp: 75, at: 70, df: 70, sa: 70, sd: 70, sp: 70 },
+        weightkg: 83,
+        abilities: { 0: 'Prankster' },
+        origin: 'Infinity'
+    },
+    'Infermon': {
+        types: ['Bug', 'Poison'],
+        bs: { hp: 90, at: 90, df: 110, sa: 120, sd: 110, sp: 110 },
+        weightkg: 450,
+        abilities: { 0: 'Prankster' },
+        origin: 'Infinity'
+    },
+    'Diaboromon': {
+        types: ['Poison', 'Dark'],
+        bs: { hp: 105, at: 130, df: 120, sa: 151, sd: 120, sp: 129 },
+        weightkg: 587,
+        abilities: { 0: 'Dark Aura' },
+        origin: 'Infinity'
+    },
+    'Wizardmon': {
+        types: ['Psychic', 'Ghost'],
+        bs: { hp: 80, at: 100, df: 70, sa: 130, sd: 75, sp: 100 },
+        weightkg: 75,
+        abilities: { 0: 'Magic Bounce' },
+        origin: 'Infinity'
+    },
     'Soulply': {
         types: ['Ghost'],
         bs: { hp: 110, at: 90, df: 90, sa: 20, sd: 119, sp: 33 },

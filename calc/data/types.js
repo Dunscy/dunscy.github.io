@@ -446,25 +446,25 @@ var XY = (0, util_1.extend)(true, {}, GSC, {
 var SM = XY;
 var SS = SM;
 var SV = (0, util_1.extend)(true, {}, SS, {
-    '???': { Stellar: 1, Crystal: 1, Nuclear: 2 },
-    Normal: { Stellar: 1, Crystal: 1, Nuclear: 2 },
-    Grass: { Stellar: 1, Crystal: 1, Nuclear: 2 },
-    Fire: { Stellar: 1, Crystal: 1, Nuclear: 2 },
-    Water: { Stellar: 1, Crystal: 1, Nuclear: 2 },
-    Electric: { Stellar: 1, Crystal: 1, Nuclear: 2 },
-    Ice: { Stellar: 1, Crystal: 1, Nuclear: 2 },
-    Flying: { Stellar: 1, Crystal: 1, Nuclear: 2 },
-    Bug: { Stellar: 1, Crystal: 1, Nuclear: 2 },
-    Poison: { Stellar: 1, Crystal: 1, Nuclear: 2 },
-    Ground: { Stellar: 1, Crystal: 1, Nuclear: 2 },
-    Rock: { Stellar: 1, Crystal: 1, Nuclear: 2 },
-    Fighting: { Stellar: 1, Crystal: 1, Nuclear: 2 },
-    Psychic: { Stellar: 1, Crystal: 1, Nuclear: 2 },
-    Ghost: { Stellar: 1, Crystal: 1, Nuclear: 2 },
-    Dragon: { Stellar: 1, Crystal: 1, Nuclear: 2 },
-    Dark: { Stellar: 1, Crystal: 1, Nuclear: 2 },
-    Steel: { Stellar: 1, Crystal: 1, Nuclear: 2 },
-    Fairy: { Stellar: 1, Crystal: 1, Nuclear: 2 },
+    '???': { Stellar: 1, Crystal: 1, Nuclear: 2, Cosmic: 1 },
+    Normal: { Stellar: 1, Crystal: 1, Nuclear: 2, Cosmic: 0.5 },
+    Grass: { Stellar: 1, Crystal: 1, Nuclear: 2, Cosmic: 1 },
+    Fire: { Stellar: 1, Crystal: 1, Nuclear: 2, Cosmic: 0 },
+    Water: { Stellar: 1, Crystal: 1, Nuclear: 2, Cosmic: 1 },
+    Electric: { Stellar: 1, Crystal: 1, Nuclear: 2, Cosmic: 1 },
+    Ice: { Stellar: 1, Crystal: 1, Nuclear: 2, Cosmic: 1 },
+    Flying: { Stellar: 1, Crystal: 1, Nuclear: 2, Cosmic: 1 },
+    Bug: { Stellar: 1, Crystal: 1, Nuclear: 2, Cosmic: 1 },
+    Poison: { Stellar: 1, Crystal: 1, Nuclear: 2, Cosmic: 1 },
+    Ground: { Stellar: 1, Crystal: 1, Nuclear: 2, Cosmic: 1 },
+    Rock: { Stellar: 1, Crystal: 1, Nuclear: 2, Cosmic: 1 },
+    Fighting: { Stellar: 1, Crystal: 1, Nuclear: 2, Cosmic: 1 },
+    Psychic: { Stellar: 1, Crystal: 1, Nuclear: 2, Cosmic: 1 },
+    Ghost: { Stellar: 1, Crystal: 1, Nuclear: 2, Cosmic: 1 },
+    Dragon: { Stellar: 1, Crystal: 1, Nuclear: 2, Cosmic: 1 },
+    Dark: { Stellar: 1, Crystal: 1, Nuclear: 2, Cosmic: 1 },
+    Steel: { Stellar: 1, Crystal: 1, Nuclear: 2, Cosmic: 1 },
+    Fairy: { Stellar: 1, Crystal: 1, Nuclear: 2, Cosmic: 1 },
     Stellar: {
         '???': 1
     },
@@ -490,7 +490,8 @@ var SV = (0, util_1.extend)(true, {}, SS, {
         Fairy: 1,
         Stellar: 1,
         Crystal: 1,
-        Nuclear: 2
+        Nuclear: 2,
+        Cosmic: 1
     },
     Nuclear: {
         '???': 2,
@@ -514,7 +515,33 @@ var SV = (0, util_1.extend)(true, {}, SS, {
         Fairy: 2,
         Stellar: 2,
         Crystal: 0.5,
-        Nuclear: 0.5
+        Nuclear: 0.5,
+        Cosmic: 2
+    },
+    Cosmic: {
+        '???': 1,
+        Normal: 2,
+        Grass: 1,
+        Fire: 1,
+        Water: 1,
+        Electric: 1,
+        Ice: 1,
+        Flying: 1,
+        Bug: 1,
+        Poison: 1,
+        Ground: 1,
+        Rock: 1,
+        Fighting: 1,
+        Psychic: 0.5,
+        Ghost: 1,
+        Dragon: 1,
+        Dark: 1,
+        Steel: 1,
+        Fairy: 2,
+        Stellar: 1,
+        Crystal: 1,
+        Nuclear: 2,
+        Cosmic: 1
     }
 });
 exports.TYPE_CHART = [{}, RBY, GSC, ADV, DPP, BW, XY, SM, SS, SV];
