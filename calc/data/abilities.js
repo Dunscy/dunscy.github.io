@@ -459,7 +459,8 @@ var SV = SS.concat([
     'Bursting Spores',
     'Belligerent Quills',
     'Full Plate',
-    'Aqua Guard'
+    'Aqua Guard',
+    'Lucky Charm'
 ]);
 exports.ABILITIES = [[], RBY, GSC, ADV, DPP, BW, XY, SM, SS, SV];
 var Abilities = (function () {
