@@ -761,7 +761,7 @@ function calculateBPModsSMSSSV(gen, attacker, defender, move, field, desc, baseP
         move.target = 'allAdjacentFoes';
         move.type = 'Stellar';
     }
-    else if ((move.named('Knock Off') && !resistedKnockOffDamage) ||
+    else if ((move.named('Knock Off', 'Dino Kick') && !resistedKnockOffDamage) ||
         (move.named('Misty Explosion') && (0, util_2.isGrounded)(attacker, field) && field.hasTerrain('Misty')) ||
         (move.named('Grav Apple', 'Void Tentacle') && field.isGravity)) {
         bpMods.push(6144);

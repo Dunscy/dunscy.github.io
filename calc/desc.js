@@ -315,7 +315,7 @@ function combine(damage) {
 var TRAPPING = [
     'Bind', 'Clamp', 'Fire Spin', 'Infestation', 'Magma Storm', 'Sand Tomb',
     'Thunder Cage', 'Whirlpool', 'Wrap', 'G-Max Sandblast', 'G-Max Centiferno',
-    'Metal Whip',
+    'Metal Whip', 'Cable Crusher',
 ];
 function getHazards(gen, defender, defenderSide) {
     var damage = 0;
@@ -446,7 +446,7 @@ function getEndOfTurn(gen, attacker, defender, move, field) {
         damage -= Math.floor((effectiveness * defender.maxHP()) / 8);
         texts.push('Fallout');
     }
-    var loseItem = move.named('Knock Off', 'Pixie Trick') && !defender.hasAbility('Sticky Hold');
+    var loseItem = move.named('Knock Off', 'Pixie Trick', 'Dino Kick') && !defender.hasAbility('Sticky Hold');
     if (defender.hasItem('Leftovers') && !loseItem) {
         damage += Math.floor(defender.maxHP() / 16);
         texts.push('Leftovers recovery');

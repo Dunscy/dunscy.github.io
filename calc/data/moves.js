@@ -5290,6 +5290,666 @@ var SV_PATCH = {
         zp: 0,
         target: 'normal'
     },
+    'Nail Flick': {
+        bp: 50,
+        type: 'Normal',
+        category: 'Physical',
+        zp: 0,
+        target: 'normal'
+    },
+    'Nostril Flare': {
+        bp: 55,
+        type: 'Fire',
+        category: 'Special',
+        zp: 0,
+        target: 'normal',
+        priority: 1
+    },
+    'Barbed Tackle': {
+        bp: 45,
+        type: 'Poison',
+        category: 'Physical',
+        zp: 0,
+        target: 'normal',
+        makesContact: true,
+        secondaries: true
+    },
+    'Thorn Whip': {
+        bp: 50,
+        type: 'Grass',
+        category: 'Physical',
+        zp: 0,
+        target: 'normal',
+        makesContact: true
+    },
+    'Nimbus Fist': {
+        bp: 35,
+        type: 'Grass',
+        category: 'Physical',
+        zp: 0,
+        target: 'normal',
+        makesContact: true,
+        isPunch: true
+    },
+    'Foggy Strike': {
+        bp: 55,
+        type: 'Water',
+        category: 'Physical',
+        zp: 0,
+        target: 'normal'
+    },
+    'Ice Slash': {
+        bp: 70,
+        type: 'Ice',
+        category: 'Physical',
+        zp: 0,
+        target: 'normal',
+        makesContact: true,
+        isSlicing: true
+    },
+    'Dry Needles': {
+        bp: 18,
+        type: 'Grass',
+        category: 'Physical',
+        zp: 0,
+        target: 'normal',
+        multihit: [2, 5]
+    },
+    'Focused Ram': {
+        bp: 100,
+        type: 'Psychic',
+        category: 'Physical',
+        zp: 0,
+        target: 'normal',
+        recoil: [25, 100]
+    },
+    'Searing Slash': {
+        bp: 90,
+        type: 'Fire',
+        category: 'Physical',
+        zp: 0,
+        target: 'normal',
+        makesContact: true,
+        isSlicing: true,
+        secondaries: true
+    },
+    'Thunder Slash': {
+        bp: 95,
+        type: 'Electric',
+        category: 'Physical',
+        zp: 0,
+        target: 'normal',
+        makesContact: true,
+        isSlicing: true
+    },
+    'Typhoon': {
+        bp: 80,
+        type: 'Flying',
+        category: 'Special',
+        zp: 0,
+        target: 'normal',
+        secondaries: true
+    },
+    'Draco Blitz': {
+        bp: 100,
+        type: 'Dragon',
+        category: 'Physical',
+        zp: 0,
+        target: 'normal',
+        makesContact: true,
+        recoil: [33, 100],
+        secondaries: true
+    },
+    'Faeng Rush': {
+        bp: 80,
+        type: 'Fairy',
+        category: 'Physical',
+        zp: 0,
+        target: 'normal',
+        makesContact: true,
+        isBite: true,
+        secondaries: true
+    },
+    'Ambush': {
+        bp: 40,
+        type: 'Dark',
+        category: 'Physical',
+        zp: 0,
+        target: 'normal',
+        makesContact: true,
+        secondaries: true
+    },
+    'Groom Guard': {
+        bp: 0,
+        type: 'Normal',
+        category: 'Status',
+        zp: 0,
+        target: 'normal'
+    },
+    'Astral Shot': {
+        bp: 50,
+        type: 'Cosmic',
+        category: 'Special',
+        zp: 0,
+        target: 'normal',
+        priority: 1
+    },
+    'Cosmic Ray': {
+        bp: 95,
+        type: 'Cosmic',
+        category: 'Special',
+        zp: 0,
+        target: 'normal',
+        isPulse: true,
+        secondaries: true
+    },
+    'Comet Shower': {
+        bp: 80,
+        type: 'Cosmic',
+        category: 'Physical',
+        zp: 0,
+        target: 'allAdjacent',
+        secondaries: true
+    },
+    'Decap Attack': {
+        bp: 120,
+        type: 'Bug',
+        category: 'Physical',
+        zp: 0,
+        target: 'normal',
+        recoil: [33, 100],
+        isBullet: true
+    },
+    'Tar-Tantrum': {
+        bp: 115,
+        type: 'Rock',
+        category: 'Physical',
+        zp: 0,
+        target: 'normal',
+        makesContact: true,
+        isPunch: true,
+        secondaries: true
+    },
+    'Bone Sweep': {
+        bp: 90,
+        type: 'Ground',
+        category: 'Physical',
+        zp: 0,
+        target: 'allAdjacentFoes'
+    },
+    'Venom Swipe': {
+        bp: 100,
+        type: 'Poison',
+        category: 'Physical',
+        zp: 0,
+        target: 'normal',
+        makesContact: true,
+        secondaries: true
+    },
+    'Pressurize': {
+        bp: 0,
+        type: 'Rock',
+        category: 'Status',
+        zp: 0,
+        target: 'normal'
+    },
+    'Vanish': {
+        bp: 0,
+        type: 'Ghost',
+        category: 'Status',
+        zp: 0,
+        target: 'normal'
+    },
+    'Cactus Smash': {
+        bp: 115,
+        type: 'Grass',
+        category: 'Physical',
+        zp: 0,
+        target: 'normal',
+        recoil: [33, 100],
+        makesContact: true,
+        secondaries: true
+    },
+    'Eevoboost': {
+        bp: 0,
+        type: 'Normal',
+        category: 'Status',
+        zp: 0,
+        target: 'normal',
+        priority: -2
+    },
+    'Deja-vu': {
+        bp: 105,
+        type: 'Psychic',
+        category: 'Special',
+        zp: 0,
+        target: 'normal'
+    },
+    'Big Bang': {
+        bp: 105,
+        type: 'Cosmic',
+        category: 'Physical',
+        zp: 0,
+        target: 'allAdjacent',
+        secondaries: true
+    },
+    'Boom Bubble': {
+        bp: 40,
+        type: 'Normal',
+        category: 'Physical',
+        zp: 0,
+        target: 'normal',
+        makesContact: true,
+        secondaries: true
+    },
+    'Pepper Breath': {
+        bp: 65,
+        type: 'Fire',
+        category: 'Special',
+        zp: 0,
+        target: 'normal',
+        secondaries: true
+    },
+    'Cinder Breath': {
+        bp: 55,
+        type: 'Fire',
+        category: 'Special',
+        zp: 0,
+        target: 'normal',
+        secondaries: true
+    },
+    'Nova Blast': {
+        bp: 75,
+        type: 'Fire',
+        category: 'Special',
+        zp: 0,
+        target: 'normal',
+        secondaries: true,
+        isPulse: true
+    },
+    'Giga Destroyer': {
+        bp: 55,
+        type: 'Fire',
+        category: 'Special',
+        zp: 0,
+        target: 'normal',
+        multihit: 2
+    },
+    'Terra Force': {
+        bp: 120,
+        type: 'Fire',
+        category: 'Special',
+        zp: 0,
+        target: 'allAdjacent'
+    },
+    'Flash Flood': {
+        bp: 40,
+        type: 'Water',
+        category: 'Special',
+        zp: 0,
+        target: 'normal',
+        priority: 1
+    },
+    'Brain Freeze': {
+        bp: 85,
+        type: 'Psychic',
+        category: 'Special',
+        zp: 0,
+        target: 'normal',
+        secondaries: true
+    },
+    'Brain Storm': {
+        bp: 70,
+        type: 'Psychic',
+        category: 'Special',
+        zp: 0,
+        target: 'normal',
+        secondaries: true
+    },
+    'Dino Kick': {
+        bp: 70,
+        type: 'Fighting',
+        category: 'Physical',
+        zp: 0,
+        target: 'normal',
+        makesContact: true
+    },
+    'Dark Shot': {
+        bp: 80,
+        type: 'Ghost',
+        category: 'Special',
+        zp: 0,
+        target: 'normal',
+        isPulse: true,
+        isBullet: true
+    },
+    'Death Nail': {
+        bp: 85,
+        type: 'Ghost',
+        category: 'Physical',
+        zp: 0,
+        target: 'normal',
+        makesContact: true
+    },
+    'Hyper-Stink-Shot': {
+        bp: 95,
+        type: 'Poison',
+        category: 'Special',
+        zp: 0,
+        target: 'normal'
+    },
+    'Yucky Tongue': {
+        bp: 80,
+        type: 'Dark',
+        category: 'Physical',
+        zp: 0,
+        target: 'normal',
+        makesContact: true
+    },
+    'Ice Blast': {
+        bp: 70,
+        type: 'Ice',
+        category: 'Physical',
+        zp: 0,
+        target: 'normal',
+        secondaries: true
+    },
+    'Fin Cutter': {
+        bp: 70,
+        type: 'Water',
+        category: 'Physical',
+        zp: 0,
+        target: 'normal',
+        makesContact: true,
+        isSlicing: true
+    },
+    'Charming Tweety': {
+        bp: 0,
+        type: 'Normal',
+        category: 'Status',
+        zp: 0,
+        target: 'normal',
+        isSound: true
+    },
+    'Horn Buster': {
+        bp: 90,
+        type: 'Bug',
+        category: 'Physical',
+        zp: 0,
+        target: 'normal',
+        makesContact: true,
+        secondaries: true
+    },
+    'Mugen Cannon': {
+        bp: 90,
+        type: 'Steel',
+        category: 'Special',
+        zp: 0,
+        target: 'normal',
+        isPulse: true,
+        secondaries: true
+    },
+    'Blue Blaster': {
+        bp: 50,
+        type: 'Ice',
+        category: 'Special',
+        zp: 0,
+        target: 'normal',
+        secondaries: true
+    },
+    'Lion Sword': {
+        bp: 75,
+        type: 'Steel',
+        category: 'Physical',
+        zp: 0,
+        target: 'normal',
+        isSlicing: true
+    },
+    'Infinity Arrow': {
+        bp: 65,
+        type: 'Electric',
+        category: 'Physical',
+        zp: 0,
+        target: 'normal',
+        makesContact: true,
+        secondaries: true
+    },
+    'Nail Crusher': {
+        bp: 90,
+        type: 'Steel',
+        category: 'Physical',
+        zp: 0,
+        target: 'normal',
+        makesContact: true,
+        secondaries: true
+    },
+    'Excalibur': {
+        bp: 105,
+        type: 'Fairy',
+        category: 'Physical',
+        zp: 0,
+        target: 'normal',
+        isSlicing: true
+    },
+    'Beam Shield': {
+        bp: 0,
+        type: 'Fairy',
+        category: 'Status',
+        zp: 0,
+        target: 'normal',
+        makesContact: true
+    },
+    'Ice Wolf Claw': {
+        bp: 35,
+        type: 'Ice',
+        category: 'Special',
+        zp: 0,
+        target: 'normal',
+        multihit: [2, 5]
+    },
+    'omniblast': {
+        bp: 100,
+        type: 'Electric',
+        category: 'Special',
+        zp: 0,
+        target: 'normal',
+        secondaries: true
+    },
+    'Vulcan\'s Hammer': {
+        bp: 100,
+        type: 'Rock',
+        category: 'Physical',
+        zp: 0,
+        target: 'normal',
+        secondaries: true
+    },
+    'Anvil Smash': {
+        bp: 100,
+        type: 'Ground',
+        category: 'Physical',
+        zp: 0,
+        target: 'normal'
+    },
+    'Compost Bomber': {
+        bp: 95,
+        type: 'Poison',
+        category: 'Special',
+        zp: 0,
+        target: 'normal',
+        secondaries: true
+    },
+    'Heaven\'s Knuckle': {
+        bp: 90,
+        type: 'Fairy',
+        category: 'Physical',
+        zp: 0,
+        target: 'normal',
+        isPunch: true
+    },
+    'Air Slam': {
+        bp: 85,
+        type: 'Flying',
+        category: 'Physical',
+        zp: 0,
+        target: 'normal',
+        makesContact: true,
+        secondaries: true
+    },
+    'Duo Scissor Claw': {
+        bp: 105,
+        type: 'Steel',
+        category: 'Physical',
+        zp: 0,
+        target: 'normal',
+        makesContact: true,
+        secondaries: true
+    },
+    'Nuclear Punch': {
+        bp: 105,
+        type: 'Steel',
+        category: 'Physical',
+        zp: 0,
+        target: 'normal',
+        makesContact: true,
+        isPunch: true,
+        secondaries: true
+    },
+    'Devil\'s Deed': {
+        bp: 0,
+        type: 'Dark',
+        category: 'Status',
+        zp: 0,
+        target: 'normal'
+    },
+    'Evil Wing': {
+        bp: 85,
+        type: 'Flying',
+        category: 'Physical',
+        zp: 0,
+        target: 'normal',
+        makesContact: true,
+        secondaries: true
+    },
+    'Concert Crush': {
+        bp: 0,
+        type: 'Dark',
+        category: 'Status',
+        zp: 0,
+        target: 'normal',
+        makesContact: true
+    },
+    'Bug Blaster': {
+        bp: 70,
+        type: 'Poison',
+        category: 'Special',
+        zp: 0,
+        target: 'normal',
+        isPulse: true,
+        secondaries: true
+    },
+    'Poison Bubbles': {
+        bp: 40,
+        type: 'Poison',
+        category: 'Physical',
+        zp: 0,
+        target: 'normal',
+        secondaries: true
+    },
+    'Garuru-Kick': {
+        bp: 70,
+        type: 'Ice',
+        category: 'Physical',
+        zp: 0,
+        target: 'normal',
+        makesContact: true
+    },
+    'Virus Skater': {
+        bp: 70,
+        type: 'Poison',
+        category: 'Physical',
+        zp: 0,
+        target: 'normal',
+        makesContact: true,
+        secondaries: true
+    },
+    'Page Fault': {
+        bp: 120,
+        type: 'Poison',
+        category: 'Physical',
+        zp: 0,
+        target: 'normal',
+        makesContact: true
+    },
+    'Cable Crusher': {
+        bp: 70,
+        type: 'Poison',
+        category: 'Physical',
+        zp: 0,
+        target: 'normal',
+        makesContact: true
+    },
+    'Web Wrecker': {
+        bp: 50,
+        type: 'Dark',
+        category: 'Special',
+        zp: 0,
+        target: 'normal'
+    },
+    'Transcendent Sword': {
+        bp: 240,
+        type: 'Steel',
+        category: 'Physical',
+        zp: 0,
+        target: 'normal',
+        makesContact: true,
+        isSlicing: true
+    },
+    'Omni Howl': {
+        bp: 140,
+        type: 'Normal',
+        category: 'Special',
+        zp: 0,
+        target: 'normal'
+    },
+    'Dark Network': {
+        bp: 130,
+        type: 'Poison',
+        category: 'Special',
+        zp: 0,
+        target: 'normal',
+        self: { boosts: { spa: -2 } }
+    },
+    'Supreme Cannon': {
+        bp: 95,
+        type: 'Ice',
+        category: 'Special',
+        zp: 0,
+        target: 'allAdjacentFoes',
+        secondaries: true
+    },
+    'Sizzle Slam': {
+        bp: 75,
+        type: 'Fire',
+        category: 'Physical',
+        zp: 0,
+        target: 'normal'
+    },
+    'Necro Magic': {
+        bp: 80,
+        type: 'Psychic',
+        category: 'Special',
+        zp: 0,
+        target: 'normal',
+        makesContact: true,
+        drain: [1, 2]
+    },
+    'Kablow!': {
+        bp: 155,
+        type: 'Steel',
+        category: 'Physical',
+        zp: 0,
+        target: 'normal'
+    },
     'Blooms Day': {
         bp: 150,
         type: 'Grass',
