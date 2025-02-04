@@ -5055,6 +5055,241 @@ var SV_PATCH = {
         target: 'normal',
         makesContact: true
     },
+    'Atomic Punch': {
+        bp: 90,
+        type: 'Nuclear',
+        category: 'Physical',
+        zp: 200,
+        target: 'normal',
+        makesContact: true,
+        isPunch: true,
+        secondaries: true
+    },
+    'Caustic Breath': {
+        bp: 60,
+        type: 'Dragon',
+        category: 'Special',
+        zp: 200,
+        target: 'allAdjacentFoes',
+        secondaries: true
+    },
+    'Coral Break': {
+        bp: 80,
+        type: 'Water',
+        category: 'Special',
+        zp: 200,
+        target: 'normal',
+        makesContact: true,
+        overrideDefensiveStat: 'def'
+    },
+    'Drain Life': {
+        bp: 75,
+        type: 'Dark',
+        category: 'Physical',
+        zp: 200,
+        target: 'normal',
+        secondaries: true,
+        makesContact: true,
+        drain: [1, 2]
+    },
+    'Expunge': {
+        bp: 70,
+        type: 'Nuclear',
+        category: 'Physical',
+        zp: 200,
+        target: 'normal'
+    },
+    'Fallout': {
+        bp: 0,
+        type: 'Nuclear',
+        category: 'Status',
+        zp: 0,
+        target: 'normal'
+    },
+    'Fission Burst': {
+        bp: 150,
+        type: 'Nuclear',
+        category: 'Physical',
+        zp: 200,
+        target: 'allAdjacent'
+    },
+    'Flame Impact': {
+        bp: 65,
+        type: 'Fire',
+        category: 'Physical',
+        zp: 200,
+        target: 'normal',
+        makesContact: true,
+        priority: 2
+    },
+    'Gamma Ray': {
+        bp: 40,
+        type: 'Nuclear',
+        category: 'Special',
+        zp: 200,
+        target: 'normal'
+    },
+    'Gemstone Glimmer': {
+        bp: 75,
+        type: 'Dark',
+        category: 'Special',
+        zp: 200,
+        target: 'normal',
+        secondaries: true
+    },
+    'Get Lucky': {
+        bp: 75,
+        type: 'Psychic',
+        category: 'Special',
+        zp: 200,
+        target: 'normal'
+    },
+    'Golden Fist': {
+        bp: 70,
+        type: 'Fighting',
+        category: 'Physical',
+        zp: 200,
+        target: 'normal',
+        isPunch: true,
+        makesContact: true
+    },
+    'Half-Life': {
+        bp: 0,
+        type: 'Nuclear',
+        category: 'Special',
+        zp: 200,
+        target: 'normal'
+    },
+    'Infernal Blade': {
+        bp: 90,
+        type: 'Fire',
+        category: 'Physical',
+        zp: 200,
+        target: 'normal',
+        isSlicing: true,
+        makesContact: true,
+        secondaries: true
+    },
+    'Instant Crush': {
+        bp: 60,
+        type: 'Psychic',
+        category: 'Special',
+        zp: 200,
+        target: 'normal',
+        priority: 1
+    },
+    'Laser Pulse': {
+        bp: 80,
+        type: 'Normal',
+        category: 'Special',
+        zp: 200,
+        target: 'normal',
+        isPulse: true
+    },
+    'Metal Cruncher': {
+        bp: 120,
+        type: 'Steel',
+        category: 'Physical',
+        zp: 200,
+        target: 'normal',
+        isBite: true,
+        makesContact: true,
+        secondaries: true
+    },
+    'Metal Whip': {
+        bp: 90,
+        type: 'Steel',
+        category: 'Physical',
+        zp: 200,
+        target: 'normal'
+    },
+    'Nuclear Slash': {
+        bp: 55,
+        type: 'Nuclear',
+        category: 'Physical',
+        zp: 200,
+        target: 'normal',
+        isSlicing: true,
+        makesContact: true
+    },
+    'Nuclear Waste': {
+        bp: 0,
+        type: 'Nuclear',
+        category: 'Status',
+        zp: 0,
+        target: 'normal'
+    },
+    'Nuclear Wind': {
+        bp: 65,
+        type: 'Nuclear',
+        category: 'Special',
+        zp: 200,
+        target: 'normal'
+    },
+    'Ocean\'s Wrath': {
+        bp: 90,
+        type: 'Water',
+        category: 'Special',
+        zp: 200,
+        target: 'normal'
+    },
+    'Proton Bream': {
+        bp: 100,
+        type: 'Nuclear',
+        category: 'Special',
+        zp: 200,
+        target: 'normal',
+        self: { boosts: { spa: -2 } }
+    },
+    'Quantum Leap': {
+        bp: 100,
+        type: 'Nuclear',
+        category: 'Physical',
+        zp: 200,
+        target: 'normal',
+        makesContact: true
+    },
+    'Radio Acid': {
+        bp: 60,
+        type: 'Nuclear',
+        category: 'Special',
+        zp: 200,
+        target: 'normal',
+        secondaries: true
+    },
+    'Sky Fall': {
+        bp: 85,
+        type: 'Flying',
+        category: 'Special',
+        zp: 200,
+        target: 'normal',
+        secondaries: true,
+        makesContact: true
+    },
+    'Subduction': {
+        bp: 140,
+        type: 'Ground',
+        category: 'Physical',
+        zp: 200,
+        target: 'normal',
+        isSound: true,
+        secondaries: true
+    },
+    'Sudden Strike': {
+        bp: 40,
+        type: 'Dark',
+        category: 'Physical',
+        zp: 200,
+        target: 'normal',
+        priority: 1
+    },
+    'Thunderstorm': {
+        bp: 0,
+        type: 'Electric',
+        category: 'Status',
+        zp: 0,
+        target: 'normal'
+    },
     'Blooms Day': {
         bp: 150,
         type: 'Grass',

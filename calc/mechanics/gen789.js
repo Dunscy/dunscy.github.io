@@ -283,6 +283,9 @@ function calculateSMSSSV(gen, attacker, defender, move, field) {
     if (defender.hasAbility('Synthetic Alloy') && move.hasType('Fire') && typeEffectiveness > 1) {
         typeEffectiveness = 1;
     }
+    if (typeEffectiveness < 2 && move.named('Infernal Blade') && defender.hasType('Fairy')) {
+        typeEffectiveness = 2;
+    }
     if (typeEffectiveness === 0) {
         return result;
     }

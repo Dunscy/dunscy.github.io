@@ -195,6 +195,12 @@ function getMoveEffectiveness(gen, move, type, isGhostRevealed, isGravity, isRin
     else if (move.named('Corrode') && type === 'Steel') {
         return 2;
     }
+    else if (move.named('Expunge') && type === 'Nuclear') {
+        return 2;
+    }
+    else if (move.named('Infernal Blade') && type === 'Fairy') {
+        return 2;
+    }
     else {
         return gen.types.get((0, util_1.toID)(move.type)).effectiveness[type];
     }
