@@ -11415,6 +11415,13 @@ var SV_PATCH = {
         abilities: { 0: 'Mold Breaker' },
         origin: "Uranium"
     },
+    'Oblivicorn-Mega': {
+        types: ['Fairy', 'Dark'],
+        bs: { hp: 75, at: 143, df: 102, sa: 67, sd: 100, sp: 123 },
+        weightkg: 560.7,
+        abilities: { 0: 'Sheer Force' },
+        origin: "Uranium"
+    },
     'Luxi': {
         types: ['Dragon', 'Fairy'],
         bs: { hp: 60, at: 30, df: 40, sa: 50, sd: 60, sp: 40 },
