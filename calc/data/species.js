@@ -13806,1273 +13806,1363 @@ var SV_PATCH = {
         bs: { hp: 44, at: 60, df: 54, sa: 50, sd: 64, sp: 37 },
         weightkg: 16,
         abilities: { 0: 'Rough Skin' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Ivysaur-Egho': {
         types: ['Grass', 'Rock'],
         bs: { hp: 60, at: 80, df: 65, sa: 67, sd: 78, sp: 45 },
         weightkg: 70,
         abilities: { 0: 'Rough Skin' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Venusaur-Egho': {
         types: ['Grass', 'Rock'],
         bs: { hp: 80, at: 111, df: 100, sa: 90, sd: 88, sp: 65 },
         weightkg: 280,
         abilities: { 0: 'Rough Skin' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Charmander-Egho': {
         types: ['Fire', 'Dragon'],
         bs: { hp: 39, at: 50, df: 43, sa: 62, sd: 50, sp: 65 },
         weightkg: 8.5,
         abilities: { 0: 'Oblivious' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Charmeleon-Egho': {
         types: ['Fire', 'Dragon'],
         bs: { hp: 58, at: 64, df: 58, sa: 80, sd: 65, sp: 80 },
         weightkg: 19,
         abilities: { 0: 'Oblivious' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Charizard-Egho': {
         types: ['Fire', 'Dragon'],
         bs: { hp: 76, at: 75, df: 75, sa: 114, sd: 80, sp: 114 },
         weightkg: 90.5,
         abilities: { 0: 'Levitate' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Squirtle-Egho': {
         types: ['Water'],
         bs: { hp: 44, at: 48, df: 65, sa: 50, sd: 64, sp: 43 },
         weightkg: 8.5,
         abilities: { 0: 'Serene Grace' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Wartortle-Egho': {
         types: ['Water', 'Flying'],
         bs: { hp: 59, at: 63, df: 80, sa: 65, sd: 80, sp: 58 },
         weightkg: 20,
         abilities: { 0: 'Serene Grace' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Blastoise-Egho': {
         types: ['Water', 'Flying'],
         bs: { hp: 70, at: 85, df: 85, sa: 95, sd: 105, sp: 90 },
         weightkg: 76,
         abilities: { 0: 'Serene Grace' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Lukpup': {
         types: ['Fairy'],
         bs: { hp: 60, at: 75, df: 50, sa: 70, sd: 70, sp: 60 },
         weightkg: 14.9,
         abilities: { 0: 'Fluffy' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Lukagon': {
         types: ['Fairy', 'Dragon'],
         bs: { hp: 100, at: 124, df: 88, sa: 102, sd: 92, sp: 94 },
         weightkg: 123,
         abilities: { 0: 'Fluffy' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Kokiseed': {
         types: ['Grass'],
         bs: { hp: 45, at: 55, df: 55, sa: 55, sd: 60, sp: 40 },
         weightkg: 6,
         abilities: { 0: 'Own Tempo' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Kokipound': {
         types: ['Grass', 'Fighting'],
         bs: { hp: 60, at: 85, df: 70, sa: 53, sd: 65, sp: 60 },
         weightkg: 36,
         abilities: { 0: 'Justified' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Kokismash': {
         types: ['Grass', 'Fighting'],
         bs: { hp: 80, at: 130, df: 85, sa: 65, sd: 80, sp: 85 },
         weightkg: 164,
         abilities: { 0: 'Justified' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Chargo': {
         types: ['Fire'],
         bs: { hp: 49, at: 45, df: 50, sa: 64, sd: 54, sp: 58 },
         weightkg: 14.8,
         abilities: { 0: 'Reckless' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Burnaram': {
         types: ['Fire'],
         bs: { hp: 58, at: 75, df: 61, sa: 83, sd: 68, sp: 75 },
         weightkg: 53,
         abilities: { 0: 'Reckless' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Psysteed': {
         types: ['Fire', 'Psychic'],
         bs: { hp: 80, at: 90, df: 82, sa: 113, sd: 85, sp: 87 },
         weightkg: 88,
         abilities: { 0: 'Reckless' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Darpole': {
         types: ['Water'],
         bs: { hp: 56, at: 60, df: 50, sa: 40, sd: 60, sp: 40 },
         weightkg: 2.8,
         abilities: { 0: 'Pickpocket' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Brutoad': {
         types: ['Water', 'Dark'],
         bs: { hp: 68, at: 80, df: 71, sa: 60, sd: 71, sp: 50 },
         weightkg: 43,
         abilities: { 0: 'Pickpocket' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Godfrogger': {
         types: ['Water', 'Dark'],
         bs: { hp: 85, at: 102, df: 95, sa: 90, sd: 105, sp: 70 },
         weightkg: 187,
         abilities: { 0: 'Bulletproof' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Gorochu': {
         types: ['Electric', 'Fire'],
         bs: { hp: 60, at: 112, df: 50, sa: 88, sd: 70, sp: 105 },
         weightkg: 38.4,
         abilities: { 0: 'Reckless' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Nidorook': {
         types: ['Poison', 'Ground'],
         bs: { hp: 78, at: 97, df: 75, sa: 85, sd: 70, sp: 100 },
         weightkg: 76.8,
         abilities: { 0: 'Poison Point' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Quezsparce': {
         types: ['Fairy', 'Ground'],
         bs: { hp: 110, at: 105, df: 75, sa: 80, sd: 70, sp: 100 },
         weightkg: 79.3,
         abilities: { 0: 'Serene Grace' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Faeralynx': {
         types: ['Fairy', 'Dark'],
         bs: { hp: 75, at: 98, df: 73, sa: 88, sd: 75, sp: 126 },
         weightkg: 51,
         abilities: { 0: 'Infiltrator' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Shellder-Egho': {
         types: ['Water', 'Steel'],
         bs: { hp: 52, at: 40, df: 70, sa: 55, sd: 57, sp: 31 },
         weightkg: 41,
         abilities: { 0: 'Iron Barbs' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Skulkraken': {
         types: ['Water', 'Steel'],
         bs: { hp: 80, at: 83, df: 123, sa: 83, sd: 110, sp: 46 },
         weightkg: 212,
         abilities: { 0: 'Iron Barbs' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Grimer-Egho': {
         types: ['Poison', 'Rock'],
         bs: { hp: 60, at: 70, df: 70, sa: 60, sd: 45, sp: 20 },
         weightkg: 205,
         abilities: { 0: 'Stench' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Muk-Egho': {
         types: ['Poison', 'Rock'],
         bs: { hp: 85, at: 100, df: 105, sa: 90, sd: 80, sp: 40 },
         weightkg: 395,
         abilities: { 0: 'Stench' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Oozma': {
         types: ['Fire', 'Rock'],
         bs: { hp: 95, at: 134, df: 100, sa: 100, sd: 55, sp: 96 },
         weightkg: 240,
         abilities: { 0: 'Iron Fist' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Omeon': {
         types: ['Ghost'],
         bs: { hp: 70, at: 124, df: 85, sa: 65, sd: 65, sp: 116 },
         weightkg: 18,
         abilities: { 0: 'Super Luck' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Champeon': {
         types: ['Fighting'],
         bs: { hp: 65, at: 110, df: 65, sa: 95, sd: 60, sp: 130 },
         weightkg: 23,
         abilities: { 0: 'Scrappy' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Lepideon': {
         types: ['Bug'],
         bs: { hp: 80, at: 65, df: 72, sa: 115, sd: 90, sp: 103 },
         weightkg: 22,
         abilities: { 0: 'Rattled' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Guardeon': {
         types: ['Steel'],
         bs: { hp: 65, at: 60, df: 130, sa: 110, sd: 95, sp: 65 },
         weightkg: 58.5,
         abilities: { 0: 'Bulletproof' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Obsideon': {
         types: ['Rock'],
         bs: { hp: 75, at: 120, df: 75, sa: 60, sd: 115, sp: 80 },
         weightkg: 33,
         abilities: { 0: 'Rock Head' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Scorpeon': {
         types: ['Poison'],
         bs: { hp: 65, at: 111, df: 105, sa: 84, sd: 50, sp: 110 },
         weightkg: 23,
         abilities: { 0: 'Poison Touch' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Sphynxeon': {
         types: ['Ground'],
         bs: { hp: 120, at: 88, df: 106, sa: 70, sd: 80, sp: 61 },
         weightkg: 24,
         abilities: { 0: 'Synchronize' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Nimbeon': {
         types: ['Flying'],
         bs: { hp: 120, at: 88, df: 61, sa: 70, sd: 80, sp: 106 },
         weightkg: 14,
         abilities: { 0: 'Aerilate' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Draconeon': {
         types: ['Dragon'],
         bs: { hp: 80, at: 127, df: 80, sa: 70, sd: 50, sp: 118 },
         weightkg: 25,
         abilities: { 0: 'Tough Claws' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Eeveeon': {
         types: ['Normal'],
         bs: { hp: 90, at: 95, df: 70, sa: 95, sd: 70, sp: 105 },
         weightkg: 25,
         abilities: { 0: 'Klutz' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Vareon': {
         types: ['???'],
         bs: { hp: 100, at: 110, df: 100, sa: 110, sd: 100, sp: 80 },
         weightkg: 28,
         abilities: { 0: 'Protean' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Terathwack': {
         types: ['Normal', 'Ground'],
         bs: { hp: 100, at: 135, df: 113, sa: 60, sd: 80, sp: 77 },
         weightkg: 123,
         abilities: { 0: 'Rock Head' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Spearow-Egho': {
         types: ['Dark', 'Fighting'],
         bs: { hp: 40, at: 70, df: 25, sa: 26, sd: 31, sp: 70 },
         weightkg: 2.8,
         abilities: { 0: 'Defiant' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Fearow-Egho': {
         types: ['Dark', 'Fighting'],
         bs: { hp: 65, at: 112, df: 55, sa: 50, sd: 50, sp: 110 },
         weightkg: 45,
         abilities: { 0: 'Defiant' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Hoothoot-Egho': {
         types: ['Dark', 'Flying'],
         bs: { hp: 60, at: 30, df: 40, sa: 56, sd: 36, sp: 40 },
         weightkg: 23.5,
         abilities: { 0: 'Unnerve' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Noctowl-Egho': {
         types: ['Dark', 'Flying'],
         bs: { hp: 86, at: 50, df: 77, sa: 99, sd: 70, sp: 70 },
         weightkg: 49.8,
         abilities: { 0: 'Unnerve' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Grimfowl': {
         types: ['Dark', 'Flying'],
         bs: { hp: 112, at: 63, df: 80, sa: 130, sd: 77, sp: 78 },
         weightkg: 70,
         abilities: { 0: 'Unnerve' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Azurill-Egho': {
         types: ['Normal', 'Rock'],
         bs: { hp: 50, at: 40, df: 30, sa: 20, sd: 25, sp: 25 },
         weightkg: 4,
         abilities: { 0: 'Huge Power' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Marill-Egho': {
         types: ['Rock', 'Fighting'],
         bs: { hp: 70, at: 50, df: 40, sa: 20, sd: 30, sp: 40 },
         weightkg: 15,
         abilities: { 0: 'Huge Power' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Azumarill-Egho': {
         types: ['Rock', 'Fighting'],
         bs: { hp: 100, at: 80, df: 65, sa: 60, sd: 60, sp: 55 },
         weightkg: 46,
         abilities: { 0: 'Huge Power' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Trubbish-Egho': {
         types: ['Poison', 'Steel'],
         bs: { hp: 57, at: 22, df: 95, sa: 60, sd: 87, sp: 10 },
         weightkg: 43,
         abilities: { 0: 'Filter' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Garbodor-Egho': {
         types: ['Poison', 'Steel'],
         bs: { hp: 90, at: 25, df: 147, sa: 95, sd: 107, sp: 15 },
         weightkg: 177.3,
         abilities: { 0: 'Unaware' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Swablu-Egho': {
         types: ['Normal', 'Ice'],
         bs: { hp: 50, at: 30, df: 55, sa: 60, sd: 45, sp: 70 },
         weightkg: 4.2,
         abilities: { 0: 'Levitate' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Altaria-Egho': {
         types: ['Dragon', 'Ice'],
         bs: { hp: 80, at: 60, df: 90, sa: 95, sd: 60, sp: 105 },
         weightkg: 24,
         abilities: { 0: 'Levitate' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Lotad-Egho': {
         types: ['Fire', 'Steel'],
         bs: { hp: 40, at: 30, df: 40, sa: 50, sd: 30, sp: 30 },
         weightkg: 8,
         abilities: { 0: 'Harvest' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Lombre-Egho': {
         types: ['Fire', 'Steel'],
         bs: { hp: 60, at: 50, df: 60, sa: 70, sd: 50, sp: 50 },
         weightkg: 73.5,
         abilities: { 0: 'Harvest' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Ludicolo-Egho': {
         types: ['Fire', 'Steel'],
         bs: { hp: 85, at: 50, df: 95, sa: 100, sd: 75, sp: 75 },
         weightkg: 130,
         abilities: { 0: 'Harvest' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Sunflorid': {
         types: ['Grass', 'Fire'],
         bs: { hp: 110, at: 90, df: 75, sa: 115, sd: 80, sp: 65 },
         weightkg: 34,
         abilities: { 0: 'Chlorophyll' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Sorcerice': {
         types: ['Ice', 'Psychic'],
         bs: { hp: 75, at: 60, df: 40, sa: 130, sd: 105, sp: 125 },
         weightkg: 71,
         abilities: { 0: 'Infiltrator' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Kecleodon': {
         types: ['Normal'],
         bs: { hp: 90, at: 110, df: 75, sa: 80, sd: 140, sp: 40 },
         weightkg: 142,
         abilities: { 0: 'Protean' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Magnemite-Egho': {
         types: ['Grass', 'Steel'],
         bs: { hp: 40, at: 80, df: 55, sa: 40, sd: 65, sp: 45 },
         weightkg: 20,
         abilities: { 0: 'Magnet Pull' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Magneton-Egho': {
         types: ['Grass', 'Steel'],
         bs: { hp: 65, at: 109, df: 66, sa: 65, sd: 90, sp: 70 },
         weightkg: 90,
         abilities: { 0: 'Magnet Pull' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Magnezone-Egho': {
         types: ['Grass', 'Steel'],
         bs: { hp: 80, at: 130, df: 85, sa: 75, sd: 105, sp: 60 },
         weightkg: 285,
         abilities: { 0: 'Magnet Pull' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Tangela-Egho': {
         types: ['Electric', 'Steel'],
         bs: { hp: 63, at: 70, df: 90, sa: 80, sd: 77, sp: 55 },
         weightkg: 35,
         abilities: { 0: 'Volt Absorb' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Tangrowth-Egho': {
         types: ['Electric', 'Steel'],
         bs: { hp: 110, at: 55, df: 107, sa: 96, sd: 77, sp: 92 },
         weightkg: 138.6,
         abilities: { 0: 'Volt Absorb' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Wereyena': {
         types: ['Dark', 'Fairy'],
         bs: { hp: 75, at: 129, df: 75, sa: 84, sd: 70, sp: 102 },
         weightkg: 108,
         abilities: { 0: 'Intimidate' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Reaptide': {
         types: ['Water', 'Ghost'],
         bs: { hp: 28, at: 130, df: 72, sa: 105, sd: 28, sp: 122 },
         weightkg: 6,
         abilities: { 0: 'Rattled' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Happiny-Egho': {
         types: ['Fighting', 'Fairy'],
         bs: { hp: 65, at: 100, df: 15, sa: 5, sd: 5, sp: 30 },
         weightkg: 24.4,
         abilities: { 0: 'Anger Point' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Chansey-Egho': {
         types: ['Fighting', 'Fairy'],
         bs: { hp: 105, at: 250, df: 35, sa: 5, sd: 5, sp: 50 },
         weightkg: 34.6,
         abilities: { 0: 'Anger Point' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Blissey-Egho': {
         types: ['Fighting', 'Fairy'],
         bs: { hp: 135, at: 255, df: 55, sa: 10, sd: 10, sp: 75 },
         weightkg: 46.8,
         abilities: { 0: 'Anger Point' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Kidfoot': {
         types: ['Normal'],
         bs: { hp: 55, at: 75, df: 45, sa: 45, sd: 45, sp: 60 },
         weightkg: 70,
         abilities: { 0: 'Forewarn' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Snosquatch': {
         types: ['Ice', 'Rock'],
         bs: { hp: 74, at: 130, df: 100, sa: 80, sd: 60, sp: 96 },
         weightkg: 450,
         abilities: { 0: 'Moxie' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Grasquatch': {
         types: ['Grass', 'Psychic'],
         bs: { hp: 74, at: 80, df: 60, sa: 130, sd: 100, sp: 96 },
         weightkg: 370,
         abilities: { 0: 'Chlorophyll' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Arctusk': {
         types: ['Ice', 'Normal'],
         bs: { hp: 45, at: 65, df: 100, sa: 50, sd: 55, sp: 40 },
         weightkg: 107,
         abilities: { 0: 'Sturdy' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Gigantusk': {
         types: ['Ice', 'Steel'],
         bs: { hp: 85, at: 100, df: 133, sa: 60, sd: 60, sp: 57 },
         weightkg: 440,
         abilities: { 0: 'Sturdy' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Iceros': {
         types: ['Ice', 'Ground'],
         bs: { hp: 50, at: 85, df: 70, sa: 40, sd: 60, sp: 50 },
         weightkg: 73,
         abilities: { 0: 'Ice Body' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Glacieros': {
         types: ['Ice', 'Ground'],
         bs: { hp: 75, at: 120, df: 100, sa: 40, sd: 76, sp: 84 },
         weightkg: 132,
         abilities: { 0: 'Ice Body' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Mockroach': {
         types: ['Bug', 'Dark'],
         bs: { hp: 52, at: 100, df: 70, sa: 40, sd: 90, sp: 138 },
         weightkg: 10,
         abilities: { 0: 'Prankster' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Jollibird': {
         types: ['Ice', 'Fairy'],
         bs: { hp: 80, at: 50, df: 105, sa: 120, sd: 115, sp: 75 },
         weightkg: 98,
         abilities: { 0: 'Thick Fat' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Kablowfish': {
         types: ['Water', 'Steel'],
         bs: { hp: 85, at: 95, df: 125, sa: 65, sd: 85, sp: 75 },
         weightkg: 60,
         abilities: { 0: 'Poison Point' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Scalarva': {
         types: ['Bug', 'Dragon'],
         bs: { hp: 50, at: 70, df: 65, sa: 40, sd: 40, sp: 35 },
         weightkg: 12.5,
         abilities: { 0: 'Compound Eyes' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Dragalis': {
         types: ['Bug', 'Dragon'],
         bs: { hp: 70, at: 80, df: 100, sa: 70, sd: 65, sp: 25 },
         weightkg: 12.5,
         abilities: { 0: 'Compound Eyes' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Ceregal': {
         types: ['Bug', 'Dragon'],
         bs: { hp: 80, at: 145, df: 110, sa: 90, sd: 75, sp: 100 },
         weightkg: 70,
         abilities: { 0: 'Compound Eyes' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Gargon': {
         types: ['Rock', 'Dragon'],
         bs: { hp: 45, at: 65, df: 65, sa: 60, sd: 45, sp: 45 },
         weightkg: 70,
         abilities: { 0: 'Intimidate' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Wardern': {
         types: ['Rock', 'Dragon'],
         bs: { hp: 65, at: 80, df: 90, sa: 70, sd: 60, sp: 60 },
         weightkg: 190,
         abilities: { 0: 'Intimidate' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Dragoyle': {
         types: ['Rock', 'Dragon'],
         bs: { hp: 70, at: 113, df: 122, sa: 99, sd: 65, sp: 81 },
         weightkg: 360,
         abilities: { 0: 'Intimidate' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Porygon-X': {
         types: ['Electric', 'Normal'],
         bs: { hp: 85, at: 70, df: 72, sa: 95, sd: 72, sp: 141 },
         weightkg: 34,
         abilities: { 0: 'Adaptability' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Oculeus': {
         types: ['Psychic', 'Cosmic'],
         bs: { hp: 120, at: 120, df: 120, sa: 120, sd: 120, sp: 120 },
         weightkg: 45,
         abilities: { 0: 'Technician' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Arkhaos': {
         types: ['Cosmic'],
         bs: { hp: 140, at: 136, df: 100, sa: 136, sd: 100, sp: 188 },
         weightkg: 888,
         abilities: { 0: 'Shed Skin' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Botamon': {
         types: ['Normal'],
         bs: { hp: 30, at: 20, df: 20, sa: 25, sd: 25, sp: 25 },
         weightkg: 2.6,
         abilities: { 0: 'Klutz' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Koromon': {
         types: ['Normal'],
         bs: { hp: 45, at: 35, df: 35, sa: 30, sd: 25, sp: 30 },
         weightkg: 5,
         abilities: { 0: 'Adaptability' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Agumon': {
         types: ['Fire'],
         bs: { hp: 65, at: 75, df: 75, sa: 80, sd: 65, sp: 60 },
         weightkg: 80,
         abilities: { 0: 'Adaptability' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Greymon': {
         types: ['Fire'],
         bs: { hp: 80, at: 115, df: 100, sa: 100, sd: 80, sp: 90 },
         weightkg: 500,
         abilities: { 0: 'Adaptability' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'MetalGreymon': {
         types: ['Fire', 'Steel'],
         bs: { hp: 85, at: 120, df: 120, sa: 110, sd: 80, sp: 100 },
         weightkg: 1220,
         abilities: { 0: 'Adaptability' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'WarGreymon': {
         types: ['Fire', 'Steel'],
         bs: { hp: 104, at: 135, df: 150, sa: 135, sd: 100, sp: 86 },
         weightkg: 1350,
         abilities: { 0: 'Download' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Tyrannomon': {
         types: ['Fire'],
         bs: { hp: 85, at: 115, df: 100, sa: 70, sd: 90, sp: 100 },
         weightkg: 350,
         abilities: { 0: 'Adaptability' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'SkullGreymon': {
         types: ['Fire', 'Ghost'],
         bs: { hp: 75, at: 140, df: 70, sa: 140, sd: 55, sp: 110 },
         weightkg: 160,
         abilities: { 0: 'Intimidate' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Betamon': {
         types: ['Water'],
         bs: { hp: 70, at: 79, df: 77, sa: 60, sd: 65, sp: 54 },
         weightkg: 55,
         abilities: { 0: 'Mold Breaker' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Seadramon': {
         types: ['Water', 'Dragon'],
         bs: { hp: 90, at: 110, df: 80, sa: 95, sd: 70, sp: 95 },
         weightkg: 195,
         abilities: { 0: 'Mold Breaker' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Numemon': {
         types: ['Poison', 'Dark'],
         bs: { hp: 90, at: 90, df: 100, sa: 90, sd: 100, sp: 65 },
         weightkg: 110,
         abilities: { 0: 'Limber' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Oddish-Egho': {
         types: ['Ghost', 'Poison'],
         bs: { hp: 45, at: 30, df: 65, sa: 75, sd: 55, sp: 50 },
         weightkg: 3.4,
         abilities: { 0: 'Levitate' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Gloom-Egho': {
         types: ['Ghost', 'Poison'],
         bs: { hp: 60, at: 45, df: 90, sa: 85, sd: 65, sp: 55 },
         weightkg: 6.5,
         abilities: { 0: 'Levitate' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Viledoom': {
         types: ['Ghost', 'Poison'],
         bs: { hp: 80, at: 52, df: 113, sa: 105, sd: 80, sp: 60 },
         weightkg: 14.2,
         abilities: { 0: 'Levitate' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Mortossum': {
         types: ['Ghost', 'Fairy'],
         bs: { hp: 90, at: 57, df: 80, sa: 100, sd: 80, sp: 83 },
         weightkg: 5,
         abilities: { 0: 'Levitate' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Mushling': {
         types: ['Grass', 'Psychic'],
         bs: { hp: 40, at: 30, df: 40, sa: 60, sd: 50, sp: 47 },
         weightkg: 8,
         abilities: { 0: 'Magic Guard' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Psycholyte': {
         types: ['Grass', 'Psychic'],
         bs: { hp: 55, at: 50, df: 60, sa: 85, sd: 70, sp: 58 },
         weightkg: 14,
         abilities: { 0: 'Magic Guard' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Shroomage': {
         types: ['Grass', 'Psychic'],
         bs: { hp: 85, at: 60, df: 80, sa: 130, sd: 100, sp: 76 },
         weightkg: 30,
         abilities: { 0: 'Magic Guard' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Calfpint': {
         types: ['Normal'],
         bs: { hp: 63, at: 65, df: 50, sa: 27, sd: 50, sp: 65 },
         weightkg: 48,
         abilities: { 0: 'Forewarn' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Arbird': {
         types: ['Steel', 'Normal'],
         bs: { hp: 47, at: 56, df: 95, sa: 18, sd: 52, sp: 52 },
         weightkg: 15,
         abilities: { 0: 'Keen Eye' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Girafaraf': {
         types: ['Fairy', 'Psychic'],
         bs: { hp: 75, at: 80, df: 70, sa: 120, sd: 105, sp: 95 },
         weightkg: 95,
         abilities: { 0: 'Pixilate' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Giragira': {
         types: ['Dark', 'Psychic'],
         bs: { hp: 70, at: 120, df: 70, sa: 110, sd: 70, sp: 105 },
         weightkg: 75,
         abilities: { 0: 'Strong Jaw' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Whave': {
         types: ['Water'],
         bs: { hp: 85, at: 80, df: 75, sa: 55, sd: 60, sp: 70 },
         weightkg: 124,
         abilities: { 0: 'Hydration' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Orcabyss': {
         types: ['Water'],
         bs: { hp: 110, at: 110, df: 100, sa: 90, sd: 85, sp: 50 },
         weightkg: 768.5,
         abilities: { 0: 'Pressure' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Zapalope': {
         types: ['Electric', 'Grass'],
         bs: { hp: 40, at: 75, df: 40, sa: 35, sd: 30, sp: 100 },
         weightkg: 10,
         abilities: { 0: 'Fluffy' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Joltalope': {
         types: ['Electric', 'Grass'],
         bs: { hp: 70, at: 102, df: 80, sa: 47, sd: 55, sp: 131 },
         weightkg: 24,
         abilities: { 0: 'Overgrow' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Chikorita-Egho': {
         types: ['Grass', 'Dragon'],
         bs: { hp: 85, at: 10, df: 49, sa: 65, sd: 65, sp: 44 },
         weightkg: 6.4,
         abilities: { 0: 'Chlorophyll' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Bayleef-Egho': {
         types: ['Grass', 'Dragon'],
         bs: { hp: 108, at: 17, df: 63, sa: 80, sd: 80, sp: 57 },
         weightkg: 15.8,
         abilities: { 0: 'Chlorophyll' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Meganium-Egho': {
         types: ['Grass', 'Dragon'],
         bs: { hp: 143, at: 24, df: 83, sa: 100, sd: 100, sp: 75 },
         weightkg: 100.5,
         abilities: { 0: 'Chlorophyll' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Cyndaquil-Egho': {
         types: ['Fire', 'Electric'],
         bs: { hp: 50, at: 38, df: 52, sa: 65, sd: 44, sp: 60 },
         weightkg: 6.3,
         abilities: { 0: 'Static' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Quilava-Egho': {
         types: ['Fire', 'Electric'],
         bs: { hp: 66, at: 52, df: 71, sa: 83, sd: 60, sp: 73 },
         weightkg: 14,
         abilities: { 0: 'Static' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Typhlosion-Egho': {
         types: ['Fire', 'Electric'],
         bs: { hp: 84, at: 64, df: 94, sa: 120, sd: 78, sp: 97 },
         weightkg: 68,
         abilities: { 0: 'Static' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Totodile-Egho': {
         types: ['Water', 'Poison'],
         bs: { hp: 45, at: 56, df: 45, sa: 57, sd: 42, sp: 69 },
         weightkg: 9.5,
         abilities: { 0: 'Merciless' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Croconaw-Egho': {
         types: ['Water', 'Poison'],
         bs: { hp: 65, at: 70, df: 59, sa: 70, sd: 54, sp: 87 },
         weightkg: 25,
         abilities: { 0: 'Merciless' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Feraligatr-Egho': {
         types: ['Water', 'Poison'],
         bs: { hp: 75, at: 95, df: 70, sa: 103, sd: 66, sp: 121 },
         weightkg: 88.8,
         abilities: { 0: 'Merciless' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Mewthree': {
         types: ['Psychic'],
         bs: { hp: 150, at: 100, df: 95, sa: 150, sd: 95, sp: 130 },
         weightkg: 162,
         abilities: { 0: 'Pressure' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Palmon': {
         types: ['Grass'],
         bs: { hp: 70, at: 69, df: 71, sa: 75, sd: 62, sp: 63 },
         weightkg: 40,
         abilities: { 0: 'Super Luck' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Togemon': {
         types: ['Grass', 'Fighting'],
         bs: { hp: 85, at: 160, df: 85, sa: 80, sd: 65, sp: 55 },
         weightkg: 197.5,
         abilities: { 0: 'Super Luck' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Shellmon': {
         types: ['Water', 'Ground'],
         bs: { hp: 135, at: 80, df: 120, sa: 75, sd: 110, sp: 45 },
         weightkg: 420,
         abilities: { 0: 'Super Luck' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Tsunomon': {
         types: ['Normal'],
         bs: { hp: 40, at: 30, df: 30, sa: 35, sd: 30, sp: 35 },
         weightkg: 5.5,
         abilities: { 0: 'Defiant' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Motimon': {
         types: ['Normal'],
         bs: { hp: 45, at: 30, df: 30, sa: 30, sd: 35, sp: 30 },
         weightkg: 5,
         abilities: { 0: 'Super Luck' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Gabumon': {
         types: ['Ice'],
         bs: { hp: 70, at: 75, df: 75, sa: 75, sd: 65, sp: 65 },
         weightkg: 50,
         abilities: { 0: 'Anger Point' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Elecmon': {
         types: ['Electric'],
         bs: { hp: 60, at: 70, df: 70, sa: 75, sd: 65, sp: 75 },
         weightkg: 30,
         abilities: { 0: 'Anger Point' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Gomamon': {
         types: ['Water'],
         bs: { hp: 69, at: 73, df: 73, sa: 65, sd: 70, sp: 65 },
         weightkg: 34,
         abilities: { 0: 'Anger Point' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Crabmon': {
         types: ['Water'],
         bs: { hp: 70, at: 65, df: 85, sa: 75, sd: 70, sp: 40 },
         weightkg: 40,
         abilities: { 0: 'Rough Skin' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Kunemon': {
         types: ['Electric', 'Poison'],
         bs: { hp: 57, at: 75, df: 73, sa: 70, sd: 45, sp: 85 },
         weightkg: 26,
         abilities: { 0: 'Poison Point' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Tentomon': {
         types: ['Bug', 'Flying'],
         bs: { hp: 65, at: 84, df: 86, sa: 65, sd: 62, sp: 53 },
         weightkg: 30,
         abilities: { 0: 'Super Luck' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Biyomon': {
         types: ['Fairy', 'Flying'],
         bs: { hp: 80, at: 66, df: 64, sa: 73, sd: 55, sp: 72 },
         weightkg: 30,
         abilities: { 0: 'Cute Charm' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Patamon': {
         types: ['Flying', 'Normal'],
         bs: { hp: 75, at: 61, df: 64, sa: 65, sd: 55, sp: 95 },
         weightkg: 19,
         abilities: { 0: 'Telepathy' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Monochromon': {
         types: ['Ground', 'Fire'],
         bs: { hp: 97, at: 105, df: 125, sa: 80, sd: 110, sp: 33 },
         weightkg: 419,
         abilities: { 0: 'Anger Point' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Birdramon': {
         types: ['Fairy', 'Fire'],
         bs: { hp: 115, at: 110, df: 65, sa: 104, sd: 60, sp: 101 },
         weightkg: 305,
         abilities: { 0: 'Levitate' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Drimogemon': {
         types: ['Ground'],
         bs: { hp: 90, at: 125, df: 105, sa: 70, sd: 70, sp: 95 },
         weightkg: 477,
         abilities: { 0: 'Sand Rush' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Garurumon': {
         types: ['Ice'],
         bs: { hp: 80, at: 115, df: 75, sa: 110, sd: 70, sp: 110 },
         weightkg: 255,
         abilities: { 0: 'Technician' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Unimon': {
         types: ['Steel', 'Fairy'],
         bs: { hp: 105, at: 106, df: 75, sa: 80, sd: 75, sp: 109 },
         weightkg: 175,
         abilities: { 0: 'Natural Cure' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Leomon': {
         types: ['Normal', 'Fighting'],
         bs: { hp: 85, at: 123, df: 89, sa: 75, sd: 66, sp: 102 },
         weightkg: 246,
         abilities: { 0: 'Steadfast' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Ogremon': {
         types: ['Dark'],
         bs: { hp: 75, at: 130, df: 85, sa: 70, sd: 80, sp: 100 },
         weightkg: 221,
         abilities: { 0: 'Anger Point' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Ikkakumon': {
         types: ['Ice', 'Water'],
         bs: { hp: 95, at: 120, df: 90, sa: 85, sd: 80, sp: 70 },
         weightkg: 460,
         abilities: { 0: 'Anger Point' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Mojyamon': {
         types: ['Normal'],
         bs: { hp: 90, at: 115, df: 100, sa: 75, sd: 100, sp: 75 },
         weightkg: 254,
         abilities: { 0: 'Early Bird' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Frigimon': {
         types: ['Ice'],
         bs: { hp: 75, at: 125, df: 90, sa: 80, sd: 80, sp: 105 },
         weightkg: 237,
         abilities: { 0: 'Iron Fist' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Kuwagamon': {
         types: ['Bug', 'Fighting'],
         bs: { hp: 65, at: 135, df: 95, sa: 85, sd: 70, sp: 90 },
         weightkg: 372.5,
         abilities: { 0: 'Hyper Cutter' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Kabuterimon': {
         types: ['Bug', 'Electric'],
         bs: { hp: 80, at: 110, df: 125, sa: 70, sd: 85, sp: 70 },
         weightkg: 400,
         abilities: { 0: 'Levitate' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Flymon': {
         types: ['Electric', 'Poison'],
         bs: { hp: 70, at: 122, df: 80, sa: 82, sd: 55, sp: 136 },
         weightkg: 55,
         abilities: { 0: 'Static' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Vegiemon': {
         types: ['Grass', 'Poison'],
         bs: { hp: 80, at: 104, df: 85, sa: 106, sd: 90, sp: 90 },
         weightkg: 93,
         abilities: { 0: 'Prankster' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'RedVegiemon': {
         types: ['Grass', 'Poison'],
         bs: { hp: 85, at: 120, df: 80, sa: 100, sd: 80, sp: 100 },
         weightkg: 94,
         abilities: { 0: 'Poison Touch' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Coelamon': {
         types: ['Water', 'Steel'],
         bs: { hp: 90, at: 95, df: 100, sa: 110, sd: 95, sp: 55 },
         weightkg: 321.5,
         abilities: { 0: 'Rough Skin' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Airdramon': {
         types: ['Dragon', 'Flying'],
         bs: { hp: 90, at: 130, df: 70, sa: 80, sd: 70, sp: 105 },
         weightkg: 242,
         abilities: { 0: 'Rock Head' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Angemon': {
         types: ['Fairy', 'Flying'],
         bs: { hp: 105, at: 115, df: 70, sa: 90, sd: 70, sp: 105 },
         weightkg: 133.5,
         abilities: { 0: 'Long Reach' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'WereGarurumon': {
         types: ['Ice', 'Fighting'],
         bs: { hp: 85, at: 130, df: 80, sa: 115, sd: 85, sp: 115 },
         weightkg: 257.5,
         abilities: { 0: 'Technician' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'MegaKabuterimon': {
         types: ['Bug', 'Electric'],
         bs: { hp: 105, at: 120, df: 150, sa: 80, sd: 95, sp: 65 },
         weightkg: 986,
         abilities: { 0: 'Levitate' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Garudamon': {
         types: ['Fire', 'Flying'],
         bs: { hp: 90, at: 138, df: 80, sa: 104, sd: 75, sp: 123 },
         weightkg: 645,
         abilities: { 0: 'Guts' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Zudomon': {
         types: ['Ice', 'Rock'],
         bs: { hp: 90, at: 140, df: 120, sa: 92, sd: 90, sp: 78 },
         weightkg: 1547,
         abilities: { 0: 'Anger Point' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'MegaSeadramon': {
         types: ['Water', 'Dragon'],
         bs: { hp: 90, at: 120, df: 100, sa: 114, sd: 74, sp: 117 },
         weightkg: 485,
         abilities: { 0: 'Lightning Rod' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Okuwamon': {
         types: ['Bug', 'Fighting'],
         bs: { hp: 65, at: 150, df: 100, sa: 117, sd: 73, sp: 110 },
         weightkg: 821,
         abilities: { 0: 'Hyper Cutter' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Piximon': {
         types: ['Fairy', 'Fighting'],
         bs: { hp: 85, at: 120, df: 85, sa: 100, sd: 90, sp: 130 },
         weightkg: 49,
         abilities: { 0: 'Levitate' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Lillymon': {
         types: ['Grass', 'Fairy'],
         bs: { hp: 100, at: 90, df: 80, sa: 138, sd: 85, sp: 117 },
         weightkg: 74.5,
         abilities: { 0: 'Opportunist' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Whamon': {
         types: ['Water', 'Normal'],
         bs: { hp: 100, at: 125, df: 110, sa: 110, sd: 105, sp: 60 },
         weightkg: 1284,
         abilities: { 0: 'Rough Skin' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Monzaemon': {
         types: ['Normal', 'Fairy'],
         bs: { hp: 120, at: 120, df: 100, sa: 100, sd: 95, sp: 70 },
         weightkg: 470,
         abilities: { 0: 'Pixilate' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'MagnaAngemon': {
         types: ['Fairy', 'Flying'],
         bs: { hp: 95, at: 120, df: 85, sa: 120, sd: 85, sp: 110 },
         weightkg: 238,
         abilities: { 0: 'Magic Guard' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'SaberLeomon': {
         types: ['Electric', 'Fighting'],
         bs: { hp: 100, at: 135, df: 120, sa: 105, sd: 90, sp: 140 },
         weightkg: 525,
         abilities: { 0: 'Iron Barbs' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'MetalGarurumon': {
         types: ['Ice', 'Steel'],
         bs: { hp: 100, at: 130, df: 120, sa: 130, sd: 105, sp: 125 },
         weightkg: 616,
         abilities: { 0: 'Technician' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Machinedramon': {
         types: ['Steel', 'Ghost'],
         bs: { hp: 76, at: 145, df: 135, sa: 155, sd: 125, sp: 79 },
         weightkg: 1490,
         abilities: { 0: 'Mega Launcher' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Omnimon': {
         types: ['Fire', 'Ice'],
         bs: { hp: 115, at: 145, df: 120, sa: 145, sd: 120, sp: 130 },
         weightkg: 470,
         abilities: { 0: 'Magic Guard' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Pagumon': {
         types: ['Poison'],
         bs: { hp: 35, at: 30, df: 30, sa: 40, sd: 35, sp: 30 },
         weightkg: 13,
         abilities: { 0: 'Prankster' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Gazimon': {
         types: ['Poison', 'Dark'],
         bs: { hp: 70, at: 70, df: 60, sa: 80, sd: 70, sp: 70 },
         weightkg: 49,
         abilities: { 0: 'Prankster' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Etemon': {
         types: ['Fighting', 'Ground'],
         bs: { hp: 80, at: 130, df: 90, sa: 95, sd: 92, sp: 118 },
         weightkg: 117.5,
         abilities: { 0: 'Prankster' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'MetalEtemon': {
         types: ['Fighting', 'Steel'],
         bs: { hp: 100, at: 140, df: 120, sa: 109, sd: 130, sp: 106 },
         weightkg: 278.5,
         abilities: { 0: 'Filter' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Demidevimon': {
         types: ['Flying', 'Poison'],
         bs: { hp: 70, at: 69, df: 66, sa: 70, sd: 70, sp: 80 },
         weightkg: 30,
         abilities: { 0: 'Prankster' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Devimon': {
         types: ['Flying', 'Poison'],
         bs: { hp: 85, at: 125, df: 70, sa: 90, sd: 80, sp: 105 },
         weightkg: 112,
         abilities: { 0: 'Long Reach' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Bakemon': {
         types: ['Poison', 'Ghost'],
         bs: { hp: 55, at: 90, df: 140, sa: 90, sd: 140, sp: 40 },
         weightkg: 26,
         abilities: { 0: 'Levitate' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Keramon': {
         types: ['Poison'],
         bs: { hp: 75, at: 70, df: 70, sa: 70, sd: 70, sp: 70 },
         weightkg: 83,
         abilities: { 0: 'Prankster' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Infermon': {
         types: ['Bug', 'Poison'],
         bs: { hp: 90, at: 90, df: 110, sa: 120, sd: 110, sp: 110 },
         weightkg: 450,
         abilities: { 0: 'Prankster' },
-        origin: 'Infinity'
+        nfe: true,
+        origin: 'Pokeathlon'
     },
     'Diaboromon': {
         types: ['Poison', 'Dark'],
         bs: { hp: 105, at: 130, df: 120, sa: 151, sd: 120, sp: 129 },
         weightkg: 587,
         abilities: { 0: 'Dark Aura' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Wizardmon': {
         types: ['Psychic', 'Ghost'],
         bs: { hp: 80, at: 100, df: 70, sa: 130, sd: 75, sp: 100 },
         weightkg: 75,
         abilities: { 0: 'Magic Bounce' },
-        origin: 'Infinity'
+        origin: 'Pokeathlon'
     },
     'Ashenash': {
         types: ['Fire'],
         bs: { hp: 57, at: 31, df: 45, sa: 58, sd: 41, sp: 45 },
         weightkg: 70,
         abilities: { 0: 'Lightning Rod' },
+        nfe: true,
         origin: 'Pokeathlon'
     },
     'Aviotion': {
@@ -15080,6 +15170,14 @@ var SV_PATCH = {
         bs: { hp: 90, at: 70, df: 45, sa: 70, sd: 45, sp: 100 },
         weightkg: 95,
         abilities: { 0: 'Swarm' },
+        nfe: true,
+        origin: 'Pokeathlon'
+    },
+    'Bahamist': {
+        types: ['Water', 'Dragon'],
+        bs: { hp: 89, at: 95, df: 79, sa: 70, sd: 88, sp: 101 },
+        weightkg: 54,
+        abilities: { 0: 'Sheer Force' },
         origin: 'Pokeathlon'
     },
     'Barrimander': {
@@ -15122,6 +15220,7 @@ var SV_PATCH = {
         bs: { hp: 30, at: 75, df: 25, sa: 45, sd: 35, sp: 40 },
         weightkg: 2,
         abilities: { 0: 'Snow Cloak' },
+        nfe: true,
         origin: 'Pokeathlon'
     },
     'Buntaki': {
@@ -15178,6 +15277,7 @@ var SV_PATCH = {
         bs: { hp: 46, at: 70, df: 34, sa: 23, sd: 24, sp: 55 },
         weightkg: 40,
         abilities: { 0: 'Keen Eye' },
+        nfe: true,
         origin: 'Pokeathlon'
     },
     'Chocogrif': {
@@ -15185,6 +15285,7 @@ var SV_PATCH = {
         bs: { hp: 69, at: 45, df: 21, sa: 21, sd: 78, sp: 13 },
         weightkg: 10,
         abilities: { 0: 'Gooey' },
+        nfe: true,
         origin: 'Pokeathlon'
     },
     'Chronobour': {
@@ -15213,6 +15314,7 @@ var SV_PATCH = {
         bs: { hp: 30, at: 46, df: 50, sa: 46, sd: 60, sp: 22 },
         weightkg: 0.6,
         abilities: { 0: 'Gooey' },
+        nfe: true,
         origin: 'Pokeathlon'
     },
     'Decidueye-Olul': {
@@ -15227,6 +15329,7 @@ var SV_PATCH = {
         bs: { hp: 40, at: 85, df: 45, sa: 20, sd: 85, sp: 75 },
         weightkg: 0.2,
         abilities: { 0: 'Technician' },
+        nfe: true,
         origin: 'Pokeathlon'
     },
     'Dracotion': {
@@ -15248,6 +15351,7 @@ var SV_PATCH = {
         bs: { hp: 90, at: 34, df: 60, sa: 44, sd: 50, sp: 72 },
         weightkg: 1.1,
         abilities: { 0: 'Natural Cure' },
+        nfe: true,
         origin: 'Pokeathlon'
     },
     'Eggchell': {
@@ -15255,6 +15359,7 @@ var SV_PATCH = {
         bs: { hp: 65, at: 89, df: 54, sa: 42, sd: 60, sp: 80 },
         weightkg: 25,
         abilities: { 0: 'Defiant' },
+        nfe: true,
         origin: 'Pokeathlon'
     },
     'Eidolburgh': {
@@ -15269,6 +15374,7 @@ var SV_PATCH = {
         bs: { hp: 65, at: 30, df: 95, sa: 55, sd: 90, sp: 35 },
         weightkg: 0.3,
         abilities: { 0: 'Filter' },
+        nfe: true,
         origin: 'Pokeathlon'
     },
     'Electrode-Mega': {
@@ -15297,6 +15403,7 @@ var SV_PATCH = {
         bs: { hp: 40, at: 20, df: 20, sa: 40, sd: 20, sp: 40 },
         weightkg: 5,
         abilities: { 0: 'Keen Eye' },
+        nfe: true,
         origin: 'Pokeathlon'
     },
     'Feidan': {
@@ -15402,6 +15509,14 @@ var SV_PATCH = {
         bs: { hp: 70, at: 50, df: 25, sa: 50, sd: 25, sp: 80 },
         weightkg: 95,
         abilities: { 0: 'Swarm' },
+        nfe: true,
+        origin: 'Pokeathlon'
+    },
+    'Incandele': {
+        types: ['Fire', 'Fairy'],
+        bs: { hp: 100, at: 76, df: 115, sa: 85, sd: 66, sp: 80 },
+        weightkg: 10.1,
+        abilities: { 0: 'Magic Bounce' },
         origin: 'Pokeathlon'
     },
     'Incineroar-Olul': {
@@ -15444,6 +15559,7 @@ var SV_PATCH = {
         bs: { hp: 50, at: 64, df: 50, sa: 45, sd: 50, sp: 41 },
         weightkg: 72,
         abilities: { 0: 'Synchronize' },
+        nfe: true,
         origin: 'Pokeathlon'
     },
     'Loxicant': {
@@ -15479,6 +15595,7 @@ var SV_PATCH = {
         bs: { hp: 40, at: 66, df: 32, sa: 32, sd: 79, sp: 35 },
         weightkg: 3,
         abilities: { 0: 'Serene Grace' },
+        nfe: true,
         origin: 'Pokeathlon'
     },
     'Magnegauss': {
@@ -15493,6 +15610,7 @@ var SV_PATCH = {
         bs: { hp: 45, at: 35, df: 70, sa: 85, sd: 55, sp: 25 },
         weightkg: 40,
         abilities: { 0: 'Magnet Pull' },
+        nfe: true,
         origin: 'Pokeathlon'
     },
     'Magneton-Terof': {
@@ -15500,18 +15618,19 @@ var SV_PATCH = {
         bs: { hp: 70, at: 60, df: 95, sa: 120, sd: 70, sp: 50 },
         weightkg: 120,
         abilities: { 0: 'Magnet Pull' },
+        nfe: true,
         origin: 'Pokeathlon'
     },
     'Manacra': {
         types: ['Rock', 'Ghost'],
-        bs: { hp: 50, at: 60, df: 95, sa: 115, sd: 87, sp: 105 },
+        bs: { hp: 50, at: 60, df: 95, sa: 118, sd: 87, sp: 105 },
         weightkg: 72,
         abilities: { 0: 'Levitate' },
         origin: 'Pokeathlon'
     },
     'Manacra-Plated': {
         types: ['Steel', 'Ghost'],
-        bs: { hp: 50, at: 60, df: 152, sa: 80, sd: 120, sp: 50 },
+        bs: { hp: 50, at: 60, df: 155, sa: 80, sd: 120, sp: 50 },
         weightkg: 159,
         abilities: { 0: 'Levitate' },
         origin: 'Pokeathlon'
@@ -15525,7 +15644,7 @@ var SV_PATCH = {
     },
     'Mephistoxin': {
         types: ['Poison', 'Steel'],
-        bs: { hp: 70, at: 126, df: 70, sa: 76, sd: 60, sp: 117 },
+        bs: { hp: 70, at: 126, df: 80, sa: 76, sd: 60, sp: 117 },
         weightkg: 90,
         abilities: { 0: 'Unaware' },
         origin: 'Pokeathlon'
@@ -15546,7 +15665,7 @@ var SV_PATCH = {
     },
     'Mochimechi': {
         types: ['Normal'],
-        bs: { hp: 99, at: 89, df: 110, sa: 79, sd: 120, sp: 66 },
+        bs: { hp: 99, at: 89, df: 110, sa: 46, sd: 120, sp: 63 },
         weightkg: 84,
         abilities: { 0: 'Gooey' },
         origin: 'Pokeathlon'
@@ -15561,7 +15680,7 @@ var SV_PATCH = {
     'Mosster': {
         types: ['Rock', 'Grass'],
         bs: { hp: 120, at: 90, df: 120, sa: 50, sd: 100, sp: 30 },
-        weightkg: 90,
+        weightkg: 2000,
         abilities: { 0: 'Water Absorb' },
         origin: 'Pokeathlon'
     },
@@ -15588,14 +15707,14 @@ var SV_PATCH = {
     },
     'Paldemaria': {
         types: ['Water', 'Fairy'],
-        bs: { hp: 70, at: 59, df: 75, sa: 105, sd: 110, sp: 106 },
+        bs: { hp: 90, at: 54, df: 75, sa: 105, sd: 110, sp: 106 },
         weightkg: 60,
         abilities: { 0: 'Regenerator' },
         origin: 'Pokeathlon'
     },
     'Pandiz': {
         types: ['Normal'],
-        bs: { hp: 90, at: 110, df: 85, sa: 70, sd: 85, sp: 100 },
+        bs: { hp: 100, at: 110, df: 85, sa: 60, sd: 85, sp: 100 },
         weightkg: 50,
         abilities: { 0: 'Own Tempo' },
         origin: 'Pokeathlon'
@@ -15626,6 +15745,7 @@ var SV_PATCH = {
         bs: { hp: 100, at: 90, df: 95, sa: 100, sd: 90, sp: 40 },
         weightkg: 32.5,
         abilities: { 0: 'Early Bird' },
+        nfe: true,
         origin: 'Pokeathlon'
     },
     'PorygonZ-Rhinian': {
@@ -15640,6 +15760,7 @@ var SV_PATCH = {
         bs: { hp: 100, at: 30, df: 50, sa: 70, sd: 75, sp: 35 },
         weightkg: 31.7,
         abilities: { 0: 'Stalwart' },
+        nfe: true,
         origin: 'Pokeathlon'
     },
     'Primarina-Olul': {
@@ -15654,6 +15775,7 @@ var SV_PATCH = {
         bs: { hp: 70, at: 84, df: 70, sa: 65, sd: 70, sp: 51 },
         weightkg: 152,
         abilities: { 0: 'Synchronize' },
+        nfe: true,
         origin: 'Pokeathlon'
     },
     'Rabbicicle': {
@@ -15700,7 +15822,7 @@ var SV_PATCH = {
     },
     'Scaly Terror': {
         types: ['Bug', 'Dragon'],
-        bs: { hp: 75, at: 127, df: 73, sa: 97, sd: 83, sp: 115 },
+        bs: { hp: 75, at: 127, df: 73, sa: 81, sd: 83, sp: 131 },
         weightkg: 120,
         abilities: { 0: 'Protosynthesis' },
         origin: 'Pokeathlon'
@@ -15715,7 +15837,7 @@ var SV_PATCH = {
     'Scorching Kiln': {
         types: ['Ground', 'Fire'],
         bs: { hp: 81, at: 63, df: 105, sa: 99, sd: 135, sp: 87 },
-        weightkg: 120,
+        weightkg: 343.3,
         abilities: { 0: 'Protosynthesis' },
         origin: 'Pokeathlon'
     },
@@ -15766,6 +15888,7 @@ var SV_PATCH = {
         bs: { hp: 90, at: 65, df: 65, sa: 40, sd: 40, sp: 15 },
         weightkg: 48,
         abilities: { 0: 'Berserk' },
+        nfe: true,
         origin: 'Pokeathlon'
     },
     'Snorlax-Frost': {
@@ -15782,6 +15905,13 @@ var SV_PATCH = {
         abilities: { 0: 'Sheer Force' },
         origin: 'Pokeathlon'
     },
+    'Snugglosis': {
+        types: ['Dark', 'Ground'],
+        bs: { hp: 85, at: 110, df: 75, sa: 85, sd: 125, sp: 30 },
+        weightkg: 20.4,
+        abilities: { 0: 'Wind Rider' },
+        origin: 'Pokeathlon'
+    },
     'Soulply': {
         types: ['Ghost'],
         bs: { hp: 110, at: 90, df: 90, sa: 20, sd: 119, sp: 33 },
@@ -15794,6 +15924,7 @@ var SV_PATCH = {
         bs: { hp: 65, at: 30, df: 30, sa: 60, sd: 60, sp: 60 },
         weightkg: 7,
         abilities: { 0: 'Water Veil' },
+        nfe: true,
         origin: 'Pokeathlon'
     },
     'Staruhz': {
@@ -15864,6 +15995,7 @@ var SV_PATCH = {
         bs: { hp: 65, at: 64, df: 70, sa: 40, sd: 85, sp: 84 },
         weightkg: 82,
         abilities: { 0: 'Fairy Law' },
+        nfe: true,
         origin: 'Pokeathlon'
     },
     'Tofagrif': {
@@ -15892,6 +16024,7 @@ var SV_PATCH = {
         bs: { hp: 66, at: 66, df: 39, sa: 66, sd: 41, sp: 31 },
         weightkg: 14,
         abilities: { 0: 'Pickpocket' },
+        nfe: true,
         origin: 'Pokeathlon'
     },
     'Tyranisacer': {
@@ -15913,6 +16046,7 @@ var SV_PATCH = {
         bs: { hp: 74, at: 40, df: 115, sa: 56, sd: 50, sp: 70 },
         weightkg: 131.5,
         abilities: { 0: 'Overcoat' },
+        nfe: true,
         origin: 'Pokeathlon'
     },
     'Wrighvern': {
