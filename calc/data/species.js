@@ -3290,7 +3290,7 @@ var DPP_PATCH = {
     },
     Kitsunoh: {
         types: ['Ghost', 'Steel'],
-        bs: { hp: 80, at: 103, df: 85, sa: 55, sd: 80, sp: 110 },
+        bs: { hp: 80, at: 117, df: 85, sa: 55, sd: 80, sp: 128 },
         weightkg: 51,
         abilities: { 0: 'Frisk' }
     },
@@ -3654,6 +3654,12 @@ var DPP_PATCH = {
         nfe: true,
         abilities: { 0: 'Rivalry' }
     },
+    Shox: {
+        types: ['Electric', 'Normal'],
+        bs: { hp: 136, at: 73, df: 81, sa: 90, sd: 98, sp: 56 },
+        weightkg: 99.9,
+        abilities: { 0: 'Electromorphosis' }
+    },
     Skorupi: {
         types: ['Poison', 'Bug'],
         bs: { hp: 40, at: 50, df: 90, sa: 30, sd: 55, sp: 65 },
@@ -3979,6 +3985,12 @@ var BW_PATCH = {
         bs: { hp: 60, at: 55, df: 90, sa: 145, sd: 90, sp: 80 },
         weightkg: 34.3,
         abilities: { 0: 'Flash Fire' }
+    },
+    Chuggalong: {
+        types: ['Dragon', 'Poison'],
+        bs: { hp: 45, at: 46, df: 117, sa: 120, sd: 110, sp: 108 },
+        weightkg: 201.6,
+        abilities: { 0: 'Armor Tail' }
     },
     Cinccino: {
         types: ['Normal'],
