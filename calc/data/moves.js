@@ -5950,6 +5950,41 @@ var SV_PATCH = {
         zp: 0,
         target: 'normal'
     },
+    'Hammer Throws': {
+        bp: 25,
+        type: 'Normal',
+        category: 'Physical',
+        zp: 0,
+        target: 'normal',
+        multihit: [2, 5]
+    },
+    'Fireball': {
+        bp: 25,
+        type: 'Fire',
+        category: 'Special',
+        zp: 0,
+        target: 'normal',
+        multihit: 3,
+        secondaries: true
+    },
+    'Boomerang': {
+        bp: 45,
+        type: 'Flying',
+        category: 'Physical',
+        zp: 0,
+        target: 'normal',
+        multihit: 2,
+        secondaries: true
+    },
+    'Ice Toss': {
+        bp: 25,
+        type: 'Ice',
+        category: 'Special',
+        zp: 0,
+        target: 'normal',
+        multihit: 3,
+        secondaries: true
+    },
     'Blooms Day': {
         bp: 150,
         type: 'Grass',

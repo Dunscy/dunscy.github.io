@@ -163,6 +163,9 @@ function getFinalSpeed(gen, pokemon, field, side) {
     else if (pokemon.hasItem('Quick Powder') && pokemon.named('Ditto', 'Ditto-Delta')) {
         speedMods.push(8192);
     }
+    else if (pokemon.hasItem('Goomba Boots') && pokemon.named('Goomba', 'Goomba Stack')) {
+        speedMods.push(8192);
+    }
     speed = OF32(pokeRound((speed * chainMods(speedMods, 410, 131172)) / 4096));
     if (pokemon.hasStatus('par') && !pokemon.hasAbility('Quick Feet')) {
         speed = Math.floor(OF32(speed * (gen.num < 7 ? 25 : 50)) / 100);

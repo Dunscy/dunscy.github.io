@@ -430,6 +430,8 @@ var SV = SS.concat([
     'Wind Power',
     'Wind Rider',
     'Zero to Hero',
+    'Chaos Emeralds',
+    'Transmutate',
     'Sacred Treasures',
     'Consumer Exchange',
     'Windy Wall',
@@ -460,7 +462,9 @@ var SV = SS.concat([
     'Belligerent Quills',
     'Full Plate',
     'Aqua Guard',
-    'Lucky Charm'
+    'Lucky Charm',
+    'Kleptomancy',
+    'Crystal Mana'
 ]);
 exports.ABILITIES = [[], RBY, GSC, ADV, DPP, BW, XY, SM, SS, SV];
 var Abilities = (function () {

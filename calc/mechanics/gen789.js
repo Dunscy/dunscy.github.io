@@ -165,6 +165,7 @@ function calculateSMSSSV(gen, attacker, defender, move, field) {
     var isFoundry = false;
     var isIntoxicate = false;
     var isAtomizate = false;
+    var isTransmutate = false;
     var noTypeChange = move.named('Revelation Dance', 'Judgment', 'Nature Power', 'Techno Blast', 'Multi Attack', 'Natural Gift', 'Weather Ball', 'Terrain Pulse', 'Struggle') || (move.named('Tera Blast') && attacker.teraType);
     if (!move.isZ && !noTypeChange) {
         var normal = move.hasType('Normal');
@@ -195,7 +196,10 @@ function calculateSMSSSV(gen, attacker, defender, move, field) {
         else if ((isAtomizate = attacker.hasAbility('Atomizate') && normal)) {
             type = 'Nuclear';
         }
-        if (isGalvanize || isPixilate || isRefrigerate || isAerilate || isNormalize || isFoundry || isIntoxicate || isAtomizate) {
+        else if ((isTransmutate = attacker.hasAbility('Transmutate') && normal)) {
+            type = 'Psychic';
+        }
+        if (isGalvanize || isPixilate || isRefrigerate || isAerilate || isNormalize || isFoundry || isIntoxicate || isAtomizate || isTransmutate) {
             desc.attackerAbility = attacker.ability;
             hasAteAbilityTypeChange = true;
         }
@@ -483,7 +487,7 @@ function calculateSMSSSV(gen, attacker, defender, move, field) {
             var newAttack = calculateAttackSMSSSV(gen, attacker, defender, move, field, desc, isCritical);
             var newDefense = calculateDefenseSMSSSV(gen, attacker, defender, move, field, desc, isCritical);
             hasAteAbilityTypeChange = hasAteAbilityTypeChange &&
-                attacker.hasAbility('Aerilate', 'Galvanize', 'Pixilate', 'Refrigerate', 'Normalize', 'Foundry', 'Intoxicate', 'Atomizate');
+                attacker.hasAbility('Aerilate', 'Galvanize', 'Pixilate', 'Refrigerate', 'Normalize', 'Foundry', 'Intoxicate', 'Atomizate', 'Transmutate');
             if ((move.dropsStats && move.timesUsed > 1)) {
                 preStellarStabMod = (0, util_2.getStabMod)(attacker, move, desc);
                 typeEffectiveness = turn2typeEffectiveness;
@@ -1265,7 +1269,8 @@ function calculateDfModsSMSSSV(gen, attacker, defender, move, field, desc, isCri
         desc.defenderItem = defender.item;
     }
     else if ((defender.hasItem('Metal Powder') && defender.named('Ditto', 'Ditto-Delta') && hitsPhysical) ||
-        (defender.hasItem('Deep Sea Scale') && defender.named('Clamperl', 'Clamperl-Delta') && !hitsPhysical)) {
+        (defender.hasItem('Deep Sea Scale') && defender.named('Clamperl', 'Clamperl-Delta') && !hitsPhysical) ||
+        (defender.hasItem('Sturdy Shell') && defender.named('Koopa Troopa', 'Paratroopa', 'Dry Bones') && hitsPhysical)) {
         dfMods.push(8192);
         desc.defenderItem = defender.item;
     }

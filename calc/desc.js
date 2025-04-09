@@ -131,6 +131,10 @@ function getRecoil(gen, attacker, defender, move, damage, notation) {
             recoil = [minRecoilDamage, maxRecoilDamage];
             text = "".concat(minRecoilDamage, " - ").concat(maxRecoilDamage).concat(notation, " recoil damage");
         }
+        if (attacker.hasItem('Padded Helmet')) {
+            recoil = [minRecoilDamage / 2, maxRecoilDamage / 2];
+            text = "".concat(minRecoilDamage, " - ").concat(maxRecoilDamage).concat(notation, " recoil damage");
+        }
     }
     else if (move.hasCrashDamage) {
         var genMultiplier = gen.num === 2 ? 12.5 : gen.num >= 3 ? 50 : 1;

@@ -606,6 +606,17 @@ var SV = SS.concat([
     'Syrupy Apple',
     'Unremarkable Teacup',
     'Wellspring Mask',
+    'Sturdy Shell',
+    'Goomba Boots',
+    'Mana Gel',
+    'Energy Drink',
+    'Double Dip',
+    'Delta Sceptilite',
+    'Delta Blazikenite',
+    'Buddy Lantern',
+    'Boomerang',
+    'Padded Helmet',
+    'Vigor Herb'
 ]);
 var BERRIES = {
     'Aguav Berry': { t: 'Dragon', p: 80 },
