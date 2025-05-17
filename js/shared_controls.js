@@ -1949,6 +1949,8 @@ function getSrcImgPokemon(poke) {
 				return `https://play.pokeathlon.com/sprites/fangame-sprites/uranium/iconsprites/${pokeID}.png`
 			case "Infinity":
 				return `https://play.pokeathlon.com/sprites/fangame-sprites/infinity/iconsprites/${pokeID}.png`
+			case "Mariomon":
+				return `https://play.pokeathlon.com/sprites/fangame-sprites/mariomon/iconsprites/${pokeID}.gif`
 			default:
 				return `https://raw.githubusercontent.com/May8th1995/sprites/master/${poke.name}.png`
 			}

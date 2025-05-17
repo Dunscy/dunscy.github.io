@@ -3290,7 +3290,7 @@ var DPP_PATCH = {
     },
     Kitsunoh: {
         types: ['Ghost', 'Steel'],
-        bs: { hp: 80, at: 117, df: 85, sa: 55, sd: 80, sp: 128 },
+        bs: { hp: 80, at: 103, df: 85, sa: 55, sd: 80, sp: 120 },
         weightkg: 51,
         abilities: { 0: 'Frisk' }
     },
@@ -15766,7 +15766,7 @@ var SV_PATCH = {
     },
     'Mollusque-Lanceur': {
         types: ['Water', 'Fire'],
-        bs: { hp: 120, at: 55, df: 90, sa: 110, sd: 100, sp: 25 },
+        bs: { hp: 140, at: 55, df: 90, sa: 110, sd: 100, sp: 25 },
         weightkg: 195,
         abilities: { 0: 'Swift Swim' },
         origin: 'Mariomon'
@@ -15924,7 +15924,7 @@ var SV_PATCH = {
         origin: 'Mariomon'
     },
     'Tuff Puff': {
-        types: ['Poison', 'Electric'],
+        types: ['Poison'],
         bs: { hp: 40, at: 60, df: 45, sa: 65, sd: 95, sp: 35 },
         weightkg: 1,
         abilities: { 0: 'Neutralizing Gas' },
@@ -16158,7 +16158,7 @@ var SV_PATCH = {
     },
     'Mr. I': {
         types: ['Psychic', 'Dark'],
-        bs: { hp: 85, at: 100, df: 110, sa: 80, sd: 90, sp: 5 },
+        bs: { hp: 85, at: 90, df: 110, sa: 60, sd: 90, sp: 5 },
         weightkg: 40,
         abilities: { 0: 'Keen Eye' },
         origin: 'Mariomon'
