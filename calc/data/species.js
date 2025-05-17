@@ -16352,6 +16352,13 @@ var SV_PATCH = {
         abilities: { 0: 'Chaos Emeralds' },
         origin: 'Mariomon'
     },
+    'Tiptron': {
+        types: ['Fairy', 'Steel'],
+        bs: { hp: 100, at: 100, df: 100, sa: 100, sd: 100, sp: 100 },
+        weightkg: 1,
+        abilities: { 0: 'Adaptability' },
+        origin: 'Mariomon'
+    },
     'Ashenash': {
         types: ['Fire'],
         bs: { hp: 57, at: 31, df: 45, sa: 58, sd: 41, sp: 45 },
