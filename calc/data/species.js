@@ -15331,7 +15331,7 @@ var SV_PATCH = {
     },
     'Sniffit': {
         types: ['Normal', 'Steel'],
-        bs: { hp: 74, at: 124, df: 114, sa: 64, sd: 64, sp: 54 },
+        bs: { hp: 74, at: 64, df: 114, sa: 124, sd: 64, sp: 54 },
         weightkg: 8.5,
         abilities: { 0: 'Battle Armor' },
         origin: 'Mariomon'
@@ -15435,7 +15435,7 @@ var SV_PATCH = {
     },
     'Dino Rhino': {
         types: ['Fire', 'Ground'],
-        bs: { hp: 115, at: 90, df: 60, sa: 80, sd: 40, sp: 50 },
+        bs: { hp: 115, at: 90, df: 60, sa: 90, sd: 40, sp: 50 },
         weightkg: 115,
         abilities: { 0: 'Flash Fire' },
         origin: 'Mariomon'
@@ -15766,7 +15766,7 @@ var SV_PATCH = {
     },
     'Mollusque-Lanceur': {
         types: ['Water', 'Fire'],
-        bs: { hp: 140, at: 55, df: 90, sa: 110, sd: 100, sp: 25 },
+        bs: { hp: 120, at: 55, df: 90, sa: 110, sd: 100, sp: 25 },
         weightkg: 195,
         abilities: { 0: 'Swift Swim' },
         origin: 'Mariomon'
@@ -15924,7 +15924,7 @@ var SV_PATCH = {
         origin: 'Mariomon'
     },
     'Tuff Puff': {
-        types: ['Poison'],
+        types: ['Poison', 'Electric'],
         bs: { hp: 40, at: 60, df: 45, sa: 65, sd: 95, sp: 35 },
         weightkg: 1,
         abilities: { 0: 'Neutralizing Gas' },
@@ -16158,7 +16158,7 @@ var SV_PATCH = {
     },
     'Mr. I': {
         types: ['Psychic', 'Dark'],
-        bs: { hp: 85, at: 90, df: 110, sa: 60, sd: 90, sp: 5 },
+        bs: { hp: 85, at: 100, df: 110, sa: 80, sd: 90, sp: 5 },
         weightkg: 40,
         abilities: { 0: 'Keen Eye' },
         origin: 'Mariomon'
