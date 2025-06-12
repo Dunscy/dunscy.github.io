@@ -32,6 +32,8 @@ function calculateSMSSSV(gen, attacker, defender, move, field) {
     (0, util_2.checkDownload)(defender, attacker, field.isWonderRoom);
     (0, util_2.checkIntrepidSword)(attacker, gen);
     (0, util_2.checkIntrepidSword)(defender, gen);
+    (0, util_2.checkAdaptiveArmor)(attacker, defender);
+    (0, util_2.checkAdaptiveArmor)(defender, attacker);
     if (move.named('Meteor Beam', 'Electro Shot')) {
         attacker.boosts.spa +=
             attacker.hasAbility('Simple') ? 2
@@ -704,6 +706,21 @@ function calculateBasePowerSMSSSV(gen, attacker, defender, move, field, hasAteAb
             basePower = move.bp * (turnOrder !== 'last' ? 1.5 : 1);
             desc.moveBP = basePower;
             break;
+        case 'Vengeful Pulse':
+            basePower = move.bp * (attacker.status ? 1.5 : 1);
+            desc.moveBP = basePower;
+            break;
+        case 'Lucky 7s':
+            var sevens = 0;
+            sevens += (attacker.stats.hp.toString().match(/7/g) || []).length;
+            sevens += (attacker.stats.atk.toString().match(/7/g) || []).length;
+            sevens += (attacker.stats.def.toString().match(/7/g) || []).length;
+            sevens += (attacker.stats.spa.toString().match(/7/g) || []).length;
+            sevens += (attacker.stats.spd.toString().match(/7/g) || []).length;
+            sevens += (attacker.stats.spe.toString().match(/7/g) || []).length;
+            basePower = move.bp + sevens * 5;
+            desc.moveBP = basePower;
+            break;
         default:
             basePower = move.bp;
     }
@@ -813,7 +830,7 @@ function calculateBPModsSMSSSV(gen, attacker, defender, move, field, desc, baseP
         }
     }
     if ((0, util_2.isGrounded)(defender, field)) {
-        if ((field.hasTerrain('Misty') && move.hasType('Dragon')) ||
+        if ((field.hasTerrain('Misty') && move.hasType('Dragon') && !move.named('Mist Barrage')) ||
             (field.hasTerrain('Grassy') && move.named('Bulldoze', 'Earthquake'))) {
             bpMods.push(2048);
             desc.terrain = field.terrain;
@@ -829,7 +846,8 @@ function calculateBPModsSMSSSV(gen, attacker, defender, move, field, desc, baseP
         (attacker.hasAbility('Steely Spirit') && move.hasType('Steel')) ||
         (attacker.hasAbility('Sharpness') && move.flags.slicing) ||
         (attacker.hasAbility('Acceleration') && move.priority > 0) ||
-        (attacker.hasAbility('Cannoneer') && move.flags.bullet)) {
+        (attacker.hasAbility('Cannoneer') && move.flags.bullet) ||
+        (attacker.hasAbility('Pixie Power') && move.hasType('Fairy'))) {
         bpMods.push(6144);
         desc.attackerAbility = attacker.ability;
     }
@@ -908,7 +926,8 @@ function calculateBPModsSMSSSV(gen, attacker, defender, move, field, desc, baseP
         }
         desc.attackerAbility = attacker.ability;
     }
-    if (!move.isMax && hasAteAbilityTypeChange) {
+    if ((!move.isMax && hasAteAbilityTypeChange) ||
+        (attacker.hasAbility('Windy Spirit') && move.flags.wind)) {
         bpMods.push(4915);
     }
     if (attacker.hasAbility('Spitting Fire') && move.hasType('Fire')) {
@@ -1373,7 +1392,8 @@ function calculateFinalModsSMSSSV(gen, attacker, defender, move, field, desc, is
     }
     else if ((defender.hasAbility('Punk Rock') && move.flags.sound) ||
         (defender.hasAbility('Ice Scales') && move.category === 'Special') ||
-        (defender.hasAbility('Ivy Wall') && move.hasType('Ground', 'Water', 'Grass', 'Electric'))) {
+        (defender.hasAbility('Ivy Wall') && move.hasType('Ground', 'Water', 'Grass', 'Electric')) ||
+        ((0, util_2.checkAdaptiveArmor)(defender, attacker))) {
         finalMods.push(2048);
         desc.defenderAbility = defender.ability;
     }

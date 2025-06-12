@@ -382,6 +382,15 @@ function checkSeedBoost(pokemon, field) {
     }
 }
 exports.checkSeedBoost = checkSeedBoost;
+function checkAdaptiveArmor(source, target) {
+    if (source.hasAbility('Adaptive Armor') && source.abilityOn) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+exports.checkAdaptiveArmor = checkAdaptiveArmor;
 function checkMultihitBoost(gen, attacker, defender, move, field, desc, attackerUsedItem, defenderUsedItem) {
     if (attackerUsedItem === void 0) { attackerUsedItem = false; }
     if (defenderUsedItem === void 0) { defenderUsedItem = false; }

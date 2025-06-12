@@ -21,6 +21,7 @@ export declare function checkDauntlessShield(source: Pokemon, gen: Generation): 
 export declare function checkEmbody(source: Pokemon, gen: Generation): void;
 export declare function checkInfiltrator(pokemon: Pokemon, affectedSide: Side, move: Move): void;
 export declare function checkSeedBoost(pokemon: Pokemon, field: Field): void;
+export declare function checkAdaptiveArmor(source: Pokemon, target: Pokemon): boolean;
 export declare function checkMultihitBoost(gen: Generation, attacker: Pokemon, defender: Pokemon, move: Move, field: Field, desc: RawDesc, attackerUsedItem?: boolean, defenderUsedItem?: boolean): boolean[];
 export declare function chainMods(mods: number[], lowerBound: number, upperBound: number): number;
 export declare function getBaseDamage(level: number, basePower: number, attack: number, defense: number): number;
