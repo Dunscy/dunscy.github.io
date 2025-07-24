@@ -929,6 +929,7 @@ function calculateBPModsSMSSSV(gen, attacker, defender, move, field, desc, baseP
     if ((!move.isMax && hasAteAbilityTypeChange) ||
         (attacker.hasAbility('Windy Spirit') && move.flags.wind)) {
         bpMods.push(4915);
+        desc.attackerAbility = attacker.ability;
     }
     if (attacker.hasAbility('Spitting Fire') && move.hasType('Fire')) {
         move.flags.sound = 1;

@@ -425,7 +425,7 @@ exports.MEGA_STONES = {
     Jirachite: 'Jirachi',
     Chatotite: 'Chatot',
     Spiritombite: 'Spiritomb',
-    Forslassite: 'Froslass',
+    Froslassite: 'Froslass',
     Zebstrikite: 'Zebstrika',
     Zoronite: 'Zoroark',
     Gothitite: 'Gothitelle',
