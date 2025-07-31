@@ -16359,6 +16359,13 @@ var SV_PATCH = {
         abilities: { 0: 'Download' },
         origin: 'Mariomon'
     },
+    'Anneliark': {
+        types: ['Psychic', 'Ground'],
+        bs: { hp: 84, at: 83, df: 124, sa: 130, sd: 85, sp: 44 },
+        weightkg: 999.9,
+        abilities: { 0: 'Mold Breaker' },
+        origin: "Pokeathlon"
+    },
     'Ashenash': {
         types: ['Fire'],
         bs: { hp: 57, at: 31, df: 45, sa: 58, sd: 41, sp: 45 },
@@ -17291,6 +17298,13 @@ var SV_PATCH = {
         weightkg: 14,
         abilities: { 0: 'Pickpocket' },
         nfe: true,
+        origin: "Pokeathlon"
+    },
+    'Twinova': {
+        types: ['Psychic', 'Fairy'],
+        bs: { hp: 70, at: 52, df: 101, sa: 77, sd: 101, sp: 109 },
+        weightkg: 32.8,
+        abilities: { 0: 'Synchronize' },
         origin: "Pokeathlon"
     },
     'Tyranisacer': {

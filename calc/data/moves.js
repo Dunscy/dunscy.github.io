@@ -6449,6 +6449,14 @@ var SV_PATCH = {
         category: 'Status',
         zp: 0,
         maxPower: 0
+    },
+    "Solar Flare": {
+        bp: 40,
+        type: 'Psychic',
+        category: 'Special',
+        multihit: 2,
+        zp: 140,
+        maxPower: 120
     }
 };
 var SV = (0, util_1.extend)(true, {}, SS, SV_PATCH);
