@@ -6175,7 +6175,7 @@ var SV_PATCH = {
         makesContact: true
     },
     'Megaton Slice': {
-        bp: 120,
+        bp: 110,
         type: 'Dark',
         category: 'Physical',
         zp: 100,
@@ -6457,6 +6457,13 @@ var SV_PATCH = {
         multihit: 2,
         zp: 140,
         maxPower: 120
+    },
+    "Severed Sidearm": {
+        bp: 55,
+        type: 'Electric',
+        category: 'Special',
+        zp: 100,
+        maxPower: 110
     }
 };
 var SV = (0, util_1.extend)(true, {}, SS, SV_PATCH);

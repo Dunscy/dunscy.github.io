@@ -470,7 +470,9 @@ var SV = SS.concat([
     'Momentum',
     'Pixel Perfect',
     'Pixie Power',
-    'Windy Spirit'
+    'Windy Spirit',
+    'Strange Anatomy',
+    'Tailgun Railgun'
 ]);
 exports.ABILITIES = [[], RBY, GSC, ADV, DPP, BW, XY, SM, SS, SV];
 var Abilities = (function () {
