@@ -16652,7 +16652,7 @@ var SV_PATCH = {
     },
     'Fonspring': {
         types: ['Water', 'Ground'],
-        bs: { hp: 90, at: 77, df: 109, sa: 98, sd: 56, sp: 65 },
+        bs: { hp: 944, at: 52, df: 116, sa: 98, sd: 70, sp: 65 },
         weightkg: 102.1,
         abilities: { 0: 'Weak Armor' },
         origin: "Pokeathlon"
@@ -16944,7 +16944,7 @@ var SV_PATCH = {
     },
     'Omecha': {
         types: ['Electric', 'Normal'],
-        bs: { hp: 84, at: 42, df: 69, sa: 110, sd: 104, sp: 99 },
+        bs: { hp: 84, at: 42, df: 69, sa: 110, sd: 104, sp: 111 },
         weightkg: 24,
         abilities: { 0: 'Volt Absorb' },
         origin: "Pokeathlon"
@@ -17345,7 +17345,7 @@ var SV_PATCH = {
     },
     'Wyvarice': {
         types: ['Dark', 'Dragon'],
-        bs: { hp: 127, at: 57, df: 67, sa: 117, sd: 67, sp: 107 },
+        bs: { hp: 117, at: 57, df: 67, sa: 117, sd: 67, sp: 117 },
         weightkg: 22.4,
         abilities: { 0: 'Pickpocket' },
         origin: "Pokeathlon"
