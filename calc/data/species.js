@@ -16652,7 +16652,7 @@ var SV_PATCH = {
     },
     'Fonspring': {
         types: ['Water', 'Ground'],
-        bs: { hp: 944, at: 52, df: 116, sa: 98, sd: 70, sp: 65 },
+        bs: { hp: 94, at: 52, df: 116, sa: 98, sd: 70, sp: 65 },
         weightkg: 102.1,
         abilities: { 0: 'Weak Armor' },
         origin: "Pokeathlon"
