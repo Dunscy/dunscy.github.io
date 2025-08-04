@@ -16858,6 +16858,13 @@ var SV_PATCH = {
         nfe: true,
         origin: "Pokeathlon"
     },
+    'Malamancer': {
+        types: ['Psychic', 'Normal'],
+        bs: { hp: 95, at: 70, df: 100, sa: 110, sd: 70, sp: 90 },
+        weightkg: 34,
+        abilities: { 0: 'Magic Guard' },
+        origin: "Pokeathlon"
+    },
     'Manacra': {
         types: ['Rock', 'Ghost'],
         bs: { hp: 50, at: 60, df: 95, sa: 118, sd: 87, sp: 105 },
@@ -17029,6 +17036,14 @@ var SV_PATCH = {
         nfe: true,
         origin: "Pokeathlon"
     },
+    'Pupprodigy': {
+        types: ['Psychic', 'Normal'],
+        bs: { hp: 75, at: 40, df: 65, sa: 90, sd: 40, sp: 65 },
+        weightkg: 14.4,
+        abilities: { 0: 'Magic Guard' },
+        nfe: true,
+        origin: "Pokeathlon"
+    },
     'Rabbicicle': {
         types: ['Normal', 'Ice'],
         bs: { hp: 90, at: 105, df: 65, sa: 65, sd: 75, sp: 100 },
@@ -17052,7 +17067,7 @@ var SV_PATCH = {
     },
     'Reneguana': {
         types: ['Electric', 'Dragon'],
-        bs: { hp: 70, at: 100, df: 110, sa: 100, sd: 50, sp: 75 },
+        bs: { hp: 70, at: 100, df: 110, sa: 110, sd: 50, sp: 75 },
         weightkg: 55,
         abilities: { 0: 'Battle Armor' },
         origin: "Pokeathlon"
