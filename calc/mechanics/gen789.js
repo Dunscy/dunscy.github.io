@@ -970,6 +970,10 @@ function calculateBPModsSMSSSV(gen, attacker, defender, move, field, desc, baseP
         bpMods.push(5120);
         desc.attackerAbility = attacker.ability;
     }
+    if (attacker.hasAbility('Hidden Ambush') && move.flags.charge) {
+        bpMods.push(5120);
+        desc.attackerAbility = attacker.ability;
+    }
     if (attacker.hasItem("".concat(move.type, " Gem"))) {
         bpMods.push(5325);
         desc.attackerItem = attacker.item;

@@ -4142,6 +4142,22 @@ finally {
     finally { if (e_1) throw e_1.error; }
 }
 var SV_PATCH = {
+    'Dive': { isCharge: true },
+    'Bounce': { isCharge: true },
+    'Dig': { isCharge: true },
+    'Electroshot': { isCharge: true },
+    'Fly': { isCharge: true },
+    'Freeze Shock': { isCharge: true },
+    'Geomancy': { isCharge: true },
+    'Ice Burn': { isCharge: true },
+    'Meteor Beam': { isCharge: true },
+    'Phantom Force': { isCharge: true },
+    'Razor Wind': { isCharge: true },
+    'Shadow Force': { isCharge: true },
+    'Skull Bash': { isCharge: true },
+    'Sky Attack': { isCharge: true },
+    'Sky Drop': { isCharge: true },
+    'Solar Beam': { isCharge: true },
     'Aerial Ace': { isSlicing: true },
     Aeroblast: { isWind: true },
     'Air Cutter': { isSlicing: true, isWind: true },
@@ -4170,7 +4186,7 @@ var SV_PATCH = {
     'Secret Sword': { isSlicing: true },
     Sandstorm: { isWind: true },
     Slash: { isSlicing: true },
-    'Solar Blade': { isSlicing: true },
+    'Solar Blade': { isSlicing: true, isCharge: true },
     Tailwind: { isWind: true },
     Twister: { isWind: true },
     Whirlwind: { isWind: true },
@@ -6527,6 +6543,8 @@ var Move = (function () {
             this.flags.slicing = 1;
         if (data.isWind)
             this.flags.wind = 1;
+        if (data.isCharge)
+            this.flags.charge = 1;
         (0, util_1.assignWithout)(this, data, Move.FLAGS);
         this.basePower = data.bp;
         if (data.zp)
