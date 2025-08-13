@@ -11,7 +11,7 @@ export declare function getMoveEffectiveness(gen: Generation, move: Move, type: 
 export declare function checkAirLock(pokemon: Pokemon, field: Field): void;
 export declare function checkTeraformZero(pokemon: Pokemon, field: Field): void;
 export declare function checkForecast(pokemon: Pokemon, weather?: Weather): void;
-export declare function checkItem(pokemon: Pokemon, magicRoomActive?: boolean): void;
+export declare function checkItem(pokemon: Pokemon, magicRoomActive?: boolean, attacker?: Pokemon): void;
 export declare function checkWonderRoom(pokemon: Pokemon, wonderRoomActive?: boolean): void;
 export declare function checkIntimidate(gen: Generation, source: Pokemon, target: Pokemon): void;
 export declare function checkPetrify(gen: Generation, source: Pokemon, target: Pokemon): void;

@@ -16935,6 +16935,13 @@ var SV_PATCH = {
         abilities: { 0: 'Water Absorb' },
         origin: "Pokeathlon"
     },
+    'Nebulant': {
+        types: ['Bug', 'Psychic'],
+        bs: { hp: 91, at: 66, df: 70, sa: 108, sd: 71, sp: 114 },
+        weightkg: 28.4,
+        abilities: { 0: 'Vacuum Bubble' },
+        origin: "Pokeathlon"
+    },
     'Nestitan': {
         types: ['Grass', 'Flying'],
         bs: { hp: 100, at: 52, df: 160, sa: 75, sd: 65, sp: 93 },
@@ -17257,6 +17264,13 @@ var SV_PATCH = {
         abilities: { 0: 'Clean Sweep' },
         origin: "Pokeathlon"
     },
+    'Tanukief': {
+        types: ['Dark', 'Fighting'],
+        bs: { hp: 95, at: 84, df: 121, sa: 76, sd: 94, sp: 60 },
+        weightkg: 95,
+        abilities: { 0: 'Coat of Arms' },
+        origin: 'Pokeathlon'
+    },
     'Tinkashank': {
         types: ['Steel', 'Dark'],
         bs: { hp: 70, at: 95, df: 85, sa: 70, sd: 87, sp: 95 },
@@ -17378,6 +17392,22 @@ var SV_PATCH = {
         weightkg: 22.4,
         abilities: { 0: 'Pickpocket' },
         origin: "Pokeathlon"
+    },
+    'Zorblob': {
+        types: ['Psychic'],
+        bs: { hp: 90, at: 72, df: 78, sa: 105, sd: 110, sp: 85 },
+        weightkg: 49.2,
+        abilities: { 0: 'Hive Mind' },
+        origin: "Pokeathlon",
+        otherFormes: ['Zorblob-Split']
+    },
+    'Zorblob-Split': {
+        types: ['Psychic'],
+        bs: { hp: 90, at: 91, df: 66, sa: 115, sd: 66, sp: 112 },
+        weightkg: 49.2,
+        abilities: { 0: 'Hive Mind' },
+        origin: "Pokeathlon",
+        baseSpecies: 'Zorblob'
     }
 };
 var SV = (0, util_1.extend)(true, {}, SS, SV_PATCH, PLA_PATCH);

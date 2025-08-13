@@ -473,7 +473,10 @@ var SV = SS.concat([
     'Windy Spirit',
     'Strange Anatomy',
     'Tailgun Railgun',
-    'Hidden Ambush'
+    'Hidden Ambush',
+    'Hive Mind',
+    'Vacuum Bubble',
+    'Coat of Arms'
 ]);
 exports.ABILITIES = [[], RBY, GSC, ADV, DPP, BW, XY, SM, SS, SV];
 var Abilities = (function () {

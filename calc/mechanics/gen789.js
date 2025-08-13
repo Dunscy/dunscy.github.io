@@ -5,6 +5,7 @@ var util_1 = require("../util");
 var items_1 = require("../items");
 var result_1 = require("../result");
 var util_2 = require("./util");
+var data_1 = require("../data");
 function calculateSMSSSV(gen, attacker, defender, move, field) {
     var _a;
     (0, util_2.checkAirLock)(attacker, field);
@@ -14,7 +15,7 @@ function calculateSMSSSV(gen, attacker, defender, move, field) {
     (0, util_2.checkForecast)(attacker, field.weather);
     (0, util_2.checkForecast)(defender, field.weather);
     (0, util_2.checkItem)(attacker, field.isMagicRoom);
-    (0, util_2.checkItem)(defender, field.isMagicRoom);
+    (0, util_2.checkItem)(defender, field.isMagicRoom, attacker);
     (0, util_2.checkWonderRoom)(attacker, field.isWonderRoom);
     (0, util_2.checkWonderRoom)(defender, field.isWonderRoom);
     (0, util_2.checkSeedBoost)(attacker, field);
@@ -245,6 +246,14 @@ function calculateSMSSSV(gen, attacker, defender, move, field) {
             else
                 abilitytypemod = (0, util_2.getMoveEffectiveness)(gen, move, 'Grass', isGhostRevealed, field.isGravity, isRingTarget);
             desc.defenderAbility = defender.ability;
+            break;
+        case 'Coat of Arms':
+            if (defender.coat) {
+                abilitytypemod = (0, util_2.getMoveEffectiveness)(gen, move, defender.coat, isGhostRevealed, field.isGravity, isRingTarget);
+                desc.coatDef = defender.coat;
+            }
+            else
+                abilitytypemod = 1;
             break;
         default:
             abilitytypemod = 1;
@@ -1207,7 +1216,7 @@ function calculateDefenseSMSSSV(gen, attacker, defender, move, field, desc, isCr
         move.ignoreDefensive) {
         defense = defender.rawStats[defenseStat];
     }
-    else if (attacker.hasAbility('Unaware')) {
+    else if (attacker.hasAbility('Unaware', 'Vacuum Bubble')) {
         defense = defender.rawStats[defenseStat];
         desc.attackerAbility = attacker.ability;
     }
@@ -1388,6 +1397,11 @@ function calculateFinalModsSMSSSV(gen, attacker, defender, move, field, desc, is
         hitCount === 0 &&
         (!field.defenderSide.isSR && (!field.defenderSide.spikes || defender.hasType('Flying')) ||
             defender.hasItem('Heavy-Duty Boots')) && !attacker.hasAbility('Parental Bond (Child)')) {
+        finalMods.push(2048);
+        desc.defenderAbility = defender.ability;
+    }
+    if (defender.hasAbility('Hive Mind') && defender.species.name === 'Zorblob' &&
+        calculateBaseDamageSMSSSV(data_1.Generations.get(9), attacker, defender, move.bp, attacker.stats.atk, defender.stats.def, move, field, desc, isCritical) > (defender.maxHP() / 4)) {
         finalMods.push(2048);
         desc.defenderAbility = defender.ability;
     }

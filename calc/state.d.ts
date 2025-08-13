@@ -12,6 +12,7 @@ export declare namespace State {
         heads?: number;
         boostedStat?: I.StatIDExceptHP | 'auto';
         season?: number;
+        coat?: I.TypeName;
         item?: I.ItemName;
         gender?: I.GenderName;
         nature?: I.NatureName;

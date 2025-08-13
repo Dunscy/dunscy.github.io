@@ -775,6 +775,9 @@ function buildDescription(description, attacker, defender) {
     if (description.heads) {
         output += Math.max(5, description.heads) + " heads ";
     }
+    if (description.coatAtk) {
+        output += "".concat(description.coatAtk, " Coat ");
+    }
     if (description.attackerTera) {
         output += "Tera ".concat(description.attackerTera, " ");
     }
@@ -873,6 +876,9 @@ function buildDescription(description, attacker, defender) {
     }
     if (description.isWonderRoom) {
         output += ' in Wonder Room';
+    }
+    if (description.coatDef) {
+        output += " ".concat(description.coatDef, " Coat ");
     }
     return output;
 }

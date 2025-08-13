@@ -19,6 +19,7 @@ export declare class Pokemon implements State.Pokemon {
     teraType?: I.TypeName;
     heads?: number;
     season?: number;
+    coat?: I.TypeName;
     nature: I.NatureName;
     ivs: I.StatsTable;
     evs: I.StatsTable;

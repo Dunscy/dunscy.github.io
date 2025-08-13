@@ -249,11 +249,11 @@ function checkForecast(pokemon, weather) {
     }
 }
 exports.checkForecast = checkForecast;
-function checkItem(pokemon, magicRoomActive) {
+function checkItem(pokemon, magicRoomActive, attacker) {
     if (pokemon.gen.num === 4 && pokemon.hasItem('Iron Ball'))
         return;
     if (pokemon.hasAbility('Klutz') && !EV_ITEMS.includes(pokemon.item) ||
-        magicRoomActive) {
+        magicRoomActive || (attacker === null || attacker === void 0 ? void 0 : attacker.hasAbility('Vacuum Bubble'))) {
         pokemon.item = '';
     }
 }
@@ -620,6 +620,10 @@ function getStabMod(pokemon, move, desc) {
     else if (pokemon.hasAbility('Ancient Presence')) {
         stabMod += 2048;
         desc.attackerAbility = pokemon.ability;
+    }
+    else if (pokemon.hasAbility('Coat of Arms') && move.type === pokemon.coat) {
+        stabMod += 2048;
+        desc.coatAtk = pokemon.coat;
     }
     var teraType = pokemon.teraType;
     if (teraType === move.type && teraType !== 'Stellar') {
